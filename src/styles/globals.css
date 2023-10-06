@@ -1,0 +1,26 @@
+.layout {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.default_input {
+  outline: none;
+  background-color: #fff;
+}
+
+.login_btn {
+  background-image: linear-gradient(#004e27, #081e0e, #020103);
+  height: 45px;
+  font-size: 18px;
+  border-radius: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: .3s;
+  width: 100%;
+}
+
+.login_btn:hover {
+  border: 1px solid #46b8da;
+}
