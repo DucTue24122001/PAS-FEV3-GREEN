@@ -1,6 +1,8 @@
 import { extendTheme, useBreakpointValue } from "@chakra-ui/react";
+import { colors } from "./colors";
 
 const baseTheme = extendTheme({
+  colors,
   components: {
     Button: {
       variants: {

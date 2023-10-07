@@ -7,13 +7,20 @@ import baseTheme from "../../components/chakra-ui/theme";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import MobileMenu from "../../components/layout/MobileMenu";
+import { TenancyProvider } from "../../hook/TenancyProvider";
+import { Provider } from "react-redux";
+import { store } from "../../redux/store";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={baseTheme}>
-      <Navbar />
-      <Component {...pageProps} />
-      <MobileMenu/>
-    </ChakraProvider>
+    <Provider store={store}>
+      <ChakraProvider theme={baseTheme}>
+        <TenancyProvider>
+          <Navbar />
+          <Component {...pageProps} />
+          <MobileMenu/>
+        </TenancyProvider>
+      </ChakraProvider>
+    </Provider>
   );
 }

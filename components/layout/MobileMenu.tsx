@@ -58,7 +58,7 @@ const mobileMenuItems = [
 	{
 		icon: walletIco.src,
 		title: "Wallet",
-		src: "/",
+		src: "/wallet",
 		needAuth: true,
 	},
 	{

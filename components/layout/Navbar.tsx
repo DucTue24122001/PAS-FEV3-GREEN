@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <Flex w={"100%"} minH={"50px"} boxShadow={"0 1px 1px #20ad59aa"} justifyContent={"space-around"} pos={"sticky"} top={0}
       bgGradient='linear(to-t, #0e5931, #024921)' zIndex={1000} display={checkDisableLayoutPage(router.pathname) ? "none" : "flex"}>
-        <Box>
+        <Box cursor={'pointer'} onClick={() => router.push("/")}>
           <Image p={"5px 0"} h={"50px"} src={LuckyMyanmar.src} alt={"gift"} />
         </Box>
         <Flex pos={"absolute"} right={0} mt={"5px"} gap={"12.5px"}>
