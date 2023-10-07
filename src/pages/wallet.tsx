@@ -6,7 +6,7 @@ const Wallet = () => {
   return (
     <>
       <UserInfoBar/>
-      <Box px={"30px"} w={"100%"}>
+      <Box px={"30px"} w={"100%"} pos={"fixed"} bottom={0}>
         <Box pb={"15px"} borderBottom={"1px dotted #caffe1"} fontSize={"14px"} pt={"10px"}>
           <Box sx={profileBtn}>
             Deposit
