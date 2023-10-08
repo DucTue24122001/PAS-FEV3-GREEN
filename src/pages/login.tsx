@@ -52,7 +52,7 @@ export default function Login () {
   return (
     <Box pt={"50px"} pb={"70px"}>
       <Box className='layout'>
-        <Box p={"10px 15px"} pb={"30px"} w={"550px"} mx={"auto"}>
+        <Box p={"10px 15px"} pb={"30px"} maxW={"550px"} mx={"auto"}>
           <form onSubmit={loginHandler}>
             <Box m={"20px 0 40px"}>
               <Link href={"/"}>
