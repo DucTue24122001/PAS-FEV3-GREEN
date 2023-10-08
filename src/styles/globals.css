@@ -24,3 +24,7 @@
 .login_btn:hover {
   border: 1px solid #46b8da;
 }
+
+.error {
+  color: #ce4242;
+}

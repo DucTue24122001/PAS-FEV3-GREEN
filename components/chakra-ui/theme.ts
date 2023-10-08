@@ -30,7 +30,8 @@ const baseTheme = extendTheme({
           color: "#003534",
           bgGradient: "linear(#103f27 30%, #0f4624, #1f7544);",
           bgRepeat: "no-repeat",
-          minH: "100vh"
+          minH: "100vh",
+          overflowX: "clip"
         },
       };
     },

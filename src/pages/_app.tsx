@@ -10,11 +10,14 @@ import MobileMenu from "../../components/layout/MobileMenu";
 import { TenancyProvider } from "../../hook/TenancyProvider";
 import { Provider } from "react-redux";
 import { store } from "../../redux/store";
+import { appWithI18Next } from "ni18n";
+import { ni18nConfig } from "../../ni18n.config"
 
-export default function App({ Component, pageProps }: AppProps) {
+
+ function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <ChakraProvider theme={baseTheme}>
+      <ChakraProvider theme={baseTheme} toastOptions={{ defaultOptions: { position: 'bottom', duration: 3000, isClosable: true } }}>
         <TenancyProvider>
           <Navbar />
           <Component {...pageProps} />
@@ -24,3 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
     </Provider>
   );
 }
+
+export default appWithI18Next(App, ni18nConfig);
+

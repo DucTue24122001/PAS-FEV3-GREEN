@@ -11,3 +11,9 @@ export const convertDecimalNum = (num: number) => {
     return 0
   }
 };
+
+export const checkIsTimeoutToken = (error: any, router: any) => {
+  if (error?.response?.status === 401 || error?.response?.status === 403) {
+    router.push("/");
+  }
+};

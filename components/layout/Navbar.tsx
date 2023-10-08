@@ -1,13 +1,30 @@
 import { Box, Flex, Image } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import LuckyMyanmar from "../../public/images/LuckyMyanmar.png"
 import langUkImg from "../../public/images/lang2-uk.png"
 import langMmImg from "../../public/images/lang2-myanmar.png"
 import { useRouter } from 'next/router'
 import { checkDisableLayoutPage } from '../../util/function'
+import { useTenancy } from '../../hook/TenancyProvider'
+import { useTranslation } from 'react-i18next'
 
 const Navbar = () => {
   const router = useRouter()
+  const tenancy = useTenancy()
+  const {i18n} = useTranslation()
+
+  useEffect(() => {
+    if(tenancy?.lang) {
+      const langList = tenancy.lang.split(",");
+      const currentLang = window.localStorage.getItem("MY_LANGUAGE");
+      if (!currentLang) {
+        const primaryLang = langList.find((lang) => lang !== "EN")
+        i18n.changeLanguage(primaryLang);
+      } else {
+        i18n.changeLanguage(currentLang);
+      }
+    }
+  }, [tenancy])
 
   return (
     <Flex w={"100%"} minH={"50px"} boxShadow={"0 1px 1px #20ad59aa"} justifyContent={"space-around"} pos={"sticky"} top={0}
