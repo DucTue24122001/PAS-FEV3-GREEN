@@ -28,3 +28,43 @@
 .error {
   color: #ce4242;
 }
+
+.text_vip {
+  text-shadow: 0 0 4px #00d741;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.default_select {
+  color: #fff;
+  background: linear-gradient(#2ee983 , #257248);
+  line-height: 1.15;
+  padding: 5px;
+  height: 3rem;
+  width: 100%;
+}
+
+.default_option {
+  color: black;
+}
+
+.add_bank_table {
+  margin-top: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #5554;
+  border-collapse: collapse;
+}
+
+.add_bank_table thead {
+  border-bottom: 1px solid #d0d0d0;
+  color: #fff;
+}
+.add_bank_table th, .add_bank_table td {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}

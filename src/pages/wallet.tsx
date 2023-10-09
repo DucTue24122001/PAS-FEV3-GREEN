@@ -1,23 +1,36 @@
 import React from 'react'
 import UserInfoBar from '../../components/UserInfoBar'
 import { Box } from '@chakra-ui/react'
+import ClientService from '../../http-client/ClientService'
+import { useRouter } from 'next/router'
 
 const Wallet = () => {
+  const isAuth = ClientService.isAuthenticated()
+  const router = useRouter()
+
+  const navigateHandler = (url: string) => {
+    if (isAuth) {
+      router.push(url)
+    } else {
+      router.push("/")
+    }
+  }
+
   return (
     <>
       <UserInfoBar/>
       <Box px={"30px"} w={"100%"}>
         <Box pb={"15px"} borderBottom={"1px dotted #caffe1"} fontSize={"14px"} pt={"10px"}>
-          <Box sx={profileBtn}>
+          <Box sx={profileBtn} onClick={() => navigateHandler("/deposit")}>
             Deposit
           </Box>
-          <Box sx={profileBtn}>
+          <Box sx={profileBtn} onClick={() => navigateHandler("/withdraw")}>
             Withdrawal
           </Box>
-          <Box sx={profileBtn}>
+          <Box sx={profileBtn} onClick={() => navigateHandler("/record")}>
             Transaction Record
           </Box>
-          <Box sx={profileBtn}>
+          <Box sx={profileBtn} onClick={() => navigateHandler("/add-bank")}>
             Bank Account
           </Box>
         </Box>

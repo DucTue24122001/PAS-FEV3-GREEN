@@ -18,3 +18,16 @@ export type AccountDetail = {
   userId:number
   userName:string
 }
+
+export type Bank = {
+  accountName: string,
+  accountNumber: string,
+  bankName: string,
+  bankShortName: string,
+  displayName: string,
+  id: number,
+  maximumDeposit: number,
+  minimumDeposit: number,
+  maximumWithdraw: number,
+  minimumWithdraw: number,
+}
