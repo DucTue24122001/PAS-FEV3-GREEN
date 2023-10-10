@@ -15,8 +15,6 @@ import { ni18nConfig } from "../../ni18n.config";
 
 
  function App({ Component, pageProps }: AppProps) {
-  const locale:any = typeof window !== 'undefined' && window.localStorage.getItem('MY_LANGUAGE')
-  useSyncLanguage(locale)
   return (
     <Provider store={store}>
       <ChakraProvider theme={baseTheme} toastOptions={{ defaultOptions: { position: 'bottom', duration: 3000, isClosable: true } }}>

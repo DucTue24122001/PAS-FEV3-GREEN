@@ -71,7 +71,7 @@ const mobileMenuItems = [
 	},
 	{
 		icon: userIco.src,
-		title: "profile",
+		title: "more",
 		src: "/profile",
 		needAuth: true,
 	},
