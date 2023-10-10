@@ -3,9 +3,11 @@ import React, { useEffect } from 'react'
 import UserInfoBar from '../../components/UserInfoBar'
 import ClientService from '../../http-client/ClientService';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 
 const Profile = () => {
   const router = useRouter()
+  const {t} = useTranslation()
 
   const logoutHandler = () => {
     ClientService.logout();
@@ -17,15 +19,15 @@ const Profile = () => {
       <UserInfoBar/>
       <Box px={"30px"} w={"100%"}>
         <Text fontSize={"20px"} fontWeight={500} color={"#caffe1"} textAlign={'center'} my={"10px"}>
-          Profile
+          {t("profile")}
         </Text>
         <Box pb={"15px"} borderBottom={"1px dotted #caffe1"} fontSize={"14px"}>
           <Box sx={profileBtn}
             onClick={() => router.push("/change-password")}>
-            Change password
+            {t("change_password")}
           </Box>
           <Box sx={profileBtn} onClick={logoutHandler}>
-            Logout
+            {t('logout')}
           </Box>
         </Box>
       </Box>

@@ -13,11 +13,15 @@ export const accountSlice = createSlice({
       surName:"",
       userId:0,
       userName:"",
-    }
+    },
+    checkToken:null,
   },
   reducers: {
     setAccountDetail(state, action) {
       state.accountDetail = action.payload
+    },
+    setCheckToken(state, action){
+      state.checkToken = action.payload
     }
   }
 })

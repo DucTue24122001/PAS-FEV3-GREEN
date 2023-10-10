@@ -54,7 +54,7 @@ const CategoryGame = () => {
             ))}
         </Grid>
         <Text fontSize={"28px"} fontWeight={600} color={"#fff"} textAlign={"center"} letterSpacing={"3px"} mt={2}>{`- ${title} -`}</Text>
-        <Grid w={"100%"} templateColumns={"repeat(3, 1fr)"} pb={20}>
+        <Grid w={"100%"} templateColumns={"repeat(3, 1fr)"} gap={2} p={"0 10px 70px 10px"}>
                 {data !== undefined && data?.map((items:any, i:any) => (
                     <Flex key={i} justifyContent={"center"}>
                         <Flex>

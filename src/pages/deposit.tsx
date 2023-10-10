@@ -60,26 +60,26 @@ const Deposit = () => {
         <Box mt={"20px"} mb={"40px"}>
           <Text pt={"16px"} pb={"12.7px"} alignItems={'center'}
             color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
-            DEPOSIT
+            {t('deposit')}
           </Text>
         </Box>
         <Box mb={"30px"}>
           <label htmlFor="deposit">
-            <Text className='text_vip' mb={"5px"} fontSize={14}>Deposit Amount</Text>
+            <Text className='text_vip' mb={"5px"} fontSize={14}>{t('deposit_amount')}</Text>
           </label>
           <Input variant={"default"} id='deposit' fontSize={14} letterSpacing={"1px"}/>
         </Box>
         <Box mb={"30px"}>
           <label>
-            <Text className='text_vip' mb={"5px"} fontSize={14}>Real Deposit Amount</Text>
+            <Text className='text_vip' mb={"5px"} fontSize={14}>{t('real_deposit_amount')}</Text>
           </label>
           <Input variant={"default"} fontSize={14} letterSpacing={"1px"} disabled
             border={"1px solid white"} bg={"#073809"} color={"white"}/>
         </Box>
         <Box mb={"30px"}>
-          <Text className='text_vip' mb={"5px"} fontSize={14}>BANK</Text>
+          <Text className='text_vip' mb={"5px"} fontSize={14}>{t("bank")}</Text>
           <select className='default_select' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => selectAgentDepositBank(e.target.value)}>
-            <option className='default_option' value={""}>Select Bank</option>
+            <option className='default_option' value={""}>{t('select_bank')}</option>
             {depositBankingList.map((bank, i) => (
               <option key={i} className='default_option' value={bank.id}>
                 {bank.bankShortName}
@@ -88,35 +88,35 @@ const Deposit = () => {
           </select>
         </Box>
         <Text color={"white"} mb={"40px"} lineHeight={"20px"} mt={"30px"} fontSize={"14px"}>
-          Account Number: <span>{currentAgentBankSelect && currentAgentBankSelect.accountNumber}</span>
+          {t('account_number')}: <span>{currentAgentBankSelect && currentAgentBankSelect.accountNumber}</span>
         </Text>
         <Box mb={"30px"}>
-          <Text className='text_vip' mb={"5px"} fontSize={14}>Bankslip</Text>
+          <Text className='text_vip' mb={"5px"} fontSize={14}>{t('bankslip')}</Text>
           <Box bg={"white"} px={"20px"} pb={"10px"} borderRadius={'5px'}>
             <input type='file' accept={"image/*"} onChange={imageInputHandler}/>
           </Box>
         </Box>
         <Box mb={"30px"}>
-          <Text className='text_vip' mb={"5px"} fontSize={14}>Bonus</Text>
+          <Text className='text_vip' mb={"5px"} fontSize={14}>{t('bonus')}</Text>
           <Box px={"20px"} pb={"10px"} borderRadius={'5px'}>
             <RadioGroup defaultValue='1'>
               <Radio value='1'>
-                <Text className='text_vip' fontSize={14}>No Bonus</Text>
+                <Text className='text_vip' fontSize={14}>{t('no_bonus')}</Text>
               </Radio>
             </RadioGroup>
           </Box>
         </Box>
         <Box p={"2%"}>
           <Box border={"solid 2px #1da95c"} p={"2%"}>
-            <Text className='text_vip' mb={"5px"} fontSize={14}>Notice</Text>
+            <Text className='text_vip' mb={"5px"} fontSize={14}>{t('notice')}</Text>
             <Box p={"inherit"} color={"white"} fontSize={"11.2px"}>
-              <Text>{"1) Minimum Deposit is 5000"}</Text>
-              <Text>{"2) Rate Deposit : 2.00 "}</Text>
+              <Text>{`1) ${t('minimum_deposit_5000')} `}</Text>
+              <Text>{`2) ${t('rate_deposit')} : 2.00 `}</Text>
             </Box>
           </Box>
         </Box>
         <Box px={"15px"} pt={"20px"}>
-          <button className='login_btn' >SUBMIT</button>
+          <button className='login_btn' >{t('submit')}</button>
         </Box>
       </Box>
       </form>

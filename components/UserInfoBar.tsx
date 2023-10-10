@@ -8,18 +8,19 @@ import { RootState } from '../redux/store'
 import { accountAction } from '../redux/account-slice'
 import {FiUser} from 'react-icons/fi'
 import { convertDecimalNum } from '../util/function'
+import { useTranslation } from 'react-i18next'
 
 const UserInfoBar = () => {
   const {accountDetail} = useSelector((state: RootState) => state.account)
   const dispatch = useDispatch()
   const router = useRouter()
+  const {t} = useTranslation()
   
   useEffect(() => {
     if(ClientService.isAuthenticated()) {
       (async () => {
         try {
           const data: any = await httpClient.get("/Account/GetProfile")
-          console.log(data.result);
           dispatch(accountAction.setAccountDetail(data.result))
         } catch (err) {
           console.log(err);
@@ -43,7 +44,7 @@ const UserInfoBar = () => {
         {accountDetail.name ? accountDetail.name : <Spinner/>}
       </Center>
       <Box sx={infoBar} onClick={() => router.push("/wallet")}>
-        Balance : {convertDecimalNum(accountDetail.balance)}
+        {t('balance')} : {convertDecimalNum(accountDetail.balance)}
       </Box>
     </Flex>
   )
