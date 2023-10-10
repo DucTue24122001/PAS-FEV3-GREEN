@@ -14,7 +14,7 @@
     "388games": "388Games Policies",
     "Remember": "Remember Me",
     "Forgot_Password": "Forgot Password?",
-    "Login": "Login",
+    "login": "Login",
     "join_now": "Join Now",
     "create_account": "Create New Account",
     "username": "Username",
@@ -103,7 +103,7 @@
     "notes": "Notes",
     "important_notes": "Important Notes",
     "note_description": "Please always deposit to the latest bank shown on this page. If you deposit money into an old bank account and cause any delayed or lost, we will not be responsible.",
-    "withdrawal": "Withdrawal are subjected to a 1x wagering requirement.",
+    "withdrawal_": "Withdrawal are subjected to a 1x wagering requirement.",
     "withdrawing": "We are not liable for losses if you enter the wrong account when withdrawing cash.",
     "notification": "Please always deposit to the latest bank shown on this page. If you deposit money into an old bank account and cause any delayed or lost, we will not be responsible.",
     "username_required": "Username is required",
@@ -201,5 +201,39 @@
     "your_password_has_been_changed_successfully":"Your password has been changed successfully",
     "game_currently_maintenance":"Game currently maintenance",
     "game_license": "Gaming License",
-    "save_qr": "SAVE QR"
+    "save_qr": "SAVE QR",
+
+
+
+
+
+
+
+
+    "region_and_language":"Region and Language",
+    "contact_us":"Contact Us",
+    "wallet":"Wallet",
+    "old_password":"Old Password",
+    "new_password":"New Password",
+    "confirm_new_password":"Confirm New Password",
+    "transaction_record":"Transaction Record",
+    "withdrawal":"Withdrawal",
+    "forget_password":"Forget Password",
+    "deposit_amount":"Deposit Amount",
+    "real_deposit_amount":"Real Deposit Amount",
+    "bankslip":"Bankslip",
+    "bonus":"Bonus",
+    "no_bonus":"No Bonus",
+    "notice":"Notice",
+    "minimum_deposit_5000":"Minimum Deposit is 5000",
+    "rate_deposit":"Rate Deposit",
+    "rate_withdrawal":"Rate Withdrawal",
+    "minimum_withdrawal":"Minimum withdrawal",
+    "turnover_amount":"Turnover Amount",
+    "withdrawal_amount":"Withdrawal Amount",
+    "real_withdrawal_amount":"Real Withdrawal Amount",
+    "account_bank":"Account bank",
+    "bank_holder":"Bank Holder",
+    "bank_account_no":"Bank Account No",
+    "history":"History"
 }

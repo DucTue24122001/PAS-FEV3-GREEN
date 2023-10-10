@@ -1,17 +1,16 @@
 import { Box, Center, Flex, Spinner } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
-import ClientService from '../http-client/ClientService'
-import httpClient from '../http-client/httpClient'
+import React from 'react'
 import { useRouter } from 'next/router'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { RootState } from '../redux/store'
-import { accountAction } from '../redux/account-slice'
 import {FiUser} from 'react-icons/fi'
 import { convertDecimalNum } from '../util/function'
+import { useTranslation } from 'react-i18next'
 
 const UserInfoBar = () => {
   const {accountDetail} = useSelector((state: RootState) => state.account)
   const router = useRouter()
+  const {t} = useTranslation()
 
   return (
     <Flex w={"100%"}>
@@ -23,7 +22,7 @@ const UserInfoBar = () => {
         {accountDetail.name ? accountDetail.name : <Spinner/>}
       </Center>
       <Box sx={infoBar} onClick={() => router.push("/wallet")}>
-        Balance : {convertDecimalNum(accountDetail.balance)}
+        {t('balance')} : {convertDecimalNum(accountDetail.balance)}
       </Box>
     </Flex>
   )

@@ -8,10 +8,12 @@ import userIco from "../../public/images/Profile.png"
 import ClientService from '../../http-client/ClientService'
 import { useRouter } from 'next/router'
 import { checkDisableLayoutPage } from '../../util/function'
+import { useTranslation } from 'react-i18next'
 
 const MobileMenu = () => {
 	const isLogin = ClientService.isAuthenticated();
 	const router = useRouter()
+	const {t} = useTranslation()
 
 	const directRouter = (url: string) => {
     if (isLogin) {
@@ -33,7 +35,7 @@ const MobileMenu = () => {
 					}
 				}}>
 					<Image alt={item.title} src={item.icon} sx={imgMenu}/>
-					<Text sx={textMenu}>{item.title}</Text>
+					<Text sx={textMenu}>{t(`${item.title}`)}</Text>
 				</Center>
 			))}
     </Flex>
@@ -45,31 +47,31 @@ export default MobileMenu
 const mobileMenuItems = [
 	{
 		icon: homeIco.src,
-		title: "Home",
+		title: "home",
 		src: "/",
 		needAuth: false,
 	},
 	{
 		icon: promoIco.src,
-		title: "Promotion",
+		title: "promotion",
 		src: "/promo",
 		needAuth: true,
 	},
 	{
 		icon: walletIco.src,
-		title: "Wallet",
+		title: "wallet",
 		src: "/wallet",
 		needAuth: true,
 	},
 	{
 		icon: contactIco.src,
-		title: "Contact us",
+		title: "contact_us",
 		src: "/contact",
 		needAuth: false,
 	},
 	{
 		icon: userIco.src,
-		title: "Profile",
+		title: "profile",
 		src: "/profile",
 		needAuth: true,
 	},

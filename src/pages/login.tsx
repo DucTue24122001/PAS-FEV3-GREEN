@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, Image, Input, Spinner, Text } from '@chakra-ui/react'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from "../../public/images/LuckyMyanmar.png"
 import httpClient from '../../http-client/httpClient'
 import { useTenancy } from '../../hook/TenancyProvider'
@@ -19,6 +19,8 @@ export default function Login () {
   const router = useRouter()
   const {t} = useTranslation()
 
+  
+
   const loginInputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setLoginForm({...loginForm, [name]: value });
@@ -36,6 +38,7 @@ export default function Login () {
         ...loginForm,
         TenancyName: tenancy?.tenancyName,
       });
+      // dispatch(accountAction.setCheckToken(data.result.token))
       if (data.error) {
         setIsError(data.error.message);
       } else {
@@ -61,25 +64,25 @@ export default function Login () {
                 <Image alt='logo' src={logo.src} minW={"160px"} maxW={"240px"} w={"40%"} mx={'auto'}/>
               </Link>
               <Heading as={"h5"} className='text_vip'
-                my={"0.8rem"} fontSize={"18px"} fontWeight={500} textAlign={'center'}>Login</Heading>
+                my={"0.8rem"} fontSize={"18px"} fontWeight={500} textAlign={'center'}>{t('login')}</Heading>
             </Box>
             <Box w={"100%"} px={"15px"} mb={"20px"}>
               <label htmlFor="user" className='text-vip'>
-                <Text className='text_vip' mb={"5px"}>Username</Text>
+                <Text className='text_vip' mb={"5px"}>{t('username')}</Text>
               </label>
-              <Input variant={"default"} id='user' name={"usernameOrEmailAddress"} placeholder=' Username #' fontSize={14} letterSpacing={"1px"}
+              <Input variant={"default"} id='user' name={"usernameOrEmailAddress"} placeholder={t('username') + " " + "#"} fontSize={14} letterSpacing={"1px"}
                 onChange={loginInputHandler}/>
             </Box>
             <Box w={"100%"} px={"15px"} mb={"20px"}>
               <label htmlFor="password" className='text-vip'>
-                <Text className='text_vip' mb={"5px"}>Password</Text>
+                <Text className='text_vip' mb={"5px"}>{t('password')}</Text>
               </label>
-              <Input variant={"default"} type='password' id='password' name={'password'} placeholder=' Password #' fontSize={14} letterSpacing={"1px"}
+              <Input variant={"default"} type='password' id='password' name={'password'} placeholder={t('password') + " " + "#"} fontSize={14} letterSpacing={"1px"}
                 onChange={loginInputHandler}/>
             </Box>
             <Box w={"100%"} px={"15px"} pt={"20px"}>
               <button className='login_btn' type={"submit"}>
-                {isLoading ? <Spinner/> : "LOGIN"}
+                {isLoading ? <Spinner/> : t('login')}
               </button>
             </Box>
             {isError && <Text textAlign={'center'} color={"global.error"} mt={"10px"}>{isError}</Text>}
@@ -87,7 +90,7 @@ export default function Login () {
         </Box>
         <Box>
           <Text textAlign={'center'} color={'#b7ffd2'} fontSize={"14px"} cursor={'pointer'}>
-            Forget Password
+            {t('forget_password')}
           </Text>
         </Box>
       </Box>

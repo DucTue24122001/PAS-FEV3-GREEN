@@ -108,7 +108,7 @@ const ChangePassword = () => {
       <Box px={"30px"} w={"100%"}>
         <Text fontSize={"20px"} fontWeight={500} color={"#caffe1"} textAlign={'center'} my={"10px"}
           pb={"20px"}>
-          Change Password
+          {t('change_password')}
         </Text>
         <Box maxW={"550px"} p={["0px","0px","10px 15px","10px 15px"]} mx={"auto"}>
           <form onSubmit={submitChangePass}>

@@ -15,6 +15,7 @@ export const accountSlice = createSlice({
       userName:"",
     },
     userListBanking: <Bank[]>[],
+    checkToken:null,
   },
   reducers: {
     setAccountDetail(state, action) {
@@ -25,6 +26,9 @@ export const accountSlice = createSlice({
     },
     addUserListBanking(state, action) {
       state.userListBanking = [...state.userListBanking, action.payload]
+    },
+    setCheckToken(state, action){
+      state.checkToken = action.payload
     }
   }
 })

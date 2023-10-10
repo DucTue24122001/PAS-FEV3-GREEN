@@ -54,7 +54,7 @@ const Navbar = () => {
         <Box cursor={'pointer'} onClick={() => router.push("/")}>
           <Image p={"5px 0"} h={"50px"} src={LuckyMyanmar.src} alt={"gift"} />
         </Box>
-        <Flex pos={"absolute"} right={0} mt={"5px"} gap={"12.5px"}>
+        <Flex onClick={() => router.push("/language")} pos={"absolute"} right={0} mt={"5px"} gap={"12.5px"}>
           <Image alt='en' src={langUkImg.src} sx={langImg}/>
           <Image alt='mm' src={langMmImg.src} sx={langImg}/>
         </Flex>
