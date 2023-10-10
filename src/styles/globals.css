@@ -43,6 +43,7 @@
   padding: 5px;
   height: 3rem;
   width: 100%;
+  outline: none;
 }
 
 .default_option {
@@ -56,15 +57,38 @@
   margin-right: auto;
   border: 1px solid #5554;
   border-collapse: collapse;
+  color: #fff;
 }
 
 .add_bank_table thead {
   border-bottom: 1px solid #d0d0d0;
-  color: #fff;
 }
 .add_bank_table th, .add_bank_table td {
   padding: 15px 5px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
+}
+
+.record_table {
+  margin-top: 20px;
+  width: 90%;
+  color: #fff;
+  border: 1px solid #5c9df9;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.record_table thead {
+  border-collapse: collapse;
+}
+
+.record_table th, .record_table td {
+  border: 1px solid #5c9df9;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 5px;
+  display: table-cell;
 }

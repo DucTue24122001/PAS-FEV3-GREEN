@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AccountDetail } from "../util/type";
+import { AccountDetail, Bank } from "../util/type";
 
 export const accountSlice = createSlice({
   name: "account",
@@ -13,11 +13,18 @@ export const accountSlice = createSlice({
       surName:"",
       userId:0,
       userName:"",
-    }
+    },
+    userListBanking: <Bank[]>[],
   },
   reducers: {
     setAccountDetail(state, action) {
       state.accountDetail = action.payload
+    },
+    setUserListBanking(state, action) {
+      state.userListBanking = action.payload
+    },
+    addUserListBanking(state, action) {
+      state.userListBanking = [...state.userListBanking, action.payload]
     }
   }
 })

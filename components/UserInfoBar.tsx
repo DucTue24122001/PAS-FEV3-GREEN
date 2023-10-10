@@ -11,27 +11,7 @@ import { convertDecimalNum } from '../util/function'
 
 const UserInfoBar = () => {
   const {accountDetail} = useSelector((state: RootState) => state.account)
-  const dispatch = useDispatch()
   const router = useRouter()
-  
-  useEffect(() => {
-    if(ClientService.isAuthenticated()) {
-      (async () => {
-        try {
-          const data: any = await httpClient.get("/Account/GetProfile")
-          console.log(data.result);
-          dispatch(accountAction.setAccountDetail(data.result))
-        } catch (err) {
-          console.log(err);
-        } finally {
-          
-        }
-      })()
-    } else {
-      router.push("/")
-    }
-  }, [])
-  
 
   return (
     <Flex w={"100%"}>

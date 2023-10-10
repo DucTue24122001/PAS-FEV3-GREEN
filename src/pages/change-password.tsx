@@ -113,27 +113,27 @@ const ChangePassword = () => {
         <Box maxW={"550px"} p={["0px","0px","10px 15px","10px 15px"]} mx={"auto"}>
           <form onSubmit={submitChangePass}>
             <Box w={"100%"} mb={"20px"}>
-              <label htmlFor="user" className='text-vip'>
+              <label htmlFor="old-pass" className='text-vip'>
                 <Text className='text_vip' mb={"5px"}>Old Password</Text>
               </label>
-              <Input variant={"default"} type='password' id='user' name={ChangePwEnum.OldPw} fontSize={14} letterSpacing={"1px"}
+              <Input variant={"default"} type='password' id='old-pass' name={ChangePwEnum.OldPw} fontSize={14} letterSpacing={"1px"}
                 value={passwordForm.oldPw}
                 onChange={changePassInputHandler}/>
               {error && <Text className='error'>{error}</Text>}
             </Box>
             <Box w={"100%"} mb={"20px"}>
-              <label htmlFor="user" className='text-vip'>
+              <label htmlFor="new-pass" className='text-vip'>
                 <Text className='text_vip' mb={"5px"}>New Password</Text>
               </label>
-              <Input variant={"default"} type='password' id='user' name={ChangePwEnum.NewPw} fontSize={14} letterSpacing={"1px"}
+              <Input variant={"default"} type='password' id='new-pass' name={ChangePwEnum.NewPw} fontSize={14} letterSpacing={"1px"}
                 value={passwordForm.newPw}
                 onChange={changePassInputHandler}/>
             </Box>
             <Box w={"100%"} mb={"20px"}>
-              <label htmlFor="user" className='text-vip'>
+              <label htmlFor="confirm-pass" className='text-vip'>
                 <Text className='text_vip' mb={"5px"}>Confirm New Password</Text>
               </label>
-              <Input variant={"default"} type='password' id='user' name={ChangePwEnum.ConfirmPw} fontSize={14} letterSpacing={"1px"}
+              <Input variant={"default"} type='password' id='confirm-pass' name={ChangePwEnum.ConfirmPw} fontSize={14} letterSpacing={"1px"}
                 value={passwordForm.confirmPw}
                 onChange={changePassInputHandler}/>
             </Box>

@@ -7,11 +7,33 @@ import { useRouter } from 'next/router'
 import { checkDisableLayoutPage } from '../../util/function'
 import { useTenancy } from '../../hook/TenancyProvider'
 import { useTranslation } from 'react-i18next'
+import ClientService from '../../http-client/ClientService'
+import httpClient from '../../http-client/httpClient'
+import { useDispatch } from 'react-redux'
+import { accountAction } from '../../redux/account-slice'
 
 const Navbar = () => {
   const router = useRouter()
   const tenancy = useTenancy()
   const {i18n} = useTranslation()
+  const dispatch = useDispatch()
+   
+  useEffect(() => {
+    if(ClientService.isAuthenticated()) {
+      (async () => {
+        try {
+          const data: any = await httpClient.get("/Account/GetProfile")
+          dispatch(accountAction.setAccountDetail(data.result))
+        } catch (err) {
+          console.log(err);
+        } finally {
+          
+        }
+      })()
+    } else {
+      router.push("/")
+    }
+  }, [])
 
   useEffect(() => {
     if(tenancy?.lang) {
