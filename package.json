@@ -20,6 +20,7 @@
     "next": "latest",
     "ni18n": "^1.1.0",
     "react": "latest",
+    "react-currency-input-field": "^3.6.11",
     "react-dom": "latest",
     "react-fast-marquee": "^1.6.1",
     "react-i18next": "^13.2.2",

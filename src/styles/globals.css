@@ -7,6 +7,9 @@
 .default_input {
   outline: none;
   background-color: #fff;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 10px;
 }
 
 .login_btn {

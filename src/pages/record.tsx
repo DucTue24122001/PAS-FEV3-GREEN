@@ -35,7 +35,7 @@ const Record = () => {
             <th>Status</th>
           </tr>
           <tr>
-
+            <Text fontSize={"14px"} p={"10px"} fontStyle={"italic"}>No record</Text>
           </tr>
         </thead>
       </table>

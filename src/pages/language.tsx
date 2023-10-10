@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 
 
 const languages = [
-    { code: "en", nameLocale: "English | ภาษาอังกฤษ", img:en.src },
-    { code: "my", nameLocale: "Myanmar | မြန်မာ", img:my.src },
+    { code: "EN", nameLocale: "English | ภาษาอังกฤษ", img:en.src },
+    { code: "MY", nameLocale: "Myanmar | မြန်မာ", img:my.src },
   ];
 const Language = () => {
     const { t, i18n } = useTranslation();

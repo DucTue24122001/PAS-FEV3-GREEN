@@ -18,6 +18,17 @@ export const checkIsTimeoutToken = (error: any, router: any) => {
   }
 };
 
+export function toNormalNum(x: string) {
+  return x.split(",").join("");
+}
+
+export function numberWithCommas(x: any) {
+  if (typeof x !== "undefined") {
+    return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  return "";
+}
+
 export const getBase64 = (file: any) => {
   return new Promise((resolve) => {
     let baseURL: any = "";
