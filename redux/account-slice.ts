@@ -4,6 +4,7 @@ import { AccountDetail, Bank, MailType } from "../util/type";
 export const accountSlice = createSlice({
   name: "account",
   initialState: {
+    token: "",
     accountDetail: <AccountDetail> {
       balance: 0,
       email: "",
@@ -25,8 +26,12 @@ export const accountSlice = createSlice({
     isFetchingMail: false,
     inboxMails: <MailType[]>[],
     currentMailRead: null,
+    categoryData:[]
   },
   reducers: {
+    setToken(state, action) {
+      state.token = action.payload
+    },
     setAccountDetail(state, action) {
       state.accountDetail = action.payload
     },
@@ -73,6 +78,9 @@ export const accountSlice = createSlice({
       }
       state.currentMailRead = currentMail;
     },
+    setCategoryData(state, action){
+      state.categoryData = action.payload
+    }
   }
 })
 
