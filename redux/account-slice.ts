@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AccountDetail, Bank } from "../util/type";
+import { AccountDetail, Bank, MailType } from "../util/type";
 
 export const accountSlice = createSlice({
   name: "account",
@@ -16,6 +16,15 @@ export const accountSlice = createSlice({
     },
     userListBanking: <Bank[]>[],
     checkToken:null,
+
+    //record
+    recordList: [],
+    isFetchingRecord: false,
+
+    //inbox
+    isFetchingMail: false,
+    inboxMails: <MailType[]>[],
+    currentMailRead: null,
   },
   reducers: {
     setAccountDetail(state, action) {
@@ -29,7 +38,41 @@ export const accountSlice = createSlice({
     },
     setCheckToken(state, action){
       state.checkToken = action.payload
-    }
+    },
+    //record
+    fetchingRecordHandler(state, action) {
+      state.isFetchingRecord = action.payload
+    },
+    setRecordList(state, action) {
+      state.recordList = action.payload
+    },
+
+    //inbox
+    fetchingMailStatus(state, action) {
+      state.isFetchingMail = action.payload;
+    },
+    setInboxMail(state, action) {
+      const allMail = action.payload;
+      if (allMail) {
+        const sortingMail = allMail.sort((a: any, b: any) => {
+          return Number(new Date(b.creationTime)) - Number(new Date(a.creationTime))
+        })
+        state.inboxMails = sortingMail
+      }
+    },
+    setCurrentMailRead(state, action) {
+      const currentMail = action.payload;
+
+      if (currentMail) {
+        state.inboxMails = state.inboxMails.map((mail: any) => {
+          if (mail.id === currentMail.id) {
+            return { ...mail, status: true };
+          }
+          return mail;
+        });
+      }
+      state.currentMailRead = currentMail;
+    },
   }
 })
 

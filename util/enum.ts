@@ -4,3 +4,12 @@ export enum PageEnum {
   PROFILE = "profile",
   LOGIN = "login"
 }
+
+export enum RecordStatusEnum {
+  ACCEPT = "ACCEPTED",
+  PENDING = "PENDING",
+  REJECT = "REJECTED",
+  DEPOSIT = "DEPOSIT",
+  WITHDRAW = "WITHDRAW",
+  PROMOTION = "PROMOTION",
+}

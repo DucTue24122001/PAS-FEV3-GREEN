@@ -1,13 +1,29 @@
 import { Box, Flex, Image } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
-import slide1 from "../../public/images/slide1.jpg"
-import slide2 from "../../public/images/slide2.jpg"
-import slide3 from "../../public/images/slide3.jpg"
-import slide4 from "../../public/images/slide4.jpg"
-import slide5 from "../../public/images/slide5.jpg"
+import httpClient from '../../http-client/httpClient'
+import { useTenancy } from '../../hook/TenancyProvider'
 
 const HomeSlider = () => {
+  const [slider, setSlider] = useState<ImgSlider[]>([])
+  const tenancy = useTenancy()
+  
+  useEffect(() => {
+    (async () => {
+      try {
+        const slider: any = await httpClient.post(
+          "/services/app/slider/GetAllSlider",
+          {
+            tenancyName: tenancy?.tenancyName,
+          }
+        );
+        setSlider(slider.result);
+      } catch (err) {
+        console.log(err);
+      }
+    })();
+}, [tenancy]);
+
   return (
     <Box>
       <Slider dots={true} infinite={true} slidesToScroll={1} slidesToShow={1} arrows={false} className='home-slider'
@@ -16,9 +32,9 @@ const HomeSlider = () => {
             {dots}
           </Box>
         )}>
-        {sliderDummy.map((item, i) => (
-          <Flex key={i} bgColor={"black"} >
-            <Image w={"100%"} h={"230px"} src={item.image} objectFit={"contain"} alt={"gift"} />
+        {slider.map((item, i) => (
+          <Flex key={i} bgColor={"black"} outline={"none"}>
+            <Image w={"100%"} h={"250px"} src={item.imageUrl} objectFit={"contain"} alt={item.title} />
           </Flex>
         ))}
       </Slider>
@@ -28,10 +44,11 @@ const HomeSlider = () => {
 
 export default HomeSlider
 
-const sliderDummy = [
-  {image:slide1.src},
-  {image:slide2.src},
-  {image:slide3.src},
-  {image:slide4.src},
-  {image:slide5.src},
-]
+type ImgSlider = {
+  category: string,
+  displayNumber: number,
+  id: number,
+  imageUrl: string,
+  imageUrlMobile: string,
+  title: string
+}

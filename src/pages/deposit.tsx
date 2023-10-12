@@ -5,7 +5,6 @@ import { checkIsTimeoutToken, getBase64, numberWithCommas, toNormalNum } from '.
 import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import { Bank } from '../../util/type'
-import {BsPaperclip} from "react-icons/bs"
 import CurrencyInput from 'react-currency-input-field'
 import FileInput from '../../components/deposit/FileInput'
 

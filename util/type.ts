@@ -32,3 +32,22 @@ export type Bank = {
   maximumWithdraw: number,
   minimumWithdraw: number,
 }
+
+export type MailType = {
+  body: string,
+  creationTime: string,
+  id: number,
+  receiverName: string,
+  senderName: string,
+  subject: string,
+  status: boolean,
+}
+
+export type AnnouncementType = {
+  body: string,
+  endTime: string,
+  startTime: string,
+  id: number,
+  title: string,
+  type: string,
+}

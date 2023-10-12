@@ -1,4 +1,4 @@
-import { PageEnum } from "./enum"
+import { PageEnum, RecordStatusEnum } from "./enum"
 
 export const checkDisableLayoutPage = (currentRouter: string) => {
   return currentRouter.includes(PageEnum.LOGIN)
@@ -45,4 +45,22 @@ export const getBase64 = (file: any) => {
       resolve(baseURL);
     };
   });
+};
+
+export const convertMoney = (num: string) => {
+  return num?.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+};
+
+export const checkStatusColor = (status: string) => {
+  const checkStatus = status.split("_")
+  switch (true) {
+    case checkStatus.some(status => (status === RecordStatusEnum.ACCEPT || status === RecordStatusEnum.PROMOTION || status === RecordStatusEnum.DEPOSIT)):
+      return "#36c96c";
+    case checkStatus.some(status => status === RecordStatusEnum.REJECT):
+      return "#ce4242";
+    case checkStatus.some(status => status === RecordStatusEnum.PENDING):
+      return "#aeaeae";
+    case checkStatus.some(status => status === RecordStatusEnum.WITHDRAW):
+      return "#ce4242";
+  }
 };

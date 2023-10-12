@@ -26,6 +26,10 @@ const Profile = () => {
             onClick={() => router.push("/change-password")}>
             {t("change_password")}
           </Box>
+          <Box sx={profileBtn}
+            onClick={() => router.push("/inbox")}>
+            {t("inbox")}
+          </Box>
           <Box sx={profileBtn} onClick={logoutHandler}>
             {t('logout')}
           </Box>
