@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import my from "../../public/images/lang2-myanmar.png"
 import en from "../../public/images/lang2-uk.png"
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { clientAction } from "../../redux/client-slice";
 
 
 const languages = [
@@ -11,9 +13,12 @@ const languages = [
   ];
 const Language = () => {
     const { t, i18n } = useTranslation();
+    const dispatch = useDispatch()
+
     const handleClickLanguage = (i18n:any ,code:any) => {
-        i18n.changeLanguage(code)
-        window.localStorage.setItem("MY_LANGUAGE", code);
+      dispatch(clientAction.setLanguage(code))
+      i18n.changeLanguage(code)
+      window.localStorage.setItem("MY_LANGUAGE", code);
     }
 
   return (

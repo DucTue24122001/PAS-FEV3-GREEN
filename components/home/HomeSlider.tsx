@@ -28,13 +28,13 @@ const HomeSlider = () => {
     <Box>
       <Slider dots={true} infinite={true} slidesToScroll={1} slidesToShow={1} arrows={false} className='home-slider'
         appendDots={(dots) => (
-          <Box pos={"absolute"} top={"80%"}>
+          <Box pos={"absolute"} top={["70%","70%","85%","85%"]}>
             {dots}
           </Box>
         )}>
         {slider.map((item, i) => (
           <Flex key={i} bgColor={"black"} outline={"none"}>
-            <Image w={"100%"} h={"250px"} src={item.imageUrl} objectFit={"contain"} alt={item.title} />
+            <Image w={"100%"} maxH={"250px"} src={item.imageUrl} objectFit={"contain"} alt={item.title} />
           </Flex>
         ))}
       </Slider>

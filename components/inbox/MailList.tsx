@@ -7,6 +7,7 @@ import { accountAction } from '../../redux/account-slice'
 import httpClient from '../../http-client/httpClient'
 import moment from 'moment'
 import { IoMailOpenSharp, IoMailSharp } from 'react-icons/io5'
+import MailDetailModal from './MailDetailModal'
 
 const MailList = () => {
   const {isFetchingMail, inboxMails} = useSelector((state: RootState) => state.account)
@@ -19,6 +20,7 @@ const MailList = () => {
 
   const onMailRead = async (mail: any) => {
     dispatch(accountAction.setCurrentMailRead(mail))
+    dispatch(accountAction.setShowMailModal(true))
     if(mail.status) return
     try {
         await httpClient.post("/services/app/notification/IsReadNoti", null, {
@@ -35,16 +37,16 @@ const MailList = () => {
 
   return (
   <>
-    <Flex flexDir={'column'} cursor={'pointer'} className='text_vip'>
-      {!isFetchingMail ? inboxMailPagination.map((mail: any, i: number) => (
+    <Flex flexDir={'column'} className='text_vip'>
+      {!isFetchingMail ? inboxMailPagination.map((mail, i: number) => (
       <Box key={mail.id} borderBottom={`1px solid #c6c6c6`} bgColor={"#1f7544"}
-        py={"20px"} px={2} onClick={() => onMailRead(mail)} >
+        py={"20px"} cursor={'pointer'} px={2} onClick={() => onMailRead(mail)} >
           <Flex justifyContent={"space-between"} mb={"5px"}>
           <Text fontWeight={"bold"}><span>{!mail.status ? <IoMailSharp style={{fontSize: "20px"}}/> : <IoMailOpenSharp style={{fontSize: "20px"}}/>}</span>{mail.subject}</Text>
           <Text>{moment(new Date(mail.creationTime)).format("YYYY/MM/DD")}</Text>
         </Flex>
         <Text>{mail.body}</Text>
-      </Box>)) : <Spinner textAlign={'center'}/>}
+      </Box>)) : <Spinner />}
     </Flex>
     <Flex justifyContent={'center'}>
       <Pagination
@@ -54,6 +56,7 @@ const MailList = () => {
         siblingCount={1}
         onPageChange={onPageChange}/>
     </Flex>
+    <MailDetailModal/>
   </>
   )
 }

@@ -18,7 +18,6 @@ const Marque = () => {
             tenancyName: tenancy?.tenancyName,
           }
         );
-        console.log(announce.result);
         setAnnounce(announce.result);
       } catch (err) {
         console.log(err);

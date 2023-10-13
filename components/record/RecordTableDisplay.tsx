@@ -48,12 +48,12 @@ const RecordTableDisplay = ({currentPage}: PropsType) => {
     <DefaultTable
           thead={
             <Tr>
-              <Th>S.No</Th>
-              <Th>{t('date_time')}</Th>
-              <Th>{t('code')}</Th>
-              <Th>{t('type')}</Th>
-              <Th>{t('status')}</Th>
-              <Th textAlign={"center"}>{t('amount')}</Th>
+              <Th color={'white'}>S.No</Th>
+              <Th color={'white'}>{t('date_time')}</Th>
+              <Th color={'white'}>{t('code')}</Th>
+              <Th color={'white'}>{t('type')}</Th>
+              <Th color={'white'}>{t('status')}</Th>
+              <Th textAlign={"center"} color={'white'}>{t('amount')}</Th>
             </Tr>
           }
           tbody={!isFetchingRecord ? recordList.map((record: any, i: number) => (

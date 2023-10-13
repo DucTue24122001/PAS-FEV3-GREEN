@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { LoginShowEnum, PoliciesEnum, PromoEnum, PromotionDetailEnum } from "../components/constants/enum";
+import { LoginShowEnum, PoliciesEnum, PromotionDetailEnum } from "../components/constants/enum";
 import { AnnounceType, PromotionDetail, PromotionType, SliderType } from "../components/constants/type";
 
 
@@ -10,7 +10,8 @@ export const clientSlice = createSlice({
         isShowLoginModal: false,
         currentSectionShow: <LoginShowEnum>"",
         isShowLanguageModal:false,
-        language: "en",
+        languageList: <string[]>[],
+        language: "EN",
         //slider
         slider: <SliderType[]>[],
         //anouncement
@@ -29,6 +30,13 @@ export const clientSlice = createSlice({
         currentMaxBonus: <number>0,
     },
     reducers: {
+        setLanguageList(state, action) {
+            state.languageList = action.payload
+        },
+        setLanguage(state, action) {
+            state.language = action.payload
+        },
+
         setTenancy(state, action) {
             state.tenancy = action.payload
         },

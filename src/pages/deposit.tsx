@@ -183,7 +183,7 @@ const Deposit = () => {
           <Text color={"white"}  lineHeight={"20px"} fontSize={"16px"}>
             {t('account_number')}: <span>{currentAgentBankSelect?.accountNumber}</span>
           </Text>
-          <Image alt='qr' src={currentAgentBankSelect?.imageUrl} boxSize={"200px"}/>
+          {currentAgentBankSelect?.imageUrl && <Image alt='qr' src={currentAgentBankSelect?.imageUrl} boxSize={"200px"}/>}
         </Flex>}
         <Box mb={"30px"}>
           <Text className='text_vip' mb={"5px"} fontSize={14}>{t('select_bank')}</Text>

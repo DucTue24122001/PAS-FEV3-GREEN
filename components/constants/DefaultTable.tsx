@@ -13,7 +13,7 @@ const DefaultTable = ({tbody, thead, ...props}: TablePropsType) => {
             <Thead bgColor={"bg"}>
                 {thead}
             </Thead>
-            <Tbody fontSize={"14px"}>
+            <Tbody fontSize={"14px"} className='text_vip'>
                 {tbody}
             </Tbody>
           </Table>

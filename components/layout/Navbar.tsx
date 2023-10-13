@@ -1,5 +1,5 @@
 import { Box, Flex, Image } from '@chakra-ui/react'
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import LuckyMyanmar from "../../public/images/LuckyMyanmar.png"
 import langUkImg from "../../public/images/lang2-uk.png"
 import langMmImg from "../../public/images/lang2-myanmar.png"
@@ -9,10 +9,13 @@ import { useTenancy } from '../../hook/TenancyProvider'
 import { useTranslation } from 'react-i18next'
 import ClientService from '../../http-client/ClientService'
 import httpClient from '../../http-client/httpClient'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { accountAction } from '../../redux/account-slice'
+import { clientAction } from '../../redux/client-slice'
+import { RootState } from '../../redux/store'
 
 const Navbar = () => {
+  const {language} = useSelector((state: RootState) => state.client)
   const router = useRouter()
   const tenancy = useTenancy()
   const {i18n} = useTranslation()
@@ -38,15 +41,31 @@ const Navbar = () => {
   useEffect(() => {
     if(tenancy?.lang) {
       const langList = tenancy.lang.split(",");
+      dispatch(clientAction.setLanguageList(langList))
       const currentLang = window.localStorage.getItem("MY_LANGUAGE");
       if (!currentLang) {
         const primaryLang = langList.find((lang) => lang !== "EN")
+        dispatch(clientAction.setLanguage(primaryLang));
         i18n.changeLanguage(primaryLang);
       } else {
+        dispatch(clientAction.setLanguage(currentLang));
         i18n.changeLanguage(currentLang);
       }
+    } else {
+      i18n.changeLanguage("EN");
     }
   }, [tenancy])
+
+  const currentLangImg = useMemo(() => {
+    switch (true) {
+      case language === "EN":
+        return langUkImg.src
+      case language === "MY":
+        return langMmImg.src
+      default:
+        return langUkImg.src
+    }
+  }, [language])
 
   return (
     <Flex w={"100%"} minH={"50px"} boxShadow={"0 1px 1px #20ad59aa"} justifyContent={"space-around"} pos={"sticky"} top={0}
@@ -54,9 +73,8 @@ const Navbar = () => {
         <Box cursor={'pointer'} onClick={() => router.push("/")}>
           <Image p={"5px 0"} h={"50px"} src={LuckyMyanmar.src} alt={"gift"} />
         </Box>
-        <Flex onClick={() => router.push("/language")} pos={"absolute"} right={0} mt={"5px"} gap={"12.5px"}>
-          <Image alt='en' src={langUkImg.src} sx={langImg}/>
-          <Image alt='mm' src={langMmImg.src} sx={langImg}/>
+        <Flex onClick={() => router.push("/language")} pos={"absolute"} right={"10px"} mt={"5px"} gap={"12.5px"}>
+          <Image alt='language' src={currentLangImg} sx={langImg}/>
         </Flex>
     </Flex>
   )
