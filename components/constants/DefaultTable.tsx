@@ -1,14 +1,19 @@
 import { Table, TableContainer, Tbody, Thead } from '@chakra-ui/react'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-const DefaultTable = ({tbody, thead, ...props}: any) => {
+type TablePropsType = {
+  tbody: ReactNode,
+  thead: ReactNode,
+}
+
+const DefaultTable = ({tbody, thead, ...props}: TablePropsType) => {
   return (
-    <TableContainer border={`1px solid #c6c6c6`} whiteSpace={'nowrap'} overflowX={'auto'} maxW={"100%"} borderRadius={5} {...props}>
-          <Table bgColor={"#1f7544"}>
-            <Thead bgColor={"#f2f5f9"}>
+    <TableContainer border={`1px solid #c6c6c6`} whiteSpace={'nowrap'} overflowX={'auto'} borderRadius={5} {...props}>
+          <Table>
+            <Thead bgColor={"bg"}>
                 {thead}
             </Thead>
-            <Tbody fontSize={"14px"} className='text_vip'>
+            <Tbody fontSize={"14px"}>
                 {tbody}
             </Tbody>
           </Table>
