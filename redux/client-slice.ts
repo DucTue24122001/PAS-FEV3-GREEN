@@ -43,6 +43,9 @@ export const clientSlice = createSlice({
         handleShowPromoModal(state, action) {
             state.isShowPromoModal = action.payload
         },
+        handleShowLoginModal(state,action){
+            state.isShowLoginModal = action.payload
+        },
         setCurrentPromo(state, action) {
             const currentPromotion = action.payload
             state.currentPromo = currentPromotion
