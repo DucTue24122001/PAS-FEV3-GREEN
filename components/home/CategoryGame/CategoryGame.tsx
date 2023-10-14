@@ -31,7 +31,9 @@ const CategoryGame = () => {
     setPos(i);
     setGametype(gametype)
     localStorage.setItem("NAV_NAME", gametype)
+    router.push(`/category/${gametype}`)
   };
+  
   
   useEffect(() => {
     (async () => {
@@ -136,28 +138,7 @@ const CategoryGame = () => {
       }
     }
   }
-  const checkCategory = () => { 
-    switch (gametype) {
-      case "LIVEARENA":
-        return false;
-      case "LIVE":
-        return false;
-      case "SPORTS":
-        return false;
-      case "LOTTERY":
-        return false;
-      case "FH":
-        return true;
-      case "SLOT":
-        return true;
-      case "ARCADE":
-        return true;
-      case "RNGTABLE":
-        return true;
-      default:
-        return <></>;
-    }
-  };
+  
   
 
   
@@ -173,7 +154,7 @@ const CategoryGame = () => {
             alignItems={"center"}
             flexDir={"column"}
             bg={
-              pos !== i
+              router !== item.game_type
                 ? "linear-gradient(180deg, #061b10 25%, #00110a 65%, #000000);"
                 : "linear-gradient(180deg, #0b2d1b 25%, #012616 65%, #000802)"
             }
@@ -181,7 +162,7 @@ const CategoryGame = () => {
             display={"inline-block"}
             textAlign={"center"}
             cursor={"pointer"}
-            border={pos !== i ? "1px solid #03110a" : "1px solid #0a502b"}
+            border={router !== item.game_type ? "1px solid #03110a" : "1px solid #0a502b"}
             transition={"all 0.3 ease-out"}
             onClick={() => handleClickCategory(i, item.game_type)}
           >
@@ -202,7 +183,7 @@ const CategoryGame = () => {
         ))}
       </Grid>
       </Flex>
-      {checkCategory() !== true ? <GameLive gametype={gametype} /> : <GameType gametype={gametype}/> }
+      {/* {checkCategory() !== true ? <GameLive gametype={gametype} /> : <GameType gametype={gametype}/> } */}
     </Flex>
   );
 };

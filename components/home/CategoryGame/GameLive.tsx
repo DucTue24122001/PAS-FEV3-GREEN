@@ -4,10 +4,11 @@ import httpClient from "../../../http-client/httpClient";
 import { Box, Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
-const GameLive = ({ gametype }: any) => {
+const GameLive = () => {
   const tenancy = useTenancy();
   const [data, setData] = useState([]);
   const router = useRouter();
+  const gametype:any = router.query.page
 
   useEffect(() => {
     (async () => {
@@ -41,7 +42,7 @@ const GameLive = ({ gametype }: any) => {
     }
   };
   return (
-    <Flex justifyContent={"center"} px={[2, 2, 2, 0]} pb={20} pt={5}>
+    <Flex justifyContent={"center"} alignItems={"center"} px={[2, 2, 2, 0]} pb={20} pt={5}>
       <Grid
         mt={5}
         mb={5}

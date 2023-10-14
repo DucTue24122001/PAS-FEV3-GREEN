@@ -6,7 +6,7 @@ import { useTenancy } from "../../../hook/TenancyProvider";
 import httpClient from "../../../http-client/httpClient";
 import { useRouter } from "next/router";
 
-const GameType = ({ gametype }: any) => {
+const GameType = () => {
   const { categoryData }: any = useSelector(
     (state: RootState) => state.account
   );
@@ -14,6 +14,7 @@ const GameType = ({ gametype }: any) => {
   const [isPlatform, setIsPlatform] = useState();
   const tenancy = useTenancy();
   const router = useRouter()
+  const gametype:any = router.query.page
 
   const findGameType = categoryData?.gameType?.find(
     (item: any) => item?.game_type === gametype
@@ -35,7 +36,7 @@ const GameType = ({ gametype }: any) => {
   };
 
   return (
-    <Flex justifyContent={"center"} w={"1024px"} pb={20} pt={5}>
+    <Flex justifyContent={"center"} alignItems={"center"} w={"1024px"} pb={20} pt={5}>
       <Grid
         mt={2}
         mb={5}

@@ -17,6 +17,7 @@ export const accountSlice = createSlice({
     },
     userListBanking: <Bank[]>[],
     checkToken:null,
+    //category
     categoryData:[],
     
     //record
