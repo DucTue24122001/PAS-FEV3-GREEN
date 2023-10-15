@@ -1,13 +1,10 @@
-import { Box, Flex, Link } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
 import UserInfoBar from "../UserInfoBar";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 
 const Login = () => {
-  const { checkToken } = useSelector((state: RootState) => state.account);
   const [token, setToken] = useState<any>(null)
   const router = useRouter()
   const {t} = useTranslation()
@@ -21,6 +18,7 @@ const Login = () => {
     <>
       {token === null ? (
           <Flex
+            zIndex={100}
             justifyContent={"center"}
             textTransform={"uppercase"}
             cursor={"pointer"}

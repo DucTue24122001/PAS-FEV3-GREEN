@@ -28,7 +28,7 @@ const HomeSlider = () => {
     <Box>
       <Slider dots={true} infinite={true} slidesToScroll={1} slidesToShow={1} arrows={false} className='home-slider'
         appendDots={(dots) => (
-          <Box pos={"absolute"} top={["70%","70%","85%","85%"]}>
+          <Box pos={"absolute"} top={["70%","70%","85%","85%"]} h={'10px'}>
             {dots}
           </Box>
         )}>
