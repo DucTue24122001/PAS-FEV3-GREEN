@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { Bank } from '../../util/type'
 import CurrencyInput from 'react-currency-input-field'
 import FileInput from '../../components/deposit/FileInput'
+import { DepositType } from '../../util/enum'
 
 const Deposit = () => {
   const [isFetching, setIsFetching] = useState(false)
@@ -110,6 +111,8 @@ const Deposit = () => {
     try {
       const res: any = await httpClient.post("/services/app/bankTransaction/AddBankTransaction", {
         type: "DEPOSIT",
+        paymentCategory: DepositType.NetBanking,
+        principalAmount: toNormalNum(depositAmount),
         amount: toNormalNum(depositAmount),
         agentBankName: currentAgentBankSelect?.bankName,
         agentBankShortName: currentAgentBankSelect?.bankShortName,

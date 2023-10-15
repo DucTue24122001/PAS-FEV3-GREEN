@@ -13,3 +13,8 @@ export enum RecordStatusEnum {
   WITHDRAW = "WITHDRAW",
   PROMOTION = "PROMOTION",
 }
+
+export enum DepositType {
+  NetBanking = "NET_BANKING",
+  Crypto = "CRYPTO",
+}
