@@ -11,7 +11,6 @@ const GameHotHome = () => {
     (state: RootState) => state.account
   );
   const router = useRouter();
-  console.log(categoryData);
 
   const handleClickUrl = async (platform: any, gamecode: any) => {
     const token = localStorage.getItem("token");
