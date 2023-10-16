@@ -39,17 +39,17 @@ const Page = () => {
 
   return (
     <>
-      <Flex flexDir={"column"} >
+      <Flex flexDir={"column"}>
         <HomeSlider />
         <Login />
         <Marque />
         <CategoryGame />
-        <Flex justifyContent={"center"} alignItems={"center"}>
+        <Flex >
 
         {checkCategory() !== true ? (
-          <GameLive  />
+          <GameLive/>
         ) : (
-          <GameType  />
+          <GameType/>
         )}
         </Flex>
       </Flex>
