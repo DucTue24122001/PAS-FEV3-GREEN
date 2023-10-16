@@ -56,8 +56,8 @@ const CategoryGame = () => {
       case "SPORTS": {
         return (
           <SportIcon
-            width="100"
-            height="88"
+            width={["20","50","50","100"]}
+            height={["44","88","88","88"]}
             viewBox="0 0 32 32"
             fill={"#44e42e"}
           />
@@ -66,8 +66,8 @@ const CategoryGame = () => {
       case "LIVE": {
         return (
           <CasinoIcon
-            width="100"
-            height="88"
+          width={["20","50","50","100"]}
+          height={["44","88","88","88"]}
             viewBox="0 0 32 32"
             fill={"#44e42e"}
           />
@@ -76,8 +76,8 @@ const CategoryGame = () => {
       case "SLOT": {
         return (
           <SlotIcon
-            width="100"
-            height="88"
+          width={["20","50","50","100"]}
+          height={["44","88","88","88"]}
             viewBox="0 0 32 32"
             fill={"#44e42e"}
           />
@@ -86,8 +86,8 @@ const CategoryGame = () => {
       case "FH": {
         return (
           <FishingIcon
-            width="100"
-            height="88"
+          width={["20","50","50","100"]}
+          height={["44","88","88","88"]}
             viewBox="0 0 32 32"
             fill={"#44e42e"}
           />
@@ -96,8 +96,8 @@ const CategoryGame = () => {
       case "LOTTERY": {
         return (
           <LotteryIcon
-            width="100"
-            height="88"
+          width={["20","50","50","100"]}
+          height={["44","88","88","88"]}
             viewBox="0 0 32 32"
             fill={"#44e42e"}
           />
@@ -106,8 +106,8 @@ const CategoryGame = () => {
       case "ARCADE": {
         return (
           <ArcadeIcon
-            width="100"
-            height="88"
+          width={["20","50","50","100"]}
+          height={["44","88","88","88"]}
             viewBox="0 0 32 32"
             fill={"#44e42e"}
           />
@@ -116,8 +116,8 @@ const CategoryGame = () => {
       case "RNGTABLE": {
         return (
           <TableIcon
-            width="100"
-            height="88"
+          width={["20","50","50","100"]}
+          height={["44","88","88","88"]}
             viewBox="0 0 32 32"
             fill={"#44e42e"}
           />
@@ -126,8 +126,8 @@ const CategoryGame = () => {
       case "LIVEARENA": {
         return (
           <Livearena
-            width="100"
-            height="88"
+          width={["20","20","20","100"]}
+            height={["44","44","44","88"]}
             viewBox="0 0 32 32"
             fill={"#44e42e"}
           />
@@ -146,7 +146,7 @@ const CategoryGame = () => {
     <Flex w={"100%"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} >
       <Flex w={"100%"} justifyContent={"center"} alignItems={"center"} bg={"linear-gradient(180deg, #061b10 25%, #00110a 65%, #000000);"}>
 
-      <Grid w={"1024px"} templateColumns={"repeat(8, 1fr)"} gap={0}>
+      <Grid w={"1024px"} templateColumns={"repeat(8, 1fr)"} overflowX={["scroll","scroll","scroll","unset"]} gap={0}>
         {categoryData?.gameType?.map((item: any, i: any) => (
           <Flex
             key={i}
@@ -154,7 +154,7 @@ const CategoryGame = () => {
             alignItems={"center"}
             flexDir={"column"}
             bg={
-              router !== item.game_type
+              router.query.page !== item.game_type
                 ? "linear-gradient(180deg, #061b10 25%, #00110a 65%, #000000);"
                 : "linear-gradient(180deg, #0b2d1b 25%, #012616 65%, #000802)"
             }
@@ -165,8 +165,11 @@ const CategoryGame = () => {
             border={router !== item.game_type ? "1px solid #03110a" : "1px solid #0a502b"}
             transition={"all 0.3 ease-out"}
             onClick={() => handleClickCategory(i, item.game_type)}
+            w={["80px","100px","100px","auto"]}
           >
-            <Flex justifyContent={"center"}>
+            <Flex justifyContent={"center"} alignItems={"center"} 
+              p={"20px 20px"}
+            >
               {getIconFromGameType(item.game_type)}
             </Flex>
             <Text

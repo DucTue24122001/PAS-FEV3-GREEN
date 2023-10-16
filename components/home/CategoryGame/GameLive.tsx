@@ -42,13 +42,13 @@ const GameLive = () => {
     }
   };
   return (
-    <Flex justifyContent={"center"} alignItems={"center"} px={[2, 2, 2, 0]} pb={20} pt={5}>
+    <Flex justifyContent={"center"} alignItems={"center"} px={[2, 2, 2, 0]} pb={20} pt={5} w={"100%"}>
       <Grid
         mt={5}
         mb={5}
         templateColumns={[
-          "repeat(2, 1fr)",
-          "repeat(2, 1fr)",
+          "repeat(3, 1fr)",
+          "repeat(3, 1fr)",
           "repeat(4, 1fr)",
           "repeat(4, 1fr)",
         ]}

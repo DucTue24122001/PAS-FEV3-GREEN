@@ -21,19 +21,13 @@ const GameType = () => {
     (item: any) => item?.game_type === gametype
   );
 
-  console.log(isPlatform);
-
-  console.log(findGameType);
-
-  console.log(isData);
-
   const handleClick = async (platform: any) => {
     router.push(`/category/${gametype}?platform=${platform}`);
     try {
       const res: any = await httpClient.post(`/MPS/ByGameTypeAndPlatform`, {
         platform: platform,
         gametype: gametype,
-        status: "HOT",
+        status: "",
         tenancyName: tenancy?.tenancyName,
       });
       setIsData(res?.result);
@@ -45,26 +39,26 @@ const GameType = () => {
 
   return (
     <Flex
+      w={"100%"}
       justifyContent={"center"}
       alignItems={"center"}
-      w={"1024px"}
       pb={20}
       pt={5}
     >
-      <Grid
-        mt={2}
-        mb={5}
-        templateColumns={[
-          "repeat(2, 1fr)",
-          "repeat(2, 1fr)",
-          "repeat(4, 1fr)",
-          "repeat(4, 1fr)",
-        ]}
-        gap={["15px 10px", 3, 3, 5]}
-      >
-        {router.query.platform !== undefined ? (
-          <GameTypeItem />
-        ) : (
+      {router.query.platform !== undefined ? (
+          <GameTypeItem isData={isData} findGameType={findGameType} />
+      ) : (
+        <Grid
+          mt={2}
+          mb={5}
+          templateColumns={[
+            "repeat(3, 1fr)",
+            "repeat(3, 1fr)",
+            "repeat(4, 1fr)",
+            "repeat(4, 1fr)",
+          ]}
+          gap={["15px 10px", 3, 3, 5]}
+        >
           <>
             {findGameType?.platforms.map((platform: any, i: number) => (
               <Box
@@ -100,8 +94,8 @@ const GameType = () => {
               </Box>
             ))}
           </>
-        )}
-      </Grid>
+        </Grid>
+      )}
     </Flex>
   );
 };
