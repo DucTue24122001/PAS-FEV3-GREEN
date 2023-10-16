@@ -289,7 +289,6 @@ const GameTypeItem = ({ data, findGameType }: any) => {
         justifyContent={"center"}
         alignItems={"center"}
         px={[2, 2, 2, 0]}
-        pb={20}
         pt={5}
         maxW={"1024px"}
       >
