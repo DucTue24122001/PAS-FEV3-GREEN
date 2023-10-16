@@ -2,7 +2,8 @@ export enum PageEnum {
   PROMOTION = "promo",
   CONTACT = "contact",
   PROFILE = "profile",
-  LOGIN = "login"
+  LOGIN = "login",
+  REGISTER = "register",
 }
 
 export enum RecordStatusEnum {

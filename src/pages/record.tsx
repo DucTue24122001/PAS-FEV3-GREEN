@@ -68,13 +68,13 @@ const Record = () => {
   }
 
   return (
-    <Box borderBottom={"1px dotted #caffe1"} mb={"50px"} overflow={"auto"}>
+    <Box minH={"100vh"} overflow={"auto"}>
       <Box className='layout'>
         <Box maxW={"550px"} p={"10px 15px"} mx={"auto"}>
           <Box mt={"20px"} >
             <Text pb={"12.7px"} alignItems={'center'}
               color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
-              RECORD
+              RECORDS
             </Text>
           </Box>
           <Box mb={"30px"}>

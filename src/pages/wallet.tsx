@@ -35,7 +35,7 @@ const Wallet = () => {
             {t("withdraw")}
           </Box>
           <Box sx={profileBtn} onClick={() => navigateHandler("/record")}>
-            {t("transaction_record")}
+            {t("records")}
           </Box>
           <Box sx={profileBtn} onClick={() => navigateHandler("/add-bank")}>
             {t("bank_account")}

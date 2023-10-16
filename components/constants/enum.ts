@@ -69,10 +69,11 @@ export enum PromoEnum {
   WELCOME = "WELCOME_BONUS",
   DEPOSIT = "DEPOSIT",
   REWARD = "REWARD",
+  REBATE = "REBATE",
 }
-
 export enum StatusPromotion {
   NOTACTIVE = "",
+  COMPLETED = "COMPLETED",
   ACCEPTED = "ACCEPTED",
   PENDING = "PENDING",
 }

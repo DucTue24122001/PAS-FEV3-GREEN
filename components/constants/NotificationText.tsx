@@ -3,7 +3,7 @@ import React from 'react'
 
 export const ErrorText = ({children, ...props}: any) => {
   return (
-    <Text color={"error"} fontSize={"sm"} {...props}>{children}</Text>
+    <Text color={"global.error"} fontSize={"sm"} {...props}>{children}</Text>
   )
 }
 export const SuccessfulText = ({children, ...props}: any) => {

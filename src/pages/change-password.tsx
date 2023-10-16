@@ -105,7 +105,7 @@ const ChangePassword = () => {
   return (
     <>
       <UserInfoBar/>
-      <Box px={"30px"} w={"100%"}>
+      <Box px={"30px"} w={"100%"} pb={"80px"}>
         <Text fontSize={"20px"} fontWeight={500} color={"#caffe1"} textAlign={'center'} my={"10px"}
           pb={"20px"}>
           {t('change_password')}

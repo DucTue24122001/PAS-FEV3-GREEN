@@ -1,7 +1,7 @@
 import { PageEnum, RecordStatusEnum } from "./enum"
 
 export const checkDisableLayoutPage = (currentRouter: string) => {
-  return currentRouter.includes(PageEnum.LOGIN)
+  return currentRouter.includes(PageEnum.LOGIN) || currentRouter.includes(PageEnum.REGISTER)
 }
 
 export const convertDecimalNum = (num: number) => {

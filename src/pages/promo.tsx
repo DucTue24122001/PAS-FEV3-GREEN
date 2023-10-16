@@ -1,16 +1,14 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import pro1 from "../../public/images/pro1.jpg";
-import pro2 from "../../public/images/pro2.jpg";
-import pro3 from "../../public/images/pro3.jpg";
-import pro4 from "../../public/images/pro4.jpg";
 import httpClient from "../../http-client/httpClient";
 import { useTenancy } from "../../hook/TenancyProvider";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { clientAction } from "../../redux/client-slice";
 import PromotionModal from "../../components/promotion/PromotionModal";
+import { RootState } from "../../redux/store";
 
 const Promotion = () => {
+  const {promotionCheck} = useSelector((state: RootState) => state.client)
   const [data, setData] = useState<any>(null);
   const tenancy = useTenancy();
   const dispatch = useDispatch()
@@ -31,14 +29,14 @@ const Promotion = () => {
         console.log(error);
       }
     })();
-  }, []);
+  }, [promotionCheck]);
   const selectPromo = (item: any) => {
     dispatch(clientAction.handleShowPromoModal(true))
     dispatch(clientAction.setCurrentPromo(item))
   }
 
   return (
-    <Flex justifyContent={"center"} alignItems={"center"} w={"100%"}>
+    <Flex justifyContent={"center"} alignItems={"center"} w={"100%"} overflow={"clip"}>
       <Flex w={"820px"} flexDir={"column"} pb={20}>
         {data?.map((item: any, i: any) => (
           <Flex
@@ -74,26 +72,3 @@ const Promotion = () => {
 };
 
 export default Promotion;
-
-const proDummy = [
-  {
-    img: pro1.src,
-    title: "150% WELCOME BONUS",
-    des: "Get 150% welcome bonus of up to $100 when you top up!",
-  },
-  {
-    img: pro2.src,
-    title: "DEPOSIT 5 FREE 8",
-    des: "Deposit $5 and get extra $8 for free all day long!",
-  },
-  {
-    img: pro3.src,
-    title: "150% WELCOME BONUS",
-    des: "Get 150% welcome bonus of up to $100 when you top up!",
-  },
-  {
-    img: pro4.src,
-    title: "150% WELCOME BONUS",
-    des: "Get 150% welcome bonus of up to $100 when you top up!",
-  },
-];

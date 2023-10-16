@@ -20,12 +20,12 @@ const RecordTableDisplay = ({currentPage}: PropsType) => {
     return (
       <DefaultTable thead={
             <Tr>
-              <Th>{t('no')}</Th>
-              <Th>{t('date_time')}</Th>
-              <Th>{t('code')}</Th>
-              <Th>{t('type')}</Th>
-              <Th>{t('status')}</Th>
-              <Th textAlign={"center"}>{t('amount')}</Th>
+              <Th color={"white"}>{t('no')}</Th>
+              <Th color={"white"} >{t('date_time')}</Th>
+              <Th color={"white"}>{t('code')}</Th>
+              <Th color={"white"}>{t('type')}</Th>
+              <Th color={"white"}>{t('status')}</Th>
+              <Th color={"white"} textAlign={"center"}>{t('amount')}</Th>
             </Tr>}
             tbody={
               !isFetchingRecord ? 

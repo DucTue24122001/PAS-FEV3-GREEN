@@ -55,7 +55,7 @@ const mobileMenuItems = [
 		icon: promoIco.src,
 		title: "promotion",
 		src: "/promo",
-		needAuth: true,
+		needAuth: false,
 	},
 	{
 		icon: walletIco.src,
@@ -71,7 +71,7 @@ const mobileMenuItems = [
 	},
 	{
 		icon: userIco.src,
-		title: "more",
+		title: "profile",
 		src: "/profile",
 		needAuth: true,
 	},

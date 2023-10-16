@@ -15,6 +15,7 @@ export const accountSlice = createSlice({
       userName:"",
     },
     userListBanking: <Bank[]>[],
+    token: "",
     //category
     categoryData:[],
     
@@ -29,6 +30,9 @@ export const accountSlice = createSlice({
     currentMailRead: <MailType>{},
   },
   reducers: {
+    setToken(state, action) {
+      state.token = action.payload
+    },
     setAccountDetail(state, action) {
       state.accountDetail = action.payload
     },

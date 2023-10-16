@@ -6,7 +6,6 @@ import { AnnounceType, PromotionDetail, PromotionType, SliderType } from "../com
 export const clientSlice = createSlice({
     name: "client",
     initialState: {
-        tenancy: <Tenancy>{},
         isShowLoginModal: false,
         currentSectionShow: <LoginShowEnum>"",
         isShowLanguageModal:false,
@@ -35,10 +34,6 @@ export const clientSlice = createSlice({
         },
         setLanguage(state, action) {
             state.language = action.payload
-        },
-
-        setTenancy(state, action) {
-            state.tenancy = action.payload
         },
         handleShowPromoModal(state, action) {
             state.isShowPromoModal = action.payload
@@ -82,15 +77,3 @@ export const clientSlice = createSlice({
 })
 
 export const clientAction = clientSlice.actions
-type Tenancy = {
-    appName: string,
-    areaCode: string,
-    currency: string,
-    id: number,
-    logo: string,
-    mainColor: string,
-    name: string,
-    tenancyName: string
-}
-
-

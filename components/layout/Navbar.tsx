@@ -16,6 +16,7 @@ import { RootState } from '../../redux/store'
 
 const Navbar = () => {
   const {language} = useSelector((state: RootState) => state.client)
+  const {token} = useSelector((state: RootState) => state.account)
   const router = useRouter()
   const tenancy = useTenancy()
   const {i18n} = useTranslation()
@@ -33,10 +34,8 @@ const Navbar = () => {
           
         }
       })()
-    } else {
-      router.push("/")
     }
-  }, [])
+  }, [token])
 
   useEffect(() => {
     if(tenancy?.lang) {
