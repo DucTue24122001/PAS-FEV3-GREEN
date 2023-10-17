@@ -1,8 +1,9 @@
 import { Box, Flex, Image } from '@chakra-ui/react'
 import React, { useEffect, useMemo } from 'react'
 import LuckyMyanmar from "../../public/images/LuckyMyanmar.png"
-import langUkImg from "../../public/images/lang2-uk.png"
-import langMmImg from "../../public/images/lang2-myanmar.png"
+import langUkImg from "../../public/images/en.png"
+import langMmImg from "../../public/images/my.png"
+import langKmImg from "../../public/images/km.png"
 import { useRouter } from 'next/router'
 import { checkDisableLayoutPage } from '../../util/function'
 import { useTenancy } from '../../hook/TenancyProvider'
@@ -61,6 +62,8 @@ const Navbar = () => {
         return langUkImg.src
       case language === "MY":
         return langMmImg.src
+      case language === "KM":
+        return langKmImg.src
       default:
         return langUkImg.src
     }

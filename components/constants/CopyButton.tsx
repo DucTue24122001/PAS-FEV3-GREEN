@@ -6,9 +6,10 @@ import React, { useState } from 'react'
 type PropsType = {
   copyText: string,
   h?: string,
+  boxSize?: string | number
 }
 
-const CopyButton = ({copyText, ...props} : PropsType) => {
+const CopyButton = ({copyText, boxSize, ...props} : PropsType) => {
   const [isCopy, setIsCopy] = useState(false);
   const { onCopy } = useClipboard(copyText);
   

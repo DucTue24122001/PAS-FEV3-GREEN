@@ -40,6 +40,9 @@ const Wallet = () => {
           <Box sx={profileBtn} onClick={() => navigateHandler("/add-bank")}>
             {t("bank_account")}
           </Box>
+          <Box sx={profileBtn} onClick={() => navigateHandler("/report")}>
+            {t("transaction_report")}
+          </Box>
         </Box>
       </Box>
     </>

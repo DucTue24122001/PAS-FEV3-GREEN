@@ -9,6 +9,7 @@ import httpClient from '../../http-client/httpClient'
 import moment from 'moment'
 import ResponsiveRecordDisplay from '../../components/record/ResponsiveRecordDisplay'
 import { useBreakpoint } from '../../hook/useBreakpoint'
+import { useTranslation } from 'react-i18next'
 
 const Record = () => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -20,6 +21,7 @@ const Record = () => {
   const pageSize = 10
   const dispatch = useDispatch()
   const isBreakpoint = useBreakpoint(900)
+  const {t} = useTranslation()
 
   useEffect(() => {
     (async () => {
@@ -74,29 +76,29 @@ const Record = () => {
           <Box mt={"20px"} >
             <Text pb={"12.7px"} alignItems={'center'}
               color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
-              RECORDS
+              {t("records")}
             </Text>
           </Box>
           <Box mb={"30px"}>
-            <Text className='text_vip' mb={"5px"} fontSize={14}>Transaction Type</Text>
+            <Text className='text_vip' mb={"5px"} fontSize={14}>{t("transaction_type")}</Text>
             <select className='default_select' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => selectTransactionType(e.target.value)}>
-              <option className='default_option' value={""}>All</option>
-              <option className='default_option' value={PaymentTypeEnum.Accept}>Accept</option>
-              <option className='default_option' value={PaymentTypeEnum.Reject}>Reject</option>
-              <option className='default_option' value={PaymentTypeEnum.Pending}>Pending</option>
+              <option className='default_option' value={""}>{t("all")}</option>
+              <option className='default_option' value={PaymentTypeEnum.Accept}>{t("accepted")}</option>
+              <option className='default_option' value={PaymentTypeEnum.Reject}>{t("Rejected")}</option>
+              <option className='default_option' value={PaymentTypeEnum.Pending}>{t("Pending")}</option>
             </select>
           </Box>
           <Box mb={"30px"}>
-            <Text className='text_vip' mb={"5px"} fontSize={14}>Transaction Type</Text>
+            <Text className='text_vip' mb={"5px"} fontSize={14}>{t("transaction_period")}</Text>
             <DefaultSelectDate isSearchMonth={true} selectDate={selectDateHandler}/>
           </Box>
           <Box mb={"30px"}>
-            <Text className='text_vip' mb={"5px"} fontSize={14}>Payment Type</Text>
+            <Text className='text_vip' mb={"5px"} fontSize={14}>{t("payment_type")}</Text>
             <select className='default_select' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => selectPaymentType(e.target.value)}>
-              <option className='default_option' value={""}>All</option>
-              <option className='default_option' value={TransactionTypeEnum.DEPOSIT}>Deposit</option>
-              <option className='default_option' value={TransactionTypeEnum.WITHDRAW}>Withdraw</option>
-              <option className='default_option' value={TransactionTypeEnum.PROMOTION}>Promotion</option>
+              <option className='default_option' value={""}>{t("all")}</option>
+              <option className='default_option' value={TransactionTypeEnum.DEPOSIT}>{t("deposit")}</option>
+              <option className='default_option' value={TransactionTypeEnum.WITHDRAW}>{t("withdraw")}</option>
+              <option className='default_option' value={TransactionTypeEnum.PROMOTION}>{t("promotion")}</option>
             </select>
           </Box>
         </Box>

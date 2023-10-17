@@ -133,15 +133,15 @@ const AddBank = () => {
           </Box>
           <Box mb={"30px"}>
             <label htmlFor="fullname">
-              <Text className='text_vip' mb={"5px"} fontSize={14}>Fullname</Text>
+              <Text className='text_vip' mb={"5px"} fontSize={14}>{t("display_name")}</Text>
             </label>
             <Input variant={"default"} name='displayName' id='fullname' fontSize={14} letterSpacing={"1px"} onChange={bankFormInput} value={addBankForm.displayName}/>
             {isError && <Text className='error'>{addBankErrorForm.displayName}</Text>}
           </Box>
           <Box mb={"30px"}>
-            <Text className='text_vip' mb={"5px"} fontSize={14}>BANK</Text>
+            <Text className='text_vip' mb={"5px"} fontSize={14} textTransform={"uppercase"}>{t("bank")}</Text>
               <select className='default_select' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => selectBank(e.target.value)}>
-                <option className='default_option' value={""}>Select Bank</option>
+                <option className='default_option' value={""}>{t("select_bank")}</option>
                 {allListBank.map((bank, i) => (
                   <option key={i} className='default_option' value={bank.id}>
                     {bank.name} ({bank.shortName})

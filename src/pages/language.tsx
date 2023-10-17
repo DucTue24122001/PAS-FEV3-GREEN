@@ -1,17 +1,12 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-import my from "../../public/images/lang2-myanmar.png"
-import en from "../../public/images/lang2-uk.png"
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { clientAction } from "../../redux/client-slice";
+import { RootState } from "../../redux/store";
 
-
-const languages = [
-    { code: "EN", nameLocale: "English | ภาษาอังกฤษ", img:en.src },
-    { code: "MY", nameLocale: "Myanmar | မြန်မာ", img:my.src },
-  ];
 const Language = () => {
+    const {languageList} = useSelector((state: RootState) => state.client)
     const { t, i18n } = useTranslation();
     const dispatch = useDispatch()
 
@@ -37,12 +32,12 @@ const Language = () => {
           {t('region_and_language')}
         </Text>
         {
-            languages.map((language, i) => (
-                <Flex key={i} onClick={() => handleClickLanguage(i18n,language.code)} w={"100%"} borderBottom={"1px solid #eee"} p={"20px 15px"} letterSpacing={"0.5px"} textShadow={"0 0 2px #06cd"} alignItems={"center"} cursor={"pointer"} _hover={{color:"#f363f4"}}>
-                    <Image w={"40px"} h={"40px"} src={language.img} alt={language.nameLocale} objectFit={"contain"} />
-                    <Text ml={5} color={"#fff"} >{language.nameLocale}</Text>
-                </Flex>
-            ))
+          languageList.map((language, i) => (
+            <Flex key={i} onClick={() => handleClickLanguage(i18n,language)} w={"100%"} borderBottom={"1px solid #eee"} p={"20px 15px"} letterSpacing={"0.5px"} textShadow={"0 0 2px #06cd"} alignItems={"center"} cursor={"pointer"} _hover={{color:"#f363f4"}}>
+              <Image w={"40px"} h={"40px"} src={`/images/${language.toLowerCase()}.png`} alt={language} objectFit={"contain"} />
+              <Text ml={5} color={"#fff"} >{t(language)}</Text>
+            </Flex>
+          ))
         }
       </Flex>
     </Flex>

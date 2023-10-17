@@ -1,12 +1,12 @@
 /* eslint-disable react/no-children-prop */
 import { Box, InputGroup, InputRightElement } from '@chakra-ui/react'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import DefaultCalendar from './DefaultCalendar'
 import moment from 'moment'
 import { useOutsideClick } from '../../util/useOutsideHandler'
 import {AiOutlineCalendar} from "react-icons/ai"
 
-const DefaultSelectDate = ({selectDate, isSearchMonth, ...props}: any) => {
+const DefaultSelectDate = ({selectDate, isSearchMonth, customizeDate, ...props}: any) => {
   const calendarRef = useRef(null)
   const [isShowCalendar, setIsShowCalendar] = useState(false)
   const [currentDateInput, setCurrentDateInput] = useState(`${moment().startOf('week').format("YYYY-MM-DD")} ~ ${moment().format("YYYY-MM-DD")}`)
@@ -15,6 +15,13 @@ const DefaultSelectDate = ({selectDate, isSearchMonth, ...props}: any) => {
   }
 
   useOutsideClick(calendarRef, disableDropdown)
+
+  useEffect(() => {
+    if (customizeDate) {
+      setCurrentDateInput(`${customizeDate.startDate} ~ ${customizeDate.endDate}`)
+    }
+  }, [customizeDate])
+
 
   const selectDateHandler = (date: any) => {
     const startDate = new Date(date[0])

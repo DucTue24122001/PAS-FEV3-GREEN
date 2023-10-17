@@ -1,7 +1,7 @@
-import { convertDecimalNum } from '@/hook/function'
 import { Text } from '@chakra-ui/react'
 import React from 'react'
 import { ErrorText, SuccessfulText } from './NotificationText'
+import { convertDecimalNum } from '../../util/function'
 
 const CustomizeNumberValue = ({num, ...props}: any) => {
   switch (true) {
