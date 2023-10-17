@@ -201,5 +201,36 @@
   "your_password_has_been_changed_successfully":"ពាក្យសម្ងាត់របស់អ្នកត្រូវបានផ្លាស់ប្តូរដោយជោគជ័យ",
   "game_currently_maintenance":"ហ្គេមថែទាំបច្ចុប្បន្ន",
   "game_license": "អាជ្ញាប័ណ្ណហ្គេម",
-  "save_qr": "សន្សំ QR"
+  "save_qr": "សន្សំ QR",
+
+
+
+
+
+
+  "region_and_language":"Region and Language",
+    "contact_us":"Contact Us",
+    "wallet":"Wallet",
+    "old_password":"Old Password",
+    "new_password":"New Password",
+    "confirm_new_password":"Confirm New Password",
+    "transaction_record":"Transaction Record",
+    "forget_password":"Forget Password",
+    "deposit_amount":"Deposit Amount",
+    "real_deposit_amount":"Real Deposit Amount",
+    "bankslip":"Bankslip",
+    "bonus":"Bonus",
+    "no_bonus":"No Bonus",
+    "notice":"Notice",
+    "minimum_deposit_5000":"Minimum Deposit is 5000",
+    "rate_deposit":"Rate Deposit",
+    "rate_withdrawal":"Rate Withdrawal",
+    "minimum_withdrawal":"Minimum withdrawal",
+    "turnover_amount":"Turnover Amount",
+    "withdrawal_amount":"Withdrawal Amount",
+    "real_withdrawal_amount":"Real Withdrawal Amount",
+    "account_bank":"Account bank",
+    "bank_holder":"Bank Holder",
+    "bank_account_no":"Bank Account No",
+    "history":"History"
 }

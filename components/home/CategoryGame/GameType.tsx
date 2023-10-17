@@ -43,7 +43,7 @@ const GameType = () => {
       justifyContent={"center"}
       alignItems={"center"}
       pb={20}
-      pt={5}
+      pt={5}px={[2, 2, 2, 0]}
     >
       {router.query.platform !== undefined ? (
           <GameTypeItem isData={isData} findGameType={findGameType} />
@@ -57,7 +57,8 @@ const GameType = () => {
             "repeat(4, 1fr)",
             "repeat(4, 1fr)",
           ]}
-          gap={["15px 10px", 3, 3, 5]}
+          // gap={["15px 10px", 3, 3, 5]}
+          gap={[2, 3, 5, 5]}
         >
           <>
             {findGameType?.platforms.map((platform: any, i: number) => (
