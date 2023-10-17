@@ -13,9 +13,7 @@ const PoliciesLayout = ({ children }: any) => {
 
   return (
     <Flex
-      bgColor={"white"}
       minH={"90vh"}
-      mt={["55px", "55px", "55px", "140px"]}
       alignItems={"center"}
       py={["0px", "0px", "20px", "20px"]}
       flexDir={"column"}
@@ -31,14 +29,14 @@ const PoliciesLayout = ({ children }: any) => {
             onClick={() => router.push("/policies/terms")}
             cursor={"pointer"}
             transition={".3s"}
-            _hover={{ bgColor: "#f9f9f9" }}
+            _hover={{ bgColor: "#1f7544" }}
           >
             <Text
               textTransform={"uppercase"}
               fontWeight={600}
               fontSize={"14px"}
               color={
-                currentPolicies === "terms" ? "#caffe1" : "#303030"
+                currentPolicies === "terms" ? "#caffe1" : "white"
               }
             >
               {t("terms_and_condition")}
@@ -52,7 +50,7 @@ const PoliciesLayout = ({ children }: any) => {
             onClick={() => router.push("/policies/privacy")}
             cursor={"pointer"}
             transition={".3s"}
-            _hover={{ bgColor: "#f9f9f9" }}
+            _hover={{ bgColor: "#1f7544" }}
           >
             <Text
               textTransform={"uppercase"}
@@ -60,7 +58,7 @@ const PoliciesLayout = ({ children }: any) => {
               fontSize={"14px"}
               color={
                 currentPolicies === "privacy"
-                  ? "#caffe1" : "#303030"
+                  ? "#caffe1" : "white"
               }
             >
               {t("privacy_policy")}
@@ -74,7 +72,7 @@ const PoliciesLayout = ({ children }: any) => {
             onClick={() => router.push("/policies/disconnect")}
             cursor={"pointer"}
             transition={".3s"}
-            _hover={{ bgColor: "#f9f9f9" }}
+            _hover={{ bgColor: "#1f7544" }}
           >
             <Text
               textTransform={"uppercase"}
@@ -82,7 +80,7 @@ const PoliciesLayout = ({ children }: any) => {
               fontSize={"14px"}
               color={
                 currentPolicies === "disconnect"
-                  ? "#caffe1" : "#303030"
+                  ? "#caffe1" : "white"
               }
             >
               {t("disconnection_policy")}
