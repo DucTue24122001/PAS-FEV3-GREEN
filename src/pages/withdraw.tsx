@@ -130,7 +130,7 @@ const Withdraw = () => {
           </Box>
           <Box mb={"30px"}>
             <label htmlFor="withdraw">
-              <Text className='text_vip' mb={"5px"} fontSize={14}>{t('withdrawal_amount')}</Text>
+              <Text className='text_vip' mb={"5px"} fontSize={14}>{t('withdraw_amount')}</Text>
             </label>
             <CurrencyInput className='default_input' decimalsLimit={2} decimalScale={2} allowDecimals={true} onChange={inputAmount}
               disableAbbreviations={true}

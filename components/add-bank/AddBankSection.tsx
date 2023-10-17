@@ -128,7 +128,7 @@ const AddBank = () => {
           <Box mt={"20px"} mb={"40px"}>
             <Text pt={"16px"} pb={"12.7px"} alignItems={'center'}
               color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
-              Add Bank
+              {t("add_bank")}
             </Text>
           </Box>
           <Box mb={"30px"}>
@@ -152,7 +152,7 @@ const AddBank = () => {
           </Box>
           <Box mb={"30px"}>
             <label htmlFor="bank-num">
-              <Text className='text_vip' mb={"5px"} fontSize={14}>Bank Account No.</Text>
+              <Text className='text_vip' mb={"5px"} fontSize={14}>{t("account_number")}</Text>
             </label>
             <Input variant={"default"} name='accountNumber' id='bank-num' fontSize={14} letterSpacing={"1px"} pattern="[0-9]*" onChange={bankFormInput} value={addBankForm.accountNumber}/>
             {isError && <Text className='error'>{addBankErrorForm.bankNum}</Text>}

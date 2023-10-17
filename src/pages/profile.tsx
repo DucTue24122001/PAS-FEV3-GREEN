@@ -24,7 +24,7 @@ const Profile = () => {
         <Box pb={"15px"} borderBottom={"1px dotted #caffe1"} fontSize={"14px"}>
           <Box sx={profileBtn}
             onClick={() => router.push("/personal")}>
-            Personal Info
+            {t("personal_info")}
           </Box>
           <Box sx={profileBtn}
             onClick={() => router.push("/change-password")}>

@@ -114,7 +114,7 @@ const ChangePassword = () => {
           <form onSubmit={submitChangePass}>
             <Box w={"100%"} mb={"20px"}>
               <label htmlFor="old-pass" className='text-vip'>
-                <Text className='text_vip' mb={"5px"}>Old Password</Text>
+                <Text className='text_vip' mb={"5px"}>{t("old_pass")}</Text>
               </label>
               <Input variant={"default"} type='password' id='old-pass' name={ChangePwEnum.OldPw} fontSize={14} letterSpacing={"1px"}
                 value={passwordForm.oldPw}
@@ -123,7 +123,7 @@ const ChangePassword = () => {
             </Box>
             <Box w={"100%"} mb={"20px"}>
               <label htmlFor="new-pass" className='text-vip'>
-                <Text className='text_vip' mb={"5px"}>New Password</Text>
+                <Text className='text_vip' mb={"5px"}>{t("new_pass")}</Text>
               </label>
               <Input variant={"default"} type='password' id='new-pass' name={ChangePwEnum.NewPw} fontSize={14} letterSpacing={"1px"}
                 value={passwordForm.newPw}
@@ -131,7 +131,7 @@ const ChangePassword = () => {
             </Box>
             <Box w={"100%"} mb={"20px"}>
               <label htmlFor="confirm-pass" className='text-vip'>
-                <Text className='text_vip' mb={"5px"}>Confirm New Password</Text>
+                <Text className='text_vip' mb={"5px"}>{t('confirm_pass')}</Text>
               </label>
               <Input variant={"default"} type='password' id='confirm-pass' name={ChangePwEnum.ConfirmPw} fontSize={14} letterSpacing={"1px"}
                 value={passwordForm.confirmPw}

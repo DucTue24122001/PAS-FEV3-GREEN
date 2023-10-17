@@ -50,9 +50,9 @@ const AddBank = () => {
             <thead>
               <tr>
                 <th>#</th>
-                <th>BANK</th>
-                <th>ACCOUNT BANK</th>
-                <th>DISPLAY NAME</th>
+                <th>{t("bank")}</th>
+                <th>{t("account_number")}</th>
+                <th>{t("display_name")}</th>
               </tr>
             </thead>
             <tbody>

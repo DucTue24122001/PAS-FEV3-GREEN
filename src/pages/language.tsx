@@ -9,7 +9,6 @@ const Language = () => {
     const {languageList} = useSelector((state: RootState) => state.client)
     const { t, i18n } = useTranslation();
     const dispatch = useDispatch()
-    // const [pos, setPos] = useState()
 
     const handleClickLanguage = (i18n:any ,code:any) => {
       dispatch(clientAction.setLanguage(code))
