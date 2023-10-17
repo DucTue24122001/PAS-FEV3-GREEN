@@ -20,7 +20,7 @@
   font-weight: 400;
   letter-spacing: 1px;
   color: #fff;
-  transition: .3s;
+  transition: 0.3s;
   width: 100%;
   text-transform: uppercase;
 }
@@ -42,7 +42,7 @@
 
 .default_select {
   color: #fff;
-  background: linear-gradient(#2ee983 , #257248);
+  background: linear-gradient(#2ee983, #257248);
   line-height: 1.15;
   padding: 5px;
   height: 3rem;
@@ -67,7 +67,8 @@
 .add_bank_table thead {
   border-bottom: 1px solid #d0d0d0;
 }
-.add_bank_table th, .add_bank_table td {
+.add_bank_table th,
+.add_bank_table td {
   padding: 15px 5px;
   display: table-cell;
   text-align: left;
@@ -89,10 +90,25 @@
   border-collapse: collapse;
 }
 
-.record_table th, .record_table td {
+.record_table th,
+.record_table td {
   border: 1px solid #5c9df9;
   text-align: center;
   font-size: 12px;
   padding: 15px 5px;
   display: table-cell;
+}
+.cssload-loader {
+  animation-name: cssloader;
+}
+@keyframes cssloader {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
