@@ -14,9 +14,7 @@ import LotteryIcon from "../../../public/nav-svg/LOTTERY.svg";
 import ArcadeIcon from "../../../public/nav-svg/ARCADE.svg";
 import TableIcon from "../../../public/nav-svg/RNGTABLE.svg";
 import Livearena from "../../../public/nav-svg/LIVEARENA.svg";
-import GameType from "./GameType";
 import { useRouter } from "next/router";
-import GameLive from "./GameLive";
 
 const CategoryGame = () => {
   const { categoryData }: any = useSelector(

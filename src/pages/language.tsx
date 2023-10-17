@@ -14,6 +14,7 @@ const languages = [
 const Language = () => {
     const { t, i18n } = useTranslation();
     const dispatch = useDispatch()
+    // const [pos, setPos] = useState()
 
     const handleClickLanguage = (i18n:any ,code:any) => {
       dispatch(clientAction.setLanguage(code))
@@ -38,9 +39,9 @@ const Language = () => {
         </Text>
         {
             languages.map((language, i) => (
-                <Flex key={i} onClick={() => handleClickLanguage(i18n,language.code)} w={"100%"} borderBottom={"1px solid #eee"} p={"20px 15px"} letterSpacing={"0.5px"} textShadow={"0 0 2px #06cd"} alignItems={"center"} cursor={"pointer"} _hover={{color:"#f363f4"}}>
+                <Flex key={i} onClick={() => handleClickLanguage(i18n,language.code, i)} w={"100%"} borderBottom={"1px solid #eee"} p={"20px 15px"} letterSpacing={"0.5px"} textShadow={"0 0 2px #06cd"} alignItems={"center"} cursor={"pointer"} _hover={{color:"#f363f4"}}>
                     <Image w={"40px"} h={"40px"} src={language.img} alt={language.nameLocale} objectFit={"contain"} />
-                    <Text ml={5} color={"#fff"} >{language.nameLocale}</Text>
+                    <Text ml={5} color={"#fff"} _hover={{color:"#f363f4"}} >{language.nameLocale}</Text>
                 </Flex>
             ))
         }

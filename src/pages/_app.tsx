@@ -15,6 +15,7 @@ import { appWithI18Next } from "ni18n";
 import { ni18nConfig } from "../../ni18n.config";
 import 'react-calendar/dist/Calendar.css';
 import { ViewportProvider } from "../../hook/ViewportProvider";
+import Loading from "../../components/layout/Loading";
 
 
  function App({ Component, pageProps }: AppProps) {
@@ -27,6 +28,7 @@ import { ViewportProvider } from "../../hook/ViewportProvider";
             <Component {...pageProps} />
             <MobileMenu/>
           </TenancyProvider>
+          <Loading />
         </ViewportProvider>
       </ChakraProvider>
     </Provider>
