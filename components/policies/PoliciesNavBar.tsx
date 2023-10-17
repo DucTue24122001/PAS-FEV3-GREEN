@@ -15,7 +15,6 @@ const PoliciesNavBar = ({ ...props }) => {
       h={"50px"}
       display={["flex", "flex", "none", "none"]}
       mb={"10px"}
-      bgColor={"#f2f5f9"}
       alignItems={"center"}
       fontSize={"14px"}
       fontWeight={"bold"}
@@ -30,7 +29,7 @@ const PoliciesNavBar = ({ ...props }) => {
         textTransform={"uppercase"}
         color={
           currentPolicies === "terms"
-            ? "#caffe1" : "#303030"
+            ? "#caffe1" : "white"
         }
       >
         {t('terms_and_condition')}
@@ -43,7 +42,7 @@ const PoliciesNavBar = ({ ...props }) => {
         textTransform={"uppercase"}
         color={
           currentPolicies === 'privacy'
-            ? "#caffe1" : "#303030"
+            ? "#caffe1" : "white"
         }
       >
         {t('privacy_policy')}
@@ -56,7 +55,7 @@ const PoliciesNavBar = ({ ...props }) => {
         textTransform={"uppercase"}
         color={
           currentPolicies === "disconnect"
-            ? "#caffe1" : "#303030"
+            ? "#caffe1" : "white"
         }
       >
        {t('disconnection_policy')}
