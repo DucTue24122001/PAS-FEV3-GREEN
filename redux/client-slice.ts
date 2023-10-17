@@ -71,7 +71,10 @@ export const clientSlice = createSlice({
               }
               return promo
             })
-          }
+        },
+        setCurrentPolicies(state, action) {
+          state.currentPolicies = action.payload;
+        },
     }
 
 })

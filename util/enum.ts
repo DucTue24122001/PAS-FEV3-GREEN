@@ -19,3 +19,9 @@ export enum DepositType {
   NetBanking = "NET_BANKING",
   Crypto = "CRYPTO",
 }
+
+export enum PoliciesEnum {
+  Terms = "terms",
+  DisconnectPolicies = "disconnect",
+  PrivacyPolicies = "privacy",
+}
