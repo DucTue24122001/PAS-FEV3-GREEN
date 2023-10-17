@@ -12,7 +12,7 @@ const ResponsiveRecordDisplay = ({currentPage}: any) => {
   const {t} = useTranslation()
 
   if(recordList.length === 0) {
-    return !isFetchingRecord ? <Text fontStyle={"italic"} fontSize={15}>{t('there_is_no_record')}</Text> : <Spinner/>
+    return !isFetchingRecord ? <Text fontStyle={"italic"} className='text_vip' fontSize={15}>{t('there_is_no_record')}</Text> : <Spinner/>
   }
 
   return (
