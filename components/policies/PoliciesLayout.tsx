@@ -28,14 +28,14 @@ const PoliciesLayout = ({ children }: any) => {
             onClick={() => router.push("/policies/terms")}
             cursor={"pointer"}
             transition={".3s"}
-            _hover={{ bgColor: "#1f7544" }}
+            _hover={{ bgColor: "#abb1ff" }}
           >
             <Text
               textTransform={"uppercase"}
               fontWeight={600}
               fontSize={"14px"}
               color={
-                currentPolicies === "terms" ? "#caffe1" : "white"
+                currentPolicies === "terms" ? "#4956ff" : "white"
               }
             >
               {t("terms_and_condition")}
@@ -48,7 +48,7 @@ const PoliciesLayout = ({ children }: any) => {
             onClick={() => router.push("/policies/privacy")}
             cursor={"pointer"}
             transition={".3s"}
-            _hover={{ bgColor: "#1f7544" }}
+            _hover={{ bgColor: "#abb1ff" }}
           >
             <Text
               textTransform={"uppercase"}
@@ -56,7 +56,7 @@ const PoliciesLayout = ({ children }: any) => {
               fontSize={"14px"}
               color={
                 currentPolicies === "privacy"
-                  ? "#caffe1" : "white"
+                  ? "#4956ff" : "white"
               }
             >
               {t("privacy_policy")}
@@ -69,7 +69,7 @@ const PoliciesLayout = ({ children }: any) => {
             onClick={() => router.push("/policies/disconnect")}
             cursor={"pointer"}
             transition={".3s"}
-            _hover={{ bgColor: "#1f7544" }}
+            _hover={{ bgColor: "#abb1ff" }}
           >
             <Text
               textTransform={"uppercase"}
@@ -77,7 +77,7 @@ const PoliciesLayout = ({ children }: any) => {
               fontSize={"14px"}
               color={
                 currentPolicies === "disconnect"
-                  ? "#caffe1" : "white"
+                  ? "#4956ff" : "white"
               }
             >
               {t("disconnection_policy")}

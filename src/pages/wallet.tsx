@@ -24,7 +24,7 @@ const Wallet = () => {
       <Box px={"30px"} w={"100%"}>
         <Box
           pb={"15px"}
-          borderBottom={"1px dotted #caffe1"}
+          borderBottom={"1px dotted #e6e7ff"}
           fontSize={"14px"}
           pt={"10px"}
         >
@@ -55,8 +55,8 @@ const profileBtn = {
   textAlign: "center",
   mt: "15px",
   borderRadius: "5px",
-  bgGradient: "linear(#023f20, #002009, #000701)",
-  border: "1px groove #108e4291",
+  bgGradient: "linear(#000ebe, #000870, #000321)",
+  border: "1px groove #0e20ff",
   fontWeight: "bold",
   h: "36px",
   lineHeight: "36px",

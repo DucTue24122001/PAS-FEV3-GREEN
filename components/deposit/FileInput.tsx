@@ -21,7 +21,7 @@ const FileInput = ({imageInputChange, currentImg}: any) => {
         <Text noOfLines={1} fontSize={"16px"}>{currentImg ? currentImg.name : t('file_size')}</Text>
       </Flex>
       <Center h={"40px"} w={"100%"} borderRadius={5} alignItems={'center'} 
-        px={"12px"} color={"rgba(0,0,0,.6)"} bgColor={"#caffe1"} cursor={'pointer'} fontSize={15}>
+        px={"12px"} color={"rgba(0,0,0,.6)"} bgColor={"#e6e7ff"} cursor={'pointer'} fontSize={15}>
         <Text textTransform={'uppercase'} fontWeight={600} color={"rgba(0, 0, 0, 0.87)"}>{t('upload')}</Text>
       </Center>
       </Flex>

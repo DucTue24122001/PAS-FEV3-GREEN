@@ -18,10 +18,10 @@ const Profile = () => {
     <>
       <UserInfoBar/>
       <Box px={"30px"} w={"100%"}>
-        <Text fontSize={"20px"} fontWeight={500} color={"#caffe1"} textAlign={'center'} my={"10px"}>
+        <Text fontSize={"20px"} fontWeight={500} color={"#e6e7ff"} textAlign={'center'} my={"10px"}>
           {t("profile")}
         </Text>
-        <Box pb={"15px"} borderBottom={"1px dotted #caffe1"} fontSize={"14px"}>
+        <Box pb={"15px"} borderBottom={"1px dotted #e6e7ff"} fontSize={"14px"}>
           <Box sx={profileBtn}
             onClick={() => router.push("/personal")}>
             {t("personal_info")}
@@ -49,8 +49,8 @@ const profileBtn = {
   textAlign:'center',
   mt:"15px",
   borderRadius:"5px",
-  bgGradient:"linear(#023f20, #002009, #000701)",
-  border:"1px groove #108e4291",
+  bgGradient:"linear(#000ebe, #000870, #000321)",
+  border:"1px groove #0e20ff",
   fontWeight:"bold",
   h:"36px",
   lineHeight:"36px",

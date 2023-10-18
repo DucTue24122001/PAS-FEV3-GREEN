@@ -6,9 +6,9 @@ import viber_icon from "../../public/images/contact_viber-icon.png";
 
 const Contact = () => {
   return (
-    <Flex bg={"linear-gradient(90deg, #1e6c3b , #1b6421, #80ffb0, #17733a , #1b643d, #80ff99, #177331 , #1b643a, #80ff93, #1c824c );"} m={["10px","10px","10px","0px"]}>
+    <Flex bg={"linear-gradient(90deg, #000a83 , #0011e6, #3544ff, #000a83 , #0011e6, #3544ff, #000a83 , #0011e6, #3544ff );"} m={["10px","10px","10px","0px"]}>
 
-    <Flex bg={"#011a0b"} padding={"1px"} w={"100%"} margin={"1px 1px"} flexDir={"column"} border={"1px solid #0a502b"}>
+    <Flex bg={"#000435"} padding={"1px"} w={"100%"} margin={"1px 1px"} flexDir={"column"} border={"1px solid #0a502b"}>
       {contactDummy.map((item, i) => (
         <Link key={i} padding={"20px"} href={item.link}>
           <Flex>

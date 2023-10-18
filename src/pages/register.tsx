@@ -218,7 +218,7 @@ const Register = () => {
             </Box>
             <Box sx={labelContainer}>
               <Checkbox _focusVisible={{outline: "none"}} autoFocus={false} outline={"none"}
-              colorScheme="green" isChecked={isHaveReferralCode}
+              colorScheme="blue" isChecked={isHaveReferralCode}
               mb={2}
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 setIsHaveReferralCode(e.target.checked)
@@ -238,7 +238,7 @@ const Register = () => {
                 />}
             </Box>
             <Flex sx={labelContainer} flexDirection={"row"}>
-              <Text fontSize={"0.9rem"} lineHeight={"22.5px"} color={'#b7ffd2'}>
+              <Text fontSize={"0.9rem"} lineHeight={"22.5px"} color={'#e6e7ff'}>
                 {t("age_verification")}{" "}
                 <span
                   style={{

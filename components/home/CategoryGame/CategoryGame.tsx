@@ -57,7 +57,7 @@ const CategoryGame = () => {
             width={["20","50","50","100"]}
             height={["44","88","88","88"]}
             viewBox="0 0 32 32"
-            fill={"#44e42e"}
+            fill={"#bec3ff"}
           />
         );
       }
@@ -67,7 +67,7 @@ const CategoryGame = () => {
           width={["20","50","50","100"]}
           height={["44","88","88","88"]}
             viewBox="0 0 32 32"
-            fill={"#44e42e"}
+            fill={"#bec3ff"}
           />
         );
       }
@@ -77,7 +77,7 @@ const CategoryGame = () => {
           width={["20","50","50","100"]}
           height={["44","88","88","88"]}
             viewBox="0 0 32 32"
-            fill={"#44e42e"}
+            fill={"#bec3ff"}
           />
         );
       }
@@ -87,7 +87,7 @@ const CategoryGame = () => {
           width={["20","50","50","100"]}
           height={["44","88","88","88"]}
             viewBox="0 0 32 32"
-            fill={"#44e42e"}
+            fill={"#bec3ff"}
           />
         );
       }
@@ -97,7 +97,7 @@ const CategoryGame = () => {
           width={["20","50","50","100"]}
           height={["44","88","88","88"]}
             viewBox="0 0 32 32"
-            fill={"#44e42e"}
+            fill={"#bec3ff"}
           />
         );
       }
@@ -107,7 +107,7 @@ const CategoryGame = () => {
           width={["20","50","50","100"]}
           height={["44","88","88","88"]}
             viewBox="0 0 32 32"
-            fill={"#44e42e"}
+            fill={"#bec3ff"}
           />
         );
       }
@@ -117,7 +117,7 @@ const CategoryGame = () => {
           width={["20","50","50","100"]}
           height={["44","88","88","88"]}
             viewBox="0 0 32 32"
-            fill={"#44e42e"}
+            fill={"#bec3ff"}
           />
         );
       }
@@ -127,7 +127,7 @@ const CategoryGame = () => {
           width={["20","20","20","100"]}
             height={["44","44","44","88"]}
             viewBox="0 0 32 32"
-            fill={"#44e42e"}
+            fill={"#bec3ff"}
           />
         );
       }
@@ -142,7 +142,7 @@ const CategoryGame = () => {
   
   return (
     <Flex w={"100%"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} >
-      <Flex w={"100%"} justifyContent={"center"} alignItems={"center"} bg={"linear-gradient(180deg, #061b10 25%, #00110a 65%, #000000);"}>
+      <Flex w={"100%"} justifyContent={"center"} alignItems={"center"} bg={"linear-gradient(180deg, #000870 25%, #00075c 65%, #000000);"}>
 
       <Grid w={"1024px"} templateColumns={"repeat(8, 1fr)"} overflowX={["scroll","scroll","scroll","unset"]} gap={0}>
         {categoryData?.gameType?.map((item: any, i: any) => (
@@ -153,14 +153,14 @@ const CategoryGame = () => {
             flexDir={"column"}
             bg={
               router.query.page !== item.game_type
-                ? "linear-gradient(180deg, #061b10 25%, #00110a 65%, #000000);"
-                : "linear-gradient(180deg, #0b2d1b 25%, #012616 65%, #000802)"
+                ? "linear-gradient(180deg, #000870 25%, #00075c 65%, #000000);"
+                : "linear-gradient(180deg, #0010d2 25%, #000870 65%, #000435)"
             }
             p={"5px 0"}
             display={"inline-block"}
             textAlign={"center"}
             cursor={"pointer"}
-            border={router !== item.game_type ? "1px solid #03110a" : "1px solid #0a502b"}
+            border={router !== item.game_type ? "1px solid #03110a" : "1px solid #0013f9"}
             transition={"all 0.3 ease-out"}
             onClick={() => handleClickCategory(i, item.game_type)}
             w={["80px","100px","100px","auto"]}

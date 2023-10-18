@@ -110,7 +110,7 @@ export default function Login () {
             </Box>
             <Box sx={labelContainer} className='text_vip' >
               <Checkbox fontSize={"14px"}
-                colorScheme='green' outline={"none"}
+                colorScheme='blue' outline={"none"}
                 isChecked={isCheckRemember}
                 onChange={(e) =>
                   setIsCheckRemember(e.target.checked)}>
@@ -127,11 +127,11 @@ export default function Login () {
         </Box>
         <Box>
           <Center>
-            <Link textAlign={'center'} color={'#b7ffd2'} fontSize={"14px"} cursor={'pointer'} mb={2}>
+            <Link textAlign={'center'} color={'#e6e7ff'} fontSize={"14px"} cursor={'pointer'} mb={2}>
               {t('Forgot_Password')}
             </Link>
           </Center>
-          <Flex gap={1} alignItems={'center'} justifyContent={'center'} color={'#b7ffd2'} fontSize={"14px"}>
+          <Flex gap={1} alignItems={'center'} justifyContent={'center'} color={'#e6e7ff'} fontSize={"14px"}>
             <Text>{t('not_a_member')},</Text>
             <Link onClick={() => router.push("/register")}>{t('register')}</Link>
           </Flex>

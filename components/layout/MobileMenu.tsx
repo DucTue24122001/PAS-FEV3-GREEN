@@ -24,8 +24,8 @@ const MobileMenu = () => {
   };
 
   return (
-    <Flex pos={"fixed"} bgGradient={"linear(#081b0d, #030c04, #040404)"} bottom={0} zIndex={1000}
-    	boxShadow={"0 0 5px #008729"} left={0} w={"100%"} display={checkDisableLayoutPage(router.pathname) ? "none" : "flex"}>
+    <Flex pos={"fixed"} bgGradient={"linear(#000b97, #00075c, #000435)"} bottom={0} zIndex={1000}
+    	boxShadow={"0 0 5px #4956ff"} left={0} w={"100%"} display={checkDisableLayoutPage(router.pathname) ? "none" : "flex"}>
 			{mobileMenuItems.map((item, i) => (
 				<Center sx={menuItemContainer} key={i} onClick={() => {
 					if (item.needAuth) {

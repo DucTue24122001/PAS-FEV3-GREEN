@@ -30,8 +30,6 @@ const Deposit = () => {
   })
   const toast = useToast()
   const {t} = useTranslation()
-  console.log(currentAgentBankSelect);
-  
   
   const resetForm = () => {
     setDepositAmount("")
@@ -154,7 +152,7 @@ const Deposit = () => {
       <Box maxW={"550px"} p={"10px 15px"} mx={"auto"}>
         <Box mb={"40px"}>
           <Text pt={"16px"} pb={"12.7px"} alignItems={'center'}
-            color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
+            color={"#e6e7ff"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
             {t('deposit')}
           </Text>
         </Box>
@@ -216,7 +214,7 @@ const Deposit = () => {
           <Text className='error'>{t('min_max')}: {numberWithCommas(currentAgentBankSelect?.minimumDeposit)}/{numberWithCommas(currentAgentBankSelect?.maximumDeposit)}</Text>
         </Box>}
         <Box p={"2%"}>
-          <Box border={"solid 2px #1da95c"} p={"2%"}>
+          <Box border={"solid 2px #2132ff"} p={"2%"}>
             <Text className='text_vip' mb={"5px"} fontSize={14}>{t('notice')}</Text>
             <Box p={"inherit"} color={"white"} fontSize={"11.2px"}>
               <Text>{t('notification')}</Text>

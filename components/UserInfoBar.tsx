@@ -14,7 +14,7 @@ const UserInfoBar = () => {
 
   return (
     <Flex w={"100%"}>
-      <Center sx={infoBar} borderRight={"1px solid #072f1b"}
+      <Center sx={infoBar} borderRight={"1px solid #0013f9"}
         onClick={() => router.push("/profile")} gap={2}>
         <Box fontSize={16}>
           <FiUser/>
@@ -40,6 +40,6 @@ const infoBar = {
   fontWeight: 600,
   textTransform: "uppercase",
   boxShadow: "0 2px 4px #0007",
-  bgGradient: "linear(to-b, #012610 15%, #010701 60%, #000000)",
+  bgGradient: "linear(to-b, #000dab 15%, #010701 60%, #000000)",
   cursor: "pointer"
 }

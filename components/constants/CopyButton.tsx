@@ -14,7 +14,7 @@ const CopyButton = ({copyText, boxSize, ...props} : PropsType) => {
   const { onCopy } = useClipboard(copyText);
   
   return (
-    <IconButton aria-label='copy' colorScheme={"whatsapp"} icon={isCopy ? <CheckCircleIcon/> : <MdOutlineContentCopy/>} 
+    <IconButton aria-label='copy' colorScheme={"blue"} icon={isCopy ? <CheckCircleIcon/> : <MdOutlineContentCopy/>} 
     onClick={() => {
       setIsCopy(true);
       setTimeout(() => setIsCopy(false), 3000);

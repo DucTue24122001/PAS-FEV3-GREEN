@@ -27,8 +27,8 @@ const baseTheme = extendTheme({
           boxSizing: "border-box",
           // fontSize: isMobileBreakpoint ? "sm" : "md",
           fontFamily: `'Poppins', sans-serif`,
-          color: "#003534",
-          bgGradient: "linear(#103f27 30%, #0f4624, #1f7544);",
+          color: "#000",
+          bgGradient: "linear(#000435 30%, #000549, #000a83);",
           bgRepeat: "no-repeat",
           minH: "100vh",
           overflowX: "clip"

@@ -124,7 +124,7 @@ const Withdraw = () => {
         <Box maxW={"550px"} p={"10px 15px"} pb={"30px"} mx={"auto"}>
           <Box mt={"20px"} mb={"40px"}>
             <Text pt={"16px"} pb={"12.7px"} alignItems={'center'}
-              color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
+              color={"#e6e7ff"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
               {t('withdraw')}
             </Text>
           </Box>
@@ -156,7 +156,7 @@ const Withdraw = () => {
             <button className='login_btn' type='button' onClick={() => router.push("/add-bank")} >{t('add_bank')}</button>
           </Box>} */}
           <Box py={"2%"} mt={"30px"}>
-            <Box border={"solid 2px #1da95c"} p={"2%"}>
+            <Box border={"solid 2px #2132ff"} p={"2%"}>
               <Text className='text_vip' mb={"5px"} fontSize={14}>{t('notice')}</Text>
               <Box p={"inherit"} color={"white"} fontSize={"11.2px"}>
                 <Text>{`1) ${t('withdrawal')}`}</Text>
