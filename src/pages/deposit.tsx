@@ -8,6 +8,7 @@ import { Bank } from '../../util/type'
 import CurrencyInput from 'react-currency-input-field'
 import FileInput from '../../components/deposit/FileInput'
 import { DepositType } from '../../util/enum'
+import CopyButton from '../../components/constants/CopyButton'
 
 const Deposit = () => {
   const [isFetching, setIsFetching] = useState(false)
@@ -150,7 +151,6 @@ const Deposit = () => {
 
   return (
     <Box className='layout' pb={"80px"}>
-      <form onSubmit={submitHandler}>
       <Box maxW={"550px"} p={"10px 15px"} mx={"auto"}>
         <Box mb={"40px"}>
           <Text pt={"16px"} pb={"12.7px"} alignItems={'center'}
@@ -158,6 +158,7 @@ const Deposit = () => {
             {t('deposit')}
           </Text>
         </Box>
+        <form onSubmit={submitHandler}>
         <Box mb={"30px"}>
           <label htmlFor="deposit">
             <Text className='text_vip' mb={"5px"} fontSize={14}>{t('deposit_amount')}</Text>
@@ -179,14 +180,20 @@ const Deposit = () => {
           </select>
           {isErr && <Text className='error'>{t(`${errorForm.bank}`)}</Text>}
         </Box>
-        {currentAgentBankSelect && <Flex flexDir={'column'} mb={"30px"} gap={"20px"} alignItems={'center'}>
-          <Text color={"white"} lineHeight={"20px"} fontSize={"16px"}>
-            {t('account_name')}: <span>{currentAgentBankSelect?.accountName}</span>
-          </Text>
-          <Text color={"white"}  lineHeight={"20px"} fontSize={"16px"}>
-            {t('account_number')}: <span>{currentAgentBankSelect?.accountNumber}</span>
-          </Text>
-          {currentAgentBankSelect?.imageUrl && <Image alt='qr' src={currentAgentBankSelect?.imageUrl} boxSize={"200px"}/>}
+        {currentAgentBankSelect && <Flex flexDir={'column'} mb={"30px"} gap={"20px"} alignItems={'flex-start'}>
+          <Flex alignItems={"center"} gap={3}>
+            <Text color={"white"} lineHeight={"20px"} fontSize={"16px"}>
+              {t('account_name')}: <span>{currentAgentBankSelect?.accountName}</span>
+            </Text>
+            <CopyButton copyText={currentAgentBankSelect?.accountName} h='30px'/>
+          </Flex>
+          <Flex alignItems={"center"} gap={3}>
+            <Text color={"white"}  lineHeight={"20px"} fontSize={"16px"}>
+              {t('account_number')}: <span>{currentAgentBankSelect?.accountNumber}</span>
+            </Text>
+            <CopyButton copyText={currentAgentBankSelect?.accountNumber} h='30px'/>
+          </Flex>
+          {currentAgentBankSelect?.imageUrl && <Image alt='qr' src={currentAgentBankSelect?.imageUrl} boxSize={"200px"} alignSelf={'center'}/>}
         </Flex>}
         <Box mb={"30px"}>
           <Text className='text_vip' mb={"5px"} fontSize={14}>{t('select_bank')}</Text>
@@ -220,8 +227,8 @@ const Deposit = () => {
           <button className='login_btn' disabled={isLoading}>{isLoading ? <Spinner/> : t('submit')}</button>
           <Text className='error'>{responseError}</Text>
         </Box>
-      </Box>
       </form>
+      </Box>
     </Box>
   )
 }

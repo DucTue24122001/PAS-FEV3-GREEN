@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Center, Flex } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import UserInfoBar from "../UserInfoBar";
 import { useTranslation } from "react-i18next";
@@ -18,7 +18,6 @@ const Login = () => {
     <>
       {token === null ? (
           <Flex
-            zIndex={100}
             justifyContent={"center"}
             textTransform={"uppercase"}
             cursor={"pointer"}
@@ -30,10 +29,15 @@ const Login = () => {
             fontWeight={600}
             boxShadow={"0 2px 4px #0007"}
             bg={"linear-gradient(180deg, #012610 15%, #010701 60%, #000000);"}
-            transition={".2 ease-in-out"}
-            onClick={() => router.push('/login')}
-          >
-            {t('login')}
+            transition={".2 ease-in-out"}>
+            <Center w={"50%"} borderRight={"1px solid #03110a"}
+              onClick={() => router.push("/login")}>
+              {t('login')}
+            </Center>
+            <Center w={"50%"}
+              onClick={() => router.push("/register")}>
+              {t('register')}
+            </Center>
           </Flex>
       ) : (
         <UserInfoBar />

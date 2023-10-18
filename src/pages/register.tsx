@@ -8,6 +8,7 @@ import { useTenancy } from '../../hook/TenancyProvider'
 import { useDispatch } from 'react-redux'
 import ClientService from '../../http-client/ClientService'
 import httpClient from '../../http-client/httpClient'
+import { CloseIcon } from '@chakra-ui/icons'
 
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -129,7 +130,10 @@ const Register = () => {
 
   return (
       <Box className='layout'>
-        <Box p={"10px 15px"} pb={"30px"} maxW={"550px"} mx={"auto"}>
+        <Box p={"10px 15px"} pb={"30px"} maxW={"550px"} mx={"auto"} pos={"relative"}>
+          <CloseIcon color={"white"} pos={'absolute'} top={"40px"} right={"30px"}
+            cursor={'pointer'}
+            onClick={() => router.push("/")}/>
           <form onSubmit={registerHandler}>
             <Box m={"20px 0 40px"}>
               <Image alt='logo' src={logo.src} minW={"140px"} maxW={"240px"} w={"30%"} mx={'auto'}

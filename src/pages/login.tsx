@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { accountAction } from '../../redux/account-slice'
+import { CloseIcon } from '@chakra-ui/icons'
 
 export default function Login () {
   const [loginForm, setLoginForm] = useState({
@@ -79,7 +80,9 @@ export default function Login () {
   return (
     <Box pt={"50px"} pb={"70px"}>
       <Box className='layout'>
-        <Box p={"10px 15px"} pb={"30px"} maxW={"550px"} mx={"auto"}>
+        <Box p={"10px 15px"} pb={"30px"} maxW={"550px"} mx={"auto"} pos={"relative"}>
+          <CloseIcon color={"white"} pos={'absolute'} top={0} right={"30px"} cursor={'pointer'}
+            onClick={() => router.push("/")}/>
           <form onSubmit={loginHandler}>
             <Box m={"20px 0 40px"}>
               <Link onClick={() => router.push("/")}>

@@ -16,26 +16,27 @@ const Personal = () => {
         <Text fontSize={"20px"} fontWeight={500} color={"#caffe1"} textAlign={'center'} my={"20px"}>
           {t("personal_info")}
         </Text>
-        <Flex maxW={"800px"} mx={"auto"} className='text_vip' flexDir={'column'} gap={[5,5,8,8]}>
-          <Flex justifyContent={'space-around'} w={"100%"}>
+        <Flex maxW={"500px"} mx={"auto"} className='text_vip' flexDir={'column'} gap={[5,5,8,8]} justifyContent={'center'}
+          fontSize={[13,13,16,16]} pl={"20px"}>
+          <Flex w={"100%"} >
             <Text sx={textBox}>{t('full_name')}</Text>
-            <Text sx={textBox}>{accountDetail.name}</Text>
+            <Text textAlign={"start"}>{accountDetail.name}</Text>
           </Flex>
-          <Flex justifyContent={'space-around'} w={"100%"}>
+          <Flex w={"100%"}>
             <Text sx={textBox}>{t('username')}</Text>
-            <Text sx={textBox}>{accountDetail.userName}</Text>
+            <Text>{accountDetail.userName}</Text>
           </Flex>
-          <Flex justifyContent={'space-around'} w={"100%"}>
+          <Flex w={"100%"}>
             <Text sx={textBox}>ID</Text>
-            <Text sx={textBox}>{accountDetail.surName}</Text>
+            <Text>{accountDetail.surName}</Text>
           </Flex>
-          <Flex justifyContent={'space-around'} w={"100%"}>
+          <Flex w={"100%"}>
             <Text sx={textBox}>{t('mobile')}</Text>
-            <Text sx={textBox}>{accountDetail.phoneNumber}</Text>
+            <Text>{accountDetail.phoneNumber}</Text>
           </Flex>
-          <Flex justifyContent={'space-around'} w={"100%"}>
+          <Flex w={"100%"}>
             <Text sx={textBox}>{t('referral_code')}</Text>
-            <Center w={"50%"} gap={3}>
+            <Center gap={3}>
               <Text>{accountDetail.referralCode}</Text>
               <CopyButton h='30px' copyText={accountDetail.referralCode}/>
             </Center>
@@ -49,6 +50,6 @@ const Personal = () => {
 export default Personal
 
 const textBox = {
-  w: "50%",
-  textAlign: "center"
+  w: ["180px","180px","300px","300px"],
+  textAlign: "start"
 }

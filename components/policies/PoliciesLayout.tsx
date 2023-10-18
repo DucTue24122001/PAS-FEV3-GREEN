@@ -25,7 +25,6 @@ const PoliciesLayout = ({ children }: any) => {
             px={"16px"}
             py={"15px"}
             borderRight={`1px solid #c6c6c6`}
-            // onClick={() => router.push(`../policies/${policies.directPage}`)}
             onClick={() => router.push("/policies/terms")}
             cursor={"pointer"}
             transition={".3s"}
@@ -46,7 +45,6 @@ const PoliciesLayout = ({ children }: any) => {
             px={"16px"}
             py={"15px"}
             borderRight={`1px solid #c6c6c6`}
-            // onClick={() => router.push(`../policies/${policies.directPage}`)}
             onClick={() => router.push("/policies/privacy")}
             cursor={"pointer"}
             transition={".3s"}
@@ -68,7 +66,6 @@ const PoliciesLayout = ({ children }: any) => {
             px={"16px"}
             py={"15px"}
             borderRight={`1px solid #c6c6c6`}
-            // onClick={() => router.push(`../policies/${policies.directPage}`)}
             onClick={() => router.push("/policies/disconnect")}
             cursor={"pointer"}
             transition={".3s"}
