@@ -1,6 +1,6 @@
-import { Box, Flex, Image } from '@chakra-ui/react'
+import { Center, Flex, Image } from '@chakra-ui/react'
 import React, { useEffect, useMemo } from 'react'
-import LuckyMyanmar from "../../public/images/LuckyMyanmar.png"
+import logo1 from "../../public/images/Eurobet_Logo.png"
 import langUkImg from "../../public/images/en.png"
 import langMmImg from "../../public/images/my.png"
 import langKmImg from "../../public/images/km.png"
@@ -72,9 +72,9 @@ const Navbar = () => {
   return (
     <Flex w={"100%"} minH={"50px"} boxShadow={"0 1px 1px #0e20ff"} justifyContent={"space-around"} pos={"sticky"} top={0}
       bgGradient='linear(to-t, #000b97, #000870)' zIndex={1000} display={checkDisableLayoutPage(router.pathname) ? "none" : "flex"}>
-        <Box cursor={'pointer'} onClick={() => router.push("/")}>
-          <Image p={"5px 0"} h={"50px"} src={LuckyMyanmar.src} alt={"gift"} />
-        </Box>
+        <Center cursor={'pointer'} onClick={() => router.push("/")}>
+          <Image p={"5px 0"} h={"40px"} src={logo1.src} alt={"gift"} />
+        </Center>
         <Flex onClick={() => router.push("/language")} pos={"absolute"} right={"10px"} mt={"5px"} gap={"12.5px"}>
           <Image alt='language' src={currentLangImg} sx={langImg}/>
         </Flex>

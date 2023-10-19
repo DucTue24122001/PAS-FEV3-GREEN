@@ -1,7 +1,7 @@
 /* eslint-disable react/no-children-prop */
 import { Box, Heading, Image, useToast, Text, Input, InputGroup, InputLeftAddon, Checkbox, Flex, Button, Spinner } from '@chakra-ui/react'
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import logo from "../../public/images/LuckyMyanmar.png"
+import logo2 from "../../public/images/Eurobet_Logo2.png"
 import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/router'
 import { useTenancy } from '../../hook/TenancyProvider'
@@ -136,7 +136,7 @@ const Register = () => {
             onClick={() => router.push("/")}/>
           <form onSubmit={registerHandler}>
             <Box m={"20px 0 40px"}>
-              <Image alt='logo' src={logo.src} minW={"140px"} maxW={"240px"} w={"30%"} mx={'auto'}
+              <Image alt='logo' src={logo2.src} h={["100px","100px","150px","150px"]} mx={'auto'}
                 onClick={() => router.push("/")} cursor={'pointer'}/>
               <Heading as={"h5"} className='text_vip'
                 my={"0.8rem"} fontSize={"18px"} fontWeight={500} textAlign={'center'}>{t('register')}</Heading>

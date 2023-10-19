@@ -1,6 +1,6 @@
 import { Box, Center, Checkbox, Flex, Heading, Image, Input, Link, Spinner, Text } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import logo from "../../public/images/LuckyMyanmar.png"
+import logo2 from "../../public/images/Eurobet_Logo2.png"
 import httpClient from '../../http-client/httpClient'
 import { useTenancy } from '../../hook/TenancyProvider'
 import ClientService from '../../http-client/ClientService'
@@ -88,7 +88,7 @@ export default function Login () {
           <form onSubmit={loginHandler}>
             <Box m={"20px 0 40px"}>
               <Link onClick={() => router.push("/")}>
-                <Image alt='logo' src={logo.src} minW={"160px"} maxW={"240px"} w={"40%"} mx={'auto'}/>
+                <Image alt='logo' src={logo2.src} h={["100px","100px","150px","150px"]} mx={'auto'}/>
               </Link>
               <Heading as={"h5"} className='text_vip'
                 my={"0.8rem"} fontSize={"18px"} fontWeight={500} textAlign={'center'}>{t('login')}</Heading>
