@@ -35,7 +35,7 @@ const PoliciesLayout = ({ children }: any) => {
               fontWeight={600}
               fontSize={"14px"}
               color={
-                currentPolicies === "terms" ? "#4956ff" : "white"
+                currentPolicies === "terms" ? "#707bff" : "white"
               }
             >
               {t("terms_and_condition")}
@@ -56,7 +56,7 @@ const PoliciesLayout = ({ children }: any) => {
               fontSize={"14px"}
               color={
                 currentPolicies === "privacy"
-                  ? "#4956ff" : "white"
+                  ? "#707bff" : "white"
               }
             >
               {t("privacy_policy")}
@@ -77,7 +77,7 @@ const PoliciesLayout = ({ children }: any) => {
               fontSize={"14px"}
               color={
                 currentPolicies === "disconnect"
-                  ? "#4956ff" : "white"
+                  ? "#707bff" : "white"
               }
             >
               {t("disconnection_policy")}

@@ -29,7 +29,7 @@ const PoliciesNavBar = ({ ...props }) => {
         textTransform={"uppercase"}
         color={
           currentPolicies === "terms"
-            ? "#4956ff" : "white"
+            ? "#707bff" : "white"
         }
       >
         {t('terms_and_condition')}
@@ -42,7 +42,7 @@ const PoliciesNavBar = ({ ...props }) => {
         textTransform={"uppercase"}
         color={
           currentPolicies === 'privacy'
-            ? "#4956ff" : "white"
+            ? "#707bff" : "white"
         }
       >
         {t('privacy_policy')}
@@ -55,7 +55,7 @@ const PoliciesNavBar = ({ ...props }) => {
         textTransform={"uppercase"}
         color={
           currentPolicies === "disconnect"
-            ? "#4956ff" : "white"
+            ? "#707bff" : "white"
         }
       >
        {t('disconnection_policy')}

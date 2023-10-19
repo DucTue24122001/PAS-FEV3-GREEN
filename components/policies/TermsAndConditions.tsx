@@ -31,20 +31,20 @@ const TermsAndConditions = () => {
           <Box>
             <Text>
               <span style={headList}>1. </span>
-              The “{tenancy?.appName} Rules” are the terms and conditions
+              The “Eurobet Rules” are the terms and conditions
               constituting the complete, final and exclusive agreement between
-              the Account Holder (“you”) and {tenancy?.appName}, and governing
-              the contractual relationship between {tenancy?.appName} and the
-              Account Holder. The {tenancy?.appName} Rules supersede and merge
+              the Account Holder (“you”) and Eurobet, and governing
+              the contractual relationship between Eurobet and the
+              Account Holder. The Eurobet Rules supersede and merge
               all prior agreements, representations, and understandings between
-              the Account Holder and {tenancy?.appName}. By opening a{" "}
-              {tenancy?.appName} Account, registering, logging-in, using the
+              the Account Holder and Eurobet. By opening a{" "}
+              Eurobet Account, registering, logging-in, using the
               Services, participating in the games, or accepting any prize, a
               visitor or an Account Holder fully understands and agrees:
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>a. </span>
-              To become a party to the {tenancy?.appName} Rules,
+              To become a party to the Eurobet Rules,
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>b. </span>
@@ -56,12 +56,12 @@ const TermsAndConditions = () => {
           <Box>
             <Text>
               <span style={headList}>2. </span>
-              {tenancy?.appName} may update, amend, edit and supplement the {tenancy?.appName} Rules
-              at any time. Any substantial amendment to the {tenancy?.appName} Rules shall
-              be notified in advance by {tenancy?.appName} to the Account Holder, before
+              Eurobet may update, amend, edit and supplement the Eurobet Rules
+              at any time. Any substantial amendment to the Eurobet Rules shall
+              be notified in advance by Eurobet to the Account Holder, before
               coming into effect and will require your consent. If you do not
-              agree with the amendment(s) to the {tenancy?.appName} rules, you will not be
-              permitted to continue using the Services. All references in the {tenancy?.appName} Rules to the singular shall include the plural and vice
+              agree with the amendment(s) to the Eurobet rules, you will not be
+              permitted to continue using the Services. All references in the Eurobet Rules to the singular shall include the plural and vice
               versa. All references to “the” shall include “a/an” and vice
               versa.
             </Text>
@@ -70,35 +70,35 @@ const TermsAndConditions = () => {
             <Text>
               <span style={headList}>3. </span>
               An “Account Holder” is an individual having a contractual
-              relationship with {tenancy?.appName} by creating a{" "}
-              {tenancy?.appName} Account on the Website.
+              relationship with Eurobet by creating a{" "}
+              Eurobet Account on the Website.
             </Text>
           </Box>
           <Box>
             <Text>
-              <span style={headList}>4. </span>A “{tenancy?.appName} Account” is
+              <span style={headList}>4. </span>A “Eurobet Account” is
               an account held by an Account Holder, for bona fide transactions,
               with a strict aim to establish a normal commercial relationship
-              with {tenancy?.appName} and with the strict purpose of conducting
+              with Eurobet and with the strict purpose of conducting
               betting and other gaming and gambling transactions.
             </Text>
           </Box>
           <Box>
             <Text>
               <span style={headList}>5. </span>
-              The “Contract” is the contractual relationship between {tenancy?.appName} and an Account Holder and shall be constituted under and governed
-              by the {tenancy?.appName} Rules, i.e. the “Terms and Conditions”.
+              The “Contract” is the contractual relationship between Eurobet and an Account Holder and shall be constituted under and governed
+              by the Eurobet Rules, i.e. the “Terms and Conditions”.
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>a. </span>
               The “Website” is the internet gateway accessible through the
-              internet address www.{window.location.host} where all current and relevant
-              information regarding {tenancy?.appName}’s operations is published, and
+              internet address www.eurobetmm.com where all current and relevant
+              information regarding Eurobet’s operations is published, and
               through which the Services are provided to the Account Holders.
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>b. </span>
-              The “Services” are the gaming and betting offers provided by {tenancy?.appName} to the Account Holder through the Website.
+              The “Services” are the gaming and betting offers provided by Eurobet to the Account Holder through the Website.
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>c. </span>A “Card” refers to all types of
@@ -121,7 +121,7 @@ const TermsAndConditions = () => {
               “Force Majeure” refers to any occurrence or condition beyond one’s
               reasonable control which leads to a delay or default in the
               performance of the affected party’s contractual obligation and
-              shall, for the purposes of the {tenancy?.appName} Rules, include
+              shall, for the purposes of the Eurobet Rules, include
               Acts of God, government restrictions (including the denial or
               cancellation of any necessary license where such denial or
               cancellation is made through no fault of the affected party),
@@ -139,7 +139,7 @@ const TermsAndConditions = () => {
             <Text ml={"10px"}>
               <span style={headList}>h. </span>
               “Software” shall mean all software or App (Android or IOS
-              versions) used by {tenancy?.appName} to offer and/or operate the
+              versions) used by Eurobet to offer and/or operate the
               Services and/or run the Client Application.
             </Text>
             <Text ml={"10px"}>
@@ -148,7 +148,7 @@ const TermsAndConditions = () => {
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>j. </span>
-              An “Inactive Account” is a {tenancy?.appName} Account which has
+              An “Inactive Account” is a Eurobet Account which has
               not recorded any log-in and/or logout for a period exceeding 12
               consecutive months.
             </Text>
@@ -158,7 +158,7 @@ const TermsAndConditions = () => {
               graphics, text, concepts or methodologies (collectively the
               “Intellectual Assets”) found on the Website, the Client
               Application and the material contained therein are the exclusive
-              property of {tenancy?.appName} and/or {tenancy?.appName}’s
+              property of Eurobet and/or Eurobet’s
               suppliers and partners. The Account Holder is not entitled to
               exploit or otherwise use any Intellectual Asset for whatever
               purpose, except for what is allowed by law.
@@ -206,9 +206,9 @@ const TermsAndConditions = () => {
                 tenancy?.appName
               }{" "}
               Account.
-              {tenancy?.appName} reserves the right to request additional proof
+              Eurobet reserves the right to request additional proof
               of age and perform additional checks in order to verify the
-              information provided. A {tenancy?.appName} Account may be
+              information provided. A Eurobet Account may be
               suspended until satisfactory proof of age is provided.
             </Text>
           </Box>
@@ -216,8 +216,8 @@ const TermsAndConditions = () => {
             <Text>
               <span style={headList}>8. </span>
               All personal and confidential information provided to{" "}
-              {tenancy?.appName} by its players remains confidential with{" "}
-              {tenancy?.appName} and is used ONLY on the {tenancy?.appName}{" "}
+              Eurobet by its players remains confidential with{" "}
+              Eurobet and is used ONLY on the Eurobet{" "}
               system for improving user-experience, and not for commercial
               purposes.
             </Text>
@@ -236,7 +236,7 @@ const TermsAndConditions = () => {
             <Text ml={"10px"}>
               <span style={headList}>b. </span>
               Not to be a professional player in any sport, competition or
-              league where {tenancy?.appName} offers betting;
+              league where Eurobet offers betting;
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>c. </span>
@@ -265,26 +265,26 @@ const TermsAndConditions = () => {
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>h. </span>
-              Not to be conducting criminal activities whereby a {tenancy?.appName} Account is directly or indirectly involved;
+              Not to be conducting criminal activities whereby a Eurobet Account is directly or indirectly involved;
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>i. </span>
               Not to be holding an active account with another legal entity
-              which is part of the same group as {tenancy?.appName};
+              which is part of the same group as Eurobet;
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>j. </span>
               Not to use the Services if it is illegal in his/her country of
               residence or otherwise restricted for him/her to open a gaming
-              account, purchase or use services from {tenancy?.appName} and/or otherwise
+              account, purchase or use services from Eurobet and/or otherwise
               participate in the games offered. It is the Account Holder’s
-              responsibility to ensure his/her use of {tenancy?.appName}’s Website and
+              responsibility to ensure his/her use of Eurobet’s Website and
               Services is legal;
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>k. </span>. Not to find the Website or the
               Services offensive, objectionable, unfair, nor indecent; and to
-              maintain his/her {tenancy?.appName} Account details up-to-date in
+              maintain his/her Eurobet Account details up-to-date in
               terms of the following: first and last name, country of residence,
               valid email address and phone number.
             </Text>
@@ -299,13 +299,13 @@ const TermsAndConditions = () => {
           <Box>
             <Text>
               <span style={headList}>10. </span>
-              An individual applying for a {tenancy?.appName} Account
+              An individual applying for a Eurobet Account
               acknowledges and accepts:
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>a. </span>
-              All definitions and stipulations as stated under the {tenancy?.appName} Rules; the {tenancy?.appName} Rules as currently published on the Website,
-              as well as any possible future changes to the {tenancy?.appName} Rules;
+              All definitions and stipulations as stated under the Eurobet Rules; the Eurobet Rules as currently published on the Website,
+              as well as any possible future changes to the Eurobet Rules;
             </Text>
           </Box>
         </Flex>
@@ -616,47 +616,47 @@ const TermsAndConditions = () => {
           <Box>
             <Text>
               <span style={headList}>១. </span>
-              “វិធានរបស់ {tenancy?.appName}” គឺជាប្រការ និងលក្ខខណ្ឌដែលបង្កើតបានជាកិច្ចព្រមព្រៀងចុងក្រោយ និងផ្តាច់មុខទាំងស្រុងរវាងម្ចាស់គណនី (តទៅនេះហៅថា “អ្នក”) និង {tenancy?.appName} ហើយនឹងគ្រប់គ្រងលើទំនាក់ទំនងតាមកិច្ចសន្យារវាង {tenancy?.appName} និងម្ចាស់គណនី។ វិធានរបស់ {tenancy?.appName} ត្រូវនិរាករណ៍ និងជាការរួមបញ្ចូលតែមួយនូវរាល់កិច្ចព្រមព្រៀង ការអះអាង និងការយោគយល់ពីមុនទាំងអស់រវាងម្ចាស់គណនី និង {tenancy?.appName} ។ តាមរយៈការបើកគណនីនៅ {tenancy?.appName} ការចុះឈ្មោះ ចូល ប្រើប្រាស់សេវា ចូលរួមលេងល្បែង ឬទទួលយករង្វាន់ណាមួយ នោះអ្នកចូលរួម ឬម្ចាស់គណនីយល់ច្បាស់ និងយល់ព្រម៖
+              “វិធានរបស់ Eurobet” គឺជាប្រការ និងលក្ខខណ្ឌដែលបង្កើតបានជាកិច្ចព្រមព្រៀងចុងក្រោយ និងផ្តាច់មុខទាំងស្រុងរវាងម្ចាស់គណនី (តទៅនេះហៅថា “អ្នក”) និង Eurobet ហើយនឹងគ្រប់គ្រងលើទំនាក់ទំនងតាមកិច្ចសន្យារវាង Eurobet និងម្ចាស់គណនី។ វិធានរបស់ Eurobet ត្រូវនិរាករណ៍ និងជាការរួមបញ្ចូលតែមួយនូវរាល់កិច្ចព្រមព្រៀង ការអះអាង និងការយោគយល់ពីមុនទាំងអស់រវាងម្ចាស់គណនី និង Eurobet ។ តាមរយៈការបើកគណនីនៅ Eurobet ការចុះឈ្មោះ ចូល ប្រើប្រាស់សេវា ចូលរួមលេងល្បែង ឬទទួលយករង្វាន់ណាមួយ នោះអ្នកចូលរួម ឬម្ចាស់គណនីយល់ច្បាស់ និងយល់ព្រម៖
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ក. </span>
-              ក្លាយជាភាគីមួយនៃវិធានរបស់ {tenancy?.appName}។
+              ក្លាយជាភាគីមួយនៃវិធានរបស់ Eurobet។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ខ. </span>
-              ខ្លួនបានអាន យល់ និងគោរពតាមបណ្តាប្រការ និងលក្ខខណ្ឌទាំងនេះ ហើយនឹងគោរពតាមគ្រប់លក្ខខណ្ឌដែល {tenancy?.appName} បានកំណត់។
+              ខ្លួនបានអាន យល់ និងគោរពតាមបណ្តាប្រការ និងលក្ខខណ្ឌទាំងនេះ ហើយនឹងគោរពតាមគ្រប់លក្ខខណ្ឌដែល Eurobet បានកំណត់។
             </Text>
           </Box>
           <Box>
             <Text>
               <span style={headList}>២. </span>
-              {tenancy?.appName} អាចធ្វើបច្ចុប្បន្នភាព កែប្រែ កែសម្រួល និងបន្ថែមវិធានរបស់ {tenancy?.appName} បានគ្រប់ពេល។ រាល់វិសោធនកម្មខ្លឹមសារសំខាន់ៗលើវិធានរបស់ {tenancy?.appName} នឹងត្រូវជូនដំណឹងជាមុនដោយ {tenancy?.appName} ទៅដល់ម្ចាស់គណនី មុនពេលចូលជាធរមាន និងទាមទារឱ្យមានការយល់ព្រមពីអ្នក។ ប្រសិនបើអ្នកមិនយល់ព្រមតាមវិសោធនកម្មលើវិធានរបស់ {tenancy?.appName} នោះអ្នកមិនត្រូវបានអនុញ្ញាតឱ្យបន្តប្រើប្រាស់សេវាទេ។ សេចក្តីយោងទាំងអស់នៅក្នុងវិធានរបស់ {tenancy?.appName} ដល់ចំនួនឯកវចនៈត្រូវរាប់បញ្ចូលទាំងចំនួនពហុវចនៈផងដែរ និងច្រាសមកវិញ។ សេចក្តីយោងទាំងអស់ដល់ពាក្យការន្តណាមួយត្រូវរាប់បញ្ចូលទាំងការន្តទាំងអស់ផងដែរ និងច្រាសមកវិញ។
+              Eurobet អាចធ្វើបច្ចុប្បន្នភាព កែប្រែ កែសម្រួល និងបន្ថែមវិធានរបស់ Eurobet បានគ្រប់ពេល។ រាល់វិសោធនកម្មខ្លឹមសារសំខាន់ៗលើវិធានរបស់ Eurobet នឹងត្រូវជូនដំណឹងជាមុនដោយ Eurobet ទៅដល់ម្ចាស់គណនី មុនពេលចូលជាធរមាន និងទាមទារឱ្យមានការយល់ព្រមពីអ្នក។ ប្រសិនបើអ្នកមិនយល់ព្រមតាមវិសោធនកម្មលើវិធានរបស់ Eurobet នោះអ្នកមិនត្រូវបានអនុញ្ញាតឱ្យបន្តប្រើប្រាស់សេវាទេ។ សេចក្តីយោងទាំងអស់នៅក្នុងវិធានរបស់ Eurobet ដល់ចំនួនឯកវចនៈត្រូវរាប់បញ្ចូលទាំងចំនួនពហុវចនៈផងដែរ និងច្រាសមកវិញ។ សេចក្តីយោងទាំងអស់ដល់ពាក្យការន្តណាមួយត្រូវរាប់បញ្ចូលទាំងការន្តទាំងអស់ផងដែរ និងច្រាសមកវិញ។
             </Text>
           </Box>
           <Box>
             <Text>
               <span style={headList}>៣. </span>
-              “ម្ចាស់គណនី” គឺជាបុគ្គលដែលមានទំនាក់ទំនងតាមកិច្ចសន្យាជាមួយ {tenancy?.appName} ដោយការបង្កើតគណនី {tenancy?.appName} នៅលើគេហទំព័រ។
+              “ម្ចាស់គណនី” គឺជាបុគ្គលដែលមានទំនាក់ទំនងតាមកិច្ចសន្យាជាមួយ Eurobet ដោយការបង្កើតគណនី Eurobet នៅលើគេហទំព័រ។
             </Text>
           </Box>
           <Box>
             <Text>
               <span style={headList}>៤. </span>
-              “គណនី {tenancy?.appName}” គឺជាគណនីដែលកាន់កាប់ដោយម្ចាស់គណនី សម្រាប់ធ្វើប្រតិបត្តិការពិតប្រាកដក្នុងគោលបំណងដាច់ខាតសម្រាប់បង្កើតទំនាក់ទំនងពាណិជ្ជកម្មធម្មតាជាមួយ {tenancy?.appName} និងក្នុងគោលបំណងដាច់ខាតសម្រាប់ប្រតិបត្តិការភ្នាល់ ប្រតិបត្តិការហ្គេម និងល្បែងផ្សេងៗ។
+              “គណនី Eurobet” គឺជាគណនីដែលកាន់កាប់ដោយម្ចាស់គណនី សម្រាប់ធ្វើប្រតិបត្តិការពិតប្រាកដក្នុងគោលបំណងដាច់ខាតសម្រាប់បង្កើតទំនាក់ទំនងពាណិជ្ជកម្មធម្មតាជាមួយ Eurobet និងក្នុងគោលបំណងដាច់ខាតសម្រាប់ប្រតិបត្តិការភ្នាល់ ប្រតិបត្តិការហ្គេម និងល្បែងផ្សេងៗ។
             </Text>
           </Box>
           <Box>
             <Text>
               <span style={headList}>៥. </span>
-              “កិច្ចសន្យា” គឺជាទំនាក់ទំនងតាមកិច្ចសន្យារវាង {tenancy?.appName} និងម្ចាស់គណនី ហើយត្រូវបានបង្កើតឡើង និងគ្រប់គ្រងតាមវិធានរបស់ {tenancy?.appName} ពោលគឺ “ប្រការ និងលក្ខខណ្ឌ”។
+              “កិច្ចសន្យា” គឺជាទំនាក់ទំនងតាមកិច្ចសន្យារវាង Eurobet និងម្ចាស់គណនី ហើយត្រូវបានបង្កើតឡើង និងគ្រប់គ្រងតាមវិធានរបស់ Eurobet ពោលគឺ “ប្រការ និងលក្ខខណ្ឌ”។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ក. </span>
-              “គេហទំព័រ” គឺជាច្រកអ៊ីនធឺណិតដែលអាចចូលប្រើបានតាមរយៈអាសយដ្ឋានអ៊ីនធឺណិត www.{window.location.host} ដែលក្នុងនោះព័ត៌មានពាក់ព័ន្ធថ្មីៗទាំងអស់ទាក់ទងនឹងប្រតិបត្តិការរបស់ {tenancy?.appName} ត្រូវបានបោះពុម្ព ហើយតាមរយៈនោះសេវាត្រូវបានផ្តល់ជូនម្ចាស់គណនី។
+              “គេហទំព័រ” គឺជាច្រកអ៊ីនធឺណិតដែលអាចចូលប្រើបានតាមរយៈអាសយដ្ឋានអ៊ីនធឺណិត www.{window.location.host} ដែលក្នុងនោះព័ត៌មានពាក់ព័ន្ធថ្មីៗទាំងអស់ទាក់ទងនឹងប្រតិបត្តិការរបស់ Eurobet ត្រូវបានបោះពុម្ព ហើយតាមរយៈនោះសេវាត្រូវបានផ្តល់ជូនម្ចាស់គណនី។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ខ. </span>
-              “សេវា” គឺជាសំណើលេងល្បែង និងភ្នាល់ពី {tenancy?.appName} ទៅកាន់ម្ចាស់គណនីតាមរយៈគេហទំព័រ។
+              “សេវា” គឺជាសំណើលេងល្បែង និងភ្នាល់ពី Eurobet ទៅកាន់ម្ចាស់គណនីតាមរយៈគេហទំព័រ។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>គ. </span>
@@ -672,7 +672,7 @@ const TermsAndConditions = () => {
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ច. </span>
-              “ករណីប្រធានសក្តិ” សំដៅលើព្រឹត្តិការណ៍ ឬលក្ខខណ្ឌណាមួយដែលហួសពីសមត្ថភាពគ្រប់គ្រងសមស្របរបស់បុគ្គលណាមួយ ដែលនាំទៅដល់ការយឺតយ៉ាវ ឬខកខានមិនបានបំពេញកាតព្វកិច្ចតាមកិច្ចសន្យារបស់ភាគីដែលរងផលប៉ះពាល់ ហើយសម្រាប់គោលបំណងនៃវិធានរបស់ {tenancy?.appName} រួមមានអំពើរបស់អាទិទេព បម្រាមរបស់រដ្ឋាភិបាល (ដូចជាការបដិសេធ ឬលុបចោលអាជ្ញាបណ្ណចាំបាច់ណាមួយ ដែលការបដិសេធ ឬលុបចោលនោះធ្វើឡើងដោយមិនមែនជាកំហុសរបស់ភាគីដែលរងផលប៉ះពាល់) សង្គ្រាម ការផ្ទុះឡើងនូវអរិភាព កុបកម្ម ការរំខានស៊ីវិល ការបះបោរ អំពើភេរវកម្ម អគ្គីភ័យ      ការផ្ទុះ ទឹកជំនន់ ចោរកម្ម ព្យសនកម្មដោយចេតនាមិនល្អ កូដកម្ម សកម្មភាពបិទទ្វាររោងចក្រ និង/ឬបុព្វហេតុផ្សេងទៀតដែលហួសពីសមត្ថភាពគ្រប់គ្រងសមស្របរបស់ភាគីដែលរងផលប៉ះពាល់ក្នុងការ​បំពេញកាតព្វកិច្ចរបស់ខ្លួន។
+              “ករណីប្រធានសក្តិ” សំដៅលើព្រឹត្តិការណ៍ ឬលក្ខខណ្ឌណាមួយដែលហួសពីសមត្ថភាពគ្រប់គ្រងសមស្របរបស់បុគ្គលណាមួយ ដែលនាំទៅដល់ការយឺតយ៉ាវ ឬខកខានមិនបានបំពេញកាតព្វកិច្ចតាមកិច្ចសន្យារបស់ភាគីដែលរងផលប៉ះពាល់ ហើយសម្រាប់គោលបំណងនៃវិធានរបស់ Eurobet រួមមានអំពើរបស់អាទិទេព បម្រាមរបស់រដ្ឋាភិបាល (ដូចជាការបដិសេធ ឬលុបចោលអាជ្ញាបណ្ណចាំបាច់ណាមួយ ដែលការបដិសេធ ឬលុបចោលនោះធ្វើឡើងដោយមិនមែនជាកំហុសរបស់ភាគីដែលរងផលប៉ះពាល់) សង្គ្រាម ការផ្ទុះឡើងនូវអរិភាព កុបកម្ម ការរំខានស៊ីវិល ការបះបោរ អំពើភេរវកម្ម អគ្គីភ័យ      ការផ្ទុះ ទឹកជំនន់ ចោរកម្ម ព្យសនកម្មដោយចេតនាមិនល្អ កូដកម្ម សកម្មភាពបិទទ្វាររោងចក្រ និង/ឬបុព្វហេតុផ្សេងទៀតដែលហួសពីសមត្ថភាពគ្រប់គ្រងសមស្របរបស់ភាគីដែលរងផលប៉ះពាល់ក្នុងការ​បំពេញកាតព្វកិច្ចរបស់ខ្លួន។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ឆ. </span>
@@ -680,7 +680,7 @@ const TermsAndConditions = () => {
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ជ. </span>
-              កម្មវិធី “សូហ្វវែរ” មានន័យថារាល់កម្មវិធីសូហ្វវែរ ឬ app ទាំងអស់ (កម្មវិធី Android ឬ IOS) ដែលប្រើដោយ {tenancy?.appName} ដើម្បីផ្តល់ជូន និង/ឬបើកដំណើរការសេវា និង/ឬដំណើរការកម្មវិធីអតិថិជន។
+              កម្មវិធី “សូហ្វវែរ” មានន័យថារាល់កម្មវិធីសូហ្វវែរ ឬ app ទាំងអស់ (កម្មវិធី Android ឬ IOS) ដែលប្រើដោយ Eurobet ដើម្បីផ្តល់ជូន និង/ឬបើកដំណើរការសេវា និង/ឬដំណើរការកម្មវិធីអតិថិជន។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ឈ. </span>
@@ -688,11 +688,11 @@ const TermsAndConditions = () => {
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ញ. </span>
-              “គណនីអសកម្ម” គឺជាគណនី {tenancy?.appName} ដែលមិនមានកំណត់ត្រាចូល និង/ឬចេញពីគណនី លើសពីរយៈពេល ១២ ខែជាប់ៗគ្នា។
+              “គណនីអសកម្ម” គឺជាគណនី Eurobet ដែលមិនមានកំណត់ត្រាចូល និង/ឬចេញពីគណនី លើសពីរយៈពេល ១២ ខែជាប់ៗគ្នា។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ដ. </span>
-              រាល់ពាណិជ្ជសញ្ញា សេវាសញ្ញា និងពាណិជ្ជនាមទាំងអស់ រួមទាំងរូបភាព ក្រាហ្វិក អត្ថបទ គំនិត ឬវិធីសាស្រ្ត (តទៅនេះហៅជារួមថា “ទ្រព្យកម្មសិទ្ធិបញ្ញា”) ដែលមាននៅលើគេហទំព័រ កម្មវិធីអតិថិជន និងសម្ភារដែលមានក្នុងនោះ គឺជាកម្មសិទ្ធិផ្តាច់មុខរបស់ {tenancy?.appName} និង/ឬអ្នកផ្គត់ផ្គង់ និងដៃគូរបស់ {tenancy?.appName}។ ម្ចាស់គណនីមិនមានសិទ្ធិធ្វើអាជីវកម្ម ឬប្រើប្រាស់ទ្រព្យកម្មសិទ្ធិបញ្ញាឡើយ មិនថាក្នុងគោលបំណងអ្វីក៏ដោយ លើកលែងតែក្នុងវិសាលភាពមួយដែលច្បាប់អនុញ្ញាត។
+              រាល់ពាណិជ្ជសញ្ញា សេវាសញ្ញា និងពាណិជ្ជនាមទាំងអស់ រួមទាំងរូបភាព ក្រាហ្វិក អត្ថបទ គំនិត ឬវិធីសាស្រ្ត (តទៅនេះហៅជារួមថា “ទ្រព្យកម្មសិទ្ធិបញ្ញា”) ដែលមាននៅលើគេហទំព័រ កម្មវិធីអតិថិជន និងសម្ភារដែលមានក្នុងនោះ គឺជាកម្មសិទ្ធិផ្តាច់មុខរបស់ Eurobet និង/ឬអ្នកផ្គត់ផ្គង់ និងដៃគូរបស់ Eurobet។ ម្ចាស់គណនីមិនមានសិទ្ធិធ្វើអាជីវកម្ម ឬប្រើប្រាស់ទ្រព្យកម្មសិទ្ធិបញ្ញាឡើយ មិនថាក្នុងគោលបំណងអ្វីក៏ដោយ លើកលែងតែក្នុងវិសាលភាពមួយដែលច្បាប់អនុញ្ញាត។
             </Text>
           </Box>
           <Box>
@@ -724,13 +724,13 @@ const TermsAndConditions = () => {
           <Box>
             <Text>
               <span style={headList}>៧. </span>
-              អ្នកដាក់ពាក្យសុំធ្វើជាម្ចាស់គណនី ធានាអះអាងថាខ្លួនមិនមានអាយុក្រោម ១៨ (ដប់ប្រាំបី) ឆ្នាំ។ អនីតិជនមិនអាចចុះឈ្មោះចូលលេង និងមិនអាចមានគណនី {tenancy?.appName} បានទេ។ {tenancy?.appName} រក្សាសិទ្ធិក្នុងការស្នើសុំ     ភស្តុតាងបន្ថែមបញ្ជាក់ពីអាយុ និងធ្វើការត្រួតពិនិត្យបន្ថែម ដើម្បីផ្ទៀងផ្ទាត់ព័ត៌មានដែលបានផ្តល់ជូន។ គណនី {tenancy?.appName} អាចនឹងត្រូវផ្អាកជាបណ្តោះអាសន្នរហូតទាល់តែមានភស្តុតាងត្រឹមត្រូវ​បញ្ជាក់ពីអាយុ។
+              អ្នកដាក់ពាក្យសុំធ្វើជាម្ចាស់គណនី ធានាអះអាងថាខ្លួនមិនមានអាយុក្រោម ១៨ (ដប់ប្រាំបី) ឆ្នាំ។ អនីតិជនមិនអាចចុះឈ្មោះចូលលេង និងមិនអាចមានគណនី Eurobet បានទេ។ Eurobet រក្សាសិទ្ធិក្នុងការស្នើសុំ     ភស្តុតាងបន្ថែមបញ្ជាក់ពីអាយុ និងធ្វើការត្រួតពិនិត្យបន្ថែម ដើម្បីផ្ទៀងផ្ទាត់ព័ត៌មានដែលបានផ្តល់ជូន។ គណនី Eurobet អាចនឹងត្រូវផ្អាកជាបណ្តោះអាសន្នរហូតទាល់តែមានភស្តុតាងត្រឹមត្រូវ​បញ្ជាក់ពីអាយុ។
             </Text>
           </Box>
           <Box>
             <Text>
               <span style={headList}>៨. </span>
-              រាល់ព័ត៌មានផ្ទាល់ខ្លួន និងសម្ងាត់ដែលអ្នកលេងផ្តល់ជូន {tenancy?.appName} នៅតែរក្សាជាការសម្ងាត់ដោយ {tenancy?.appName} និងប្រើប្រាស់សម្រាប់តែនៅលើប្រព័ន្ធ {tenancy?.appName} ដើម្បីកែលម្អបទពិសោធន៍របស់អ្នកប្រើប្រាស់ប៉ុណ្ណោះ មិនមែនសម្រាប់គោលបំណងពាណិជ្ជកម្មនោះទេ។
+              រាល់ព័ត៌មានផ្ទាល់ខ្លួន និងសម្ងាត់ដែលអ្នកលេងផ្តល់ជូន Eurobet នៅតែរក្សាជាការសម្ងាត់ដោយ Eurobet និងប្រើប្រាស់សម្រាប់តែនៅលើប្រព័ន្ធ Eurobet ដើម្បីកែលម្អបទពិសោធន៍របស់អ្នកប្រើប្រាស់ប៉ុណ្ណោះ មិនមែនសម្រាប់គោលបំណងពាណិជ្ជកម្មនោះទេ។
             </Text>
           </Box>
           <Box>
@@ -744,7 +744,7 @@ const TermsAndConditions = () => {
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ខ. </span>
-              មិនមែនជាអ្នកលេងអាជីពក្នុងវិស័យកីឡា ការប្រកួត ឬលីកណាមួយដែល {tenancy?.appName} ដាក់ភ្នាល់នោះទេ។
+              មិនមែនជាអ្នកលេងអាជីពក្នុងវិស័យកីឡា ការប្រកួត ឬលីកណាមួយដែល Eurobet ដាក់ភ្នាល់នោះទេ។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>គ. </span>
@@ -768,19 +768,19 @@ const TermsAndConditions = () => {
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ជ. </span>
-              មិនធ្វើសកម្មភាពឧក្រិដ្ឋកម្មដែលនាំឱ្យគណនី {tenancy?.appName} ជាប់ពាក់ព័ន្ធដោយផ្ទាល់ ឬដោយប្រយោល។
+              មិនធ្វើសកម្មភាពឧក្រិដ្ឋកម្មដែលនាំឱ្យគណនី Eurobet ជាប់ពាក់ព័ន្ធដោយផ្ទាល់ ឬដោយប្រយោល។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ឈ.​ </span>
-              មិនមានគណនីសកម្មណាមួយនៅនីតិបុគ្គលផ្សេងទៀតដែលស្ថិតក្នុងសម្ព័ន្ធដូចគ្នានឹង {tenancy?.appName}។
+              មិនមានគណនីសកម្មណាមួយនៅនីតិបុគ្គលផ្សេងទៀតដែលស្ថិតក្នុងសម្ព័ន្ធដូចគ្នានឹង Eurobet។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ញ. </span>
-              មិនប្រើសេវា ប្រសិនបើវាខុសច្បាប់នៅក្នុងប្រទេសដែលខ្លួនតាំងនៅលំនៅដ្ឋាន ឬដាក់កំហិតលើខ្លួនមិនឱ្យបើកគណនីហ្គេម ឬទិញ ឬប្រើប្រាស់សេវារបស់ {tenancy?.appName} និង/ឬបើមិនដូច្នេះទេ ចូលរួមលេងហ្គេមដែលបានផ្តល់ជូន។ ម្ចាស់គណនីទទួលខុសត្រូវក្នុងការធានាប្រើប្រាស់គេហទំព័រ និងសេវារបស់ {tenancy?.appName} ស្របតាមច្បាប់។
+              មិនប្រើសេវា ប្រសិនបើវាខុសច្បាប់នៅក្នុងប្រទេសដែលខ្លួនតាំងនៅលំនៅដ្ឋាន ឬដាក់កំហិតលើខ្លួនមិនឱ្យបើកគណនីហ្គេម ឬទិញ ឬប្រើប្រាស់សេវារបស់ Eurobet និង/ឬបើមិនដូច្នេះទេ ចូលរួមលេងហ្គេមដែលបានផ្តល់ជូន។ ម្ចាស់គណនីទទួលខុសត្រូវក្នុងការធានាប្រើប្រាស់គេហទំព័រ និងសេវារបស់ Eurobet ស្របតាមច្បាប់។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ដ. </span>
-              មិនប្រើពាក្យសម្តីប្រមាថមើលងាយ មិនយុត្តិធម៌ ឬមិនសមរម្យអំពីគេហទំព័រ ឬសេវា និងរក្សាធ្វើបច្ចុប្បន្នភាពព័ត៌មានលម្អិតអំពីគណនី {tenancy?.appName} របស់ខ្លួនក្នុងលក្ខខណ្ឌដូចខាងក្រោម៖ នាមខ្លួន និងនាមត្រកូល ប្រទេសតាំងលំនៅដ្ឋាន អាសយដ្ឋានអ៊ីម៉ែល និងលេខទូរសព្ទដែលមានសុពលភាព។
+              មិនប្រើពាក្យសម្តីប្រមាថមើលងាយ មិនយុត្តិធម៌ ឬមិនសមរម្យអំពីគេហទំព័រ ឬសេវា និងរក្សាធ្វើបច្ចុប្បន្នភាពព័ត៌មានលម្អិតអំពីគណនី Eurobet របស់ខ្លួនក្នុងលក្ខខណ្ឌដូចខាងក្រោម៖ នាមខ្លួន និងនាមត្រកូល ប្រទេសតាំងលំនៅដ្ឋាន អាសយដ្ឋានអ៊ីម៉ែល និងលេខទូរសព្ទដែលមានសុពលភាព។
             </Text>
             <Text ml={"10px"}>
               <span style={headList}>ឋ. </span>
@@ -790,13 +790,13 @@ const TermsAndConditions = () => {
           <Box>
             <Text>
               <span style={headList}>១០. </span>
-              អ្នកដាក់ពាក្យសុំគណនី {tenancy?.appName} ទទួលស្គាល់ និងយល់ព្រមតាម៖
+              អ្នកដាក់ពាក្យសុំគណនី Eurobet ទទួលស្គាល់ និងយល់ព្រមតាម៖
             </Text>
           </Box>
           <Box>
             <Text ml={"10px"}>
               <span style={headList}>ក. </span>
-              រាល់និយមន័យ និងបញ្ញត្តិទាំងអស់ដូចមានចែងក្នុងវិធានរបស់ {tenancy?.appName} រួមទាំងវិធានបច្ចុប្បន្នរបស់ {tenancy?.appName} ដែលបានចុះផ្សាយនៅលើគេហទំព័រ ក៏ដូចជាវិធានរបស់ {tenancy?.appName} ដែលអាចនឹងត្រូវបានកែប្រែនាពេលអនាគត។
+              រាល់និយមន័យ និងបញ្ញត្តិទាំងអស់ដូចមានចែងក្នុងវិធានរបស់ Eurobet រួមទាំងវិធានបច្ចុប្បន្នរបស់ Eurobet ដែលបានចុះផ្សាយនៅលើគេហទំព័រ ក៏ដូចជាវិធានរបស់ Eurobet ដែលអាចនឹងត្រូវបានកែប្រែនាពេលអនាគត។
             </Text>
           </Box>
         </Flex>

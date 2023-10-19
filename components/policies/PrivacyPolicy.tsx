@@ -24,15 +24,15 @@ const PrivacyPolicy = () => {
               1. Privacy
             </Text>
             <Text>
-              {tenancy?.appName} is committed to protecting the personal information of
+              Eurobet is committed to protecting the personal information of
               our players. This Privacy Policy lets you know what information we
               collect when you use our services, why we collect this
               information, and how we use the collected information.
             </Text>
             <Text>
               Please note that this Privacy Policy will be agreed between you
-              and {tenancy?.appName}. (‘We’, ‘Us’ or ‘Our’, as appropriate). This Privacy
-              Policy is an integrated part of {tenancy?.appName}’s Terms and Conditions.
+              and Eurobet. (‘We’, ‘Us’ or ‘Our’, as appropriate). This Privacy
+              Policy is an integrated part of Eurobet’s Terms and Conditions.
               We may periodically make changes to this Privacy Policy and will
               notify you of these changes by posting the modified terms on our
               platforms. We recommend that you revisit this Privacy Policy
@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
               We may automatically collect certain data as discussed above and
               receive Personal Information about you where you provide such
               information through the services or other forms of communications
-              and interactions through the {tenancy?.appName} site. We may also receive
+              and interactions through the Eurobet site. We may also receive
               Personal Information from online vendors and service providers,
               and from customer lists lawfully acquired from third-party
               vendors. In addition, we may engage the services of third-party
@@ -918,10 +918,10 @@ const PrivacyPolicy = () => {
             ១. ឯកជនភាព
             </Text>
             <Text>
-            {tenancy?.appName} ប្តេជ្ញាការពារព័ត៌មានផ្ទាល់ខ្លួនរបស់អតិថិជនយើងក្នុងនាមជាអ្នកលេង។ គោលការណ៍ ឯកជនភាពនេះអនុញ្ញាតឱ្យអ្នកដឹងថា តើព័ត៌មានអ្វីខ្លះដែលយើងប្រមូល នៅពេលអ្នកប្រើសេវារបស់យើង ហេតុអ្វីបានជាយើងប្រមូលព័ត៌មានទាំងនេះ ហើយតើយើងប្រើព័ត៌មានដែលប្រមូលបានដោយរបៀបណា។
+            Eurobet ប្តេជ្ញាការពារព័ត៌មានផ្ទាល់ខ្លួនរបស់អតិថិជនយើងក្នុងនាមជាអ្នកលេង។ គោលការណ៍ ឯកជនភាពនេះអនុញ្ញាតឱ្យអ្នកដឹងថា តើព័ត៌មានអ្វីខ្លះដែលយើងប្រមូល នៅពេលអ្នកប្រើសេវារបស់យើង ហេតុអ្វីបានជាយើងប្រមូលព័ត៌មានទាំងនេះ ហើយតើយើងប្រើព័ត៌មានដែលប្រមូលបានដោយរបៀបណា។
             </Text>
             <Text>
-            សូមកត់សម្គាល់ថាគោលការណ៍ឯកជនភាពនេះ នឹងត្រូវមានការយល់ព្រមរវាងអ្នក និង {tenancy?.appName} (តទៅនេះហៅថា 'យើង', 'ពួកយើង' ឬ 'របស់យើង' តាមករណីជាក់ស្តែង)។ គោលការណ៍ឯកជនភាពនេះគឺជាផ្នែករួមមួយនៃប្រការ និងលក្ខខណ្ឌរបស់ {tenancy?.appName}។ យើងអាចធ្វើការកែប្រែគោលការណ៍ឯកជនភាពនេះជាទៀងទាត់ ហើយ​នឹងជូនដំណឹងដល់អ្នកអំពីការកែប្រែទាំងនេះ ដោយបង្ហោះលក្ខខណ្ឌដែលបានកែប្រែនៅលើវេទិការបស់យើង។ យើងសូមណែនាំឱ្យអ្នកពិនិត្យមើលគោលការណ៍ឯកជនភាពនេះឡើងវិញជាទៀងទាត់។
+            សូមកត់សម្គាល់ថាគោលការណ៍ឯកជនភាពនេះ នឹងត្រូវមានការយល់ព្រមរវាងអ្នក និង Eurobet (តទៅនេះហៅថា 'យើង', 'ពួកយើង' ឬ 'របស់យើង' តាមករណីជាក់ស្តែង)។ គោលការណ៍ឯកជនភាពនេះគឺជាផ្នែករួមមួយនៃប្រការ និងលក្ខខណ្ឌរបស់ Eurobet។ យើងអាចធ្វើការកែប្រែគោលការណ៍ឯកជនភាពនេះជាទៀងទាត់ ហើយ​នឹងជូនដំណឹងដល់អ្នកអំពីការកែប្រែទាំងនេះ ដោយបង្ហោះលក្ខខណ្ឌដែលបានកែប្រែនៅលើវេទិការបស់យើង។ យើងសូមណែនាំឱ្យអ្នកពិនិត្យមើលគោលការណ៍ឯកជនភាពនេះឡើងវិញជាទៀងទាត់។
             </Text>
           </Box>
           <Box>
@@ -937,7 +937,7 @@ const PrivacyPolicy = () => {
             ៣. មធ្យោបាយនៃការប្រមូល និងដំណើរការទិន្នន័យ
             </Text>
             <Text>
-            យើងអាចប្រមូលទិន្នន័យជាក់លាក់ដោយស្វ័យប្រវត្តិ ដូចបានពិភាក្សាខាងលើ និងទទួលបានព័ត៌មានផ្ទាល់ខ្លួនអំពីអ្នក ហើយអ្នកបានផ្តល់ព័ត៌មានទាំងនេះតាមរយៈសេវា ឬការប្រាស្រ័យទាក់ទង និងអន្តរកម្មក្នុងទម្រង់ផ្សេងៗតាមរយៈគេហទំព័ររបស់ {tenancy?.appName}។ យើងក៏អាចទទួលបានព័ត៌មានផ្ទាល់ខ្លួនផងដែរពីអ្នកលក់ និង​អ្នកផ្តល់សេវាតាមអនឡាញ និងពីបញ្ជីអតិថិជនដែលទទួលបានដោយស្របច្បាប់ពីអ្នកលក់ពីភាគីទីបី។ លើស​​ពី​នេះ យើងអាចភ្ជាប់សេវារបស់អ្នកផ្តល់សេវាពីភាគីទីបី ដើម្បីផ្តល់ការគាំទ្របច្ចេកទេសលើដំណើរការប្រតិបត្តិការតាមអនឡាញ និងថែទាំគណនី។ យើង​មាន​សិទ្ធិ​ចូល​ប្រើប្រាស់​ព័ត៌មាន​ណា​មួយ​ដែល​អ្នក​ផ្តល់ជូន​អ្នក​លក់ អ្នក​ផ្តល់​សេវា និង​សេវា​ពាណិជ្ជកម្ម​អេឡិចត្រូនិក​ពីភាគី​ទីបី ហើយ​យើង​នឹង​ប្រើ​ព័ត៌មាន​ផ្ទាល់ខ្លួន​ដូច​មាន​ចែង​ក្នុង​គោលការណ៍​ឯកជនភាព​នេះ។ យើងចាត់វិធានការនានា ដើម្បីធានាការពារឯកជនភាពរបស់អ្នក តាមរយៈការរៀបចំចាត់ចែងរបស់យើងជាមួយអ្នកផ្តល់សេវាភាគីទីបី និងអ្នកលក់តាមអនឡាញ ។
+            យើងអាចប្រមូលទិន្នន័យជាក់លាក់ដោយស្វ័យប្រវត្តិ ដូចបានពិភាក្សាខាងលើ និងទទួលបានព័ត៌មានផ្ទាល់ខ្លួនអំពីអ្នក ហើយអ្នកបានផ្តល់ព័ត៌មានទាំងនេះតាមរយៈសេវា ឬការប្រាស្រ័យទាក់ទង និងអន្តរកម្មក្នុងទម្រង់ផ្សេងៗតាមរយៈគេហទំព័ររបស់ Eurobet។ យើងក៏អាចទទួលបានព័ត៌មានផ្ទាល់ខ្លួនផងដែរពីអ្នកលក់ និង​អ្នកផ្តល់សេវាតាមអនឡាញ និងពីបញ្ជីអតិថិជនដែលទទួលបានដោយស្របច្បាប់ពីអ្នកលក់ពីភាគីទីបី។ លើស​​ពី​នេះ យើងអាចភ្ជាប់សេវារបស់អ្នកផ្តល់សេវាពីភាគីទីបី ដើម្បីផ្តល់ការគាំទ្របច្ចេកទេសលើដំណើរការប្រតិបត្តិការតាមអនឡាញ និងថែទាំគណនី។ យើង​មាន​សិទ្ធិ​ចូល​ប្រើប្រាស់​ព័ត៌មាន​ណា​មួយ​ដែល​អ្នក​ផ្តល់ជូន​អ្នក​លក់ អ្នក​ផ្តល់​សេវា និង​សេវា​ពាណិជ្ជកម្ម​អេឡិចត្រូនិក​ពីភាគី​ទីបី ហើយ​យើង​នឹង​ប្រើ​ព័ត៌មាន​ផ្ទាល់ខ្លួន​ដូច​មាន​ចែង​ក្នុង​គោលការណ៍​ឯកជនភាព​នេះ។ យើងចាត់វិធានការនានា ដើម្បីធានាការពារឯកជនភាពរបស់អ្នក តាមរយៈការរៀបចំចាត់ចែងរបស់យើងជាមួយអ្នកផ្តល់សេវាភាគីទីបី និងអ្នកលក់តាមអនឡាញ ។
             </Text>
           </Box>
           <Box>

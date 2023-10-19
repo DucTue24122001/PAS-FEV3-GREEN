@@ -7,6 +7,7 @@ export const clientSlice = createSlice({
     name: "client",
     initialState: {
         isShowLoginModal: false,
+        isShowForgotPwModal: false,
         currentSectionShow: <LoginShowEnum>"",
         isShowLanguageModal:false,
         languageList: <string[]>[],
@@ -40,6 +41,9 @@ export const clientSlice = createSlice({
         },
         handleShowLoginModal(state,action){
             state.isShowLoginModal = action.payload
+        },
+        handleShowForgotPwModal(state, action) {
+            state.isShowForgotPwModal = action.payload
         },
         setCurrentPromo(state, action) {
             const currentPromotion = action.payload

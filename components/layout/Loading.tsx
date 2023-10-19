@@ -41,9 +41,8 @@ const Loading = () => {
           <Image
             className="cssload-loader"
             w={"100px"}
-            h={"100px"}
             opacity={0.6}
-            src={"/images/loading.gif"}
+            src={"/images/loading1.gif"}
             alt="gift"
           />
         </Flex>

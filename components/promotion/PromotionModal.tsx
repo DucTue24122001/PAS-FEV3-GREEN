@@ -159,7 +159,7 @@ const PromotionModal = () => {
               (amountInput ? ["calc(100vh - 335px)","calc(100vh - 335px)",500,500] : ["calc(100vh - 225px)","calc(100vh - 225px)",500,500]) :
               ["calc(100vh - 150px)","calc(100vh - 150px)",500,500]}>
             <Image alt={"img"} src={currentPromo?.urlImage}/>
-            <Text textTransform={"uppercase"} fontSize={18} fontWeight={700} color={'green'} my={"20px"}>
+            <Text textTransform={"uppercase"} fontSize={18} fontWeight={700} color={'#2132ff'} my={"20px"}>
               {currentPromo?.name}
             </Text>
             <Text fontFamily={"'Verdana',sans-serif"} fontSize={"16px"}>
@@ -182,7 +182,7 @@ const PromotionModal = () => {
               <ListItem>{t('only_one_account')}</ListItem>
               <ListItem>{t('any_bet_place')}</ListItem>
               <ListItem>{tenancy?.appName} {t('reserves_the_right')}</ListItem>
-              <ListItem>{tenancy?.appName}’s <Link color={'green'} onClick={() => router.push(`/polivies/terms`)}>{t('terms_&_condition')}</Link> {t('applies')}.</ListItem>
+              <ListItem>{tenancy?.appName}’s <Link color={'#2132ff'} onClick={() => router.push(`/polivies/terms`)}>{t('terms_&_condition')}</Link> {t('applies')}.</ListItem>
             </UnorderedList>
           </Flex>
           {isLogin && currentPromo?.promotionType !== PromoEnum.REBATE && <Center flexDir={'column'} pb={3} position={"sticky"} bottom={0} borderTop={"1px solid #e8e8e8"}>
@@ -233,7 +233,7 @@ const PromotionModal = () => {
             position={"sticky"} bottom={0}
             borderRadius={"0 0 5px 5px"} flexDir={["column","column","row","row"]}>
             <Text color={"white"}>{t('need_assistance')}</Text>
-            <Text fontWeight={700} fontSize={16} color={'green'} cursor={'pointer'}>
+            <Text fontWeight={700} fontSize={16} color={'#4956ff'} cursor={'pointer'}>
               {t('customer_care')}
             </Text>
           </Center> 

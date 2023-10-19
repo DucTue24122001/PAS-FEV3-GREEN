@@ -146,7 +146,7 @@ const GameTypeItem = ({ data, findGameType }: any) => {
                 justifyContent={"center"}
                 alignItems={"center"}
                 borderRadius="10px"
-                border={isBorder ? "1px solid #44e42e" : ""}
+                border={isBorder ? "1px solid #2132ff" : ""}
                 _hover={{ bg: "#f5f4f4", borderRadius: "10px", border: "none" }}
                 onClick={() => handleClickGameAll()}
               >
@@ -159,7 +159,7 @@ const GameTypeItem = ({ data, findGameType }: any) => {
                     "20px 44px",
                   ]}
                   borderRight={"1px solid #0000001a"}
-                  color={isBorder ? "#44e42e" : ""}
+                  color={isBorder ? "#2132ff" : ""}
                   textTransform={"uppercase"}
                   textAlign={"center"}
                 >
@@ -173,7 +173,7 @@ const GameTypeItem = ({ data, findGameType }: any) => {
                 <Flex
                   borderRadius="10px"
                   onClick={() => handleBorderGame(item.platform)}
-                  border={platform === item.platform ? "1px solid #44e42e" : ""}
+                  border={platform === item.platform ? "1px solid #2132ff" : ""}
                   justifyContent={"center"}
                   alignItems={"center"}
                   p={"30px 0px"}
@@ -198,7 +198,7 @@ const GameTypeItem = ({ data, findGameType }: any) => {
                       fontSize={["12px", "12px", "12px", "16px"]}
                       mt={2}
                       fontWeight={700}
-                      color={platform === item.platform ? "#44e42e" : ""}
+                      color={platform === item.platform ? "#2132ff" : ""}
                     >
                       {item.platform_name}
                     </Text>
@@ -339,7 +339,7 @@ const GameTypeItem = ({ data, findGameType }: any) => {
                 {game?.playable !== false ? (
                   ""
                 ) : (
-                  <HiWrenchScrewdriver color="#44e42e" />
+                  <HiWrenchScrewdriver color="#2132ff" />
                 )}
               </Box>
               <Image

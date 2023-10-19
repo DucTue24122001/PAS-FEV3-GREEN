@@ -18,6 +18,7 @@ export const accountSlice = createSlice({
     token: "",
     //category
     categoryData:[],
+    isFetchingCategory: false,
     
     //record
     recordList: [],
@@ -44,6 +45,9 @@ export const accountSlice = createSlice({
     },
     setCategoryData(state, action){
       state.categoryData = action.payload
+    },
+    setIsFetchingCategory(state, action) {
+      state.isFetchingCategory = action.payload
     },
     //record
     fetchingRecordHandler(state, action) {

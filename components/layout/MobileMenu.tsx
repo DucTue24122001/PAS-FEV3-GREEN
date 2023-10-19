@@ -79,15 +79,13 @@ const mobileMenuItems = [
 
 const menuItemContainer = {
 	p:"6px 4px",
-	filter:"drop-shadow(0 0 2px #00d74188)",
-	color:"#b7ffd2",
 	flexDir:'column',
 	w: "20%",
 	cursor: "pointer",
 	transition: ".3s",
 	_hover: {
-		bg: "#079d2b0a",
-		filter: "brightness(1.2) drop-shadow(0 0 2px #00d74188)"
+		bg: "#000549",
+		filter: "brightness(1.2) drop-shadow(0 0 2px #0013f9)"
 	}
 }
 
@@ -99,6 +97,6 @@ const imgMenu = {
 const textMenu = {
 	fontSize: "11px",
 	color: "#fff",
-	textShadow: "0 0 4px #00d741aa",
+	textShadow: "0 0 4px #e6e7ff",
 	mt: "2px",
 }

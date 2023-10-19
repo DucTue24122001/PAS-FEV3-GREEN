@@ -9,6 +9,8 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { accountAction } from '../../redux/account-slice'
 import { CloseIcon } from '@chakra-ui/icons'
+import { clientAction } from '../../redux/client-slice'
+import ContactSupportModal from '../../components/layout/ContactSupportModal'
 
 export default function Login () {
   const [loginForm, setLoginForm] = useState({
@@ -127,7 +129,8 @@ export default function Login () {
         </Box>
         <Box>
           <Center>
-            <Link textAlign={'center'} color={'#e6e7ff'} fontSize={"14px"} cursor={'pointer'} mb={2}>
+            <Link textAlign={'center'} color={'#e6e7ff'} fontSize={"14px"} cursor={'pointer'} mb={2}
+              onClick={() => dispatch(clientAction.handleShowForgotPwModal(true))}>
               {t('Forgot_Password')}
             </Link>
           </Center>
@@ -137,6 +140,7 @@ export default function Login () {
           </Flex>
         </Box>
       </Box>
+      <ContactSupportModal/>
     </Box>
   )
 }

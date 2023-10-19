@@ -60,7 +60,7 @@ const Promotion = () => {
               
             />
             <Flex p={"10px 30px"} flexDir={"column"} bg={"#fff"} borderBottomRightRadius={10} borderBottomLeftRadius={10}>
-              <Text textTransform={"uppercase"} fontWeight={700} fontSize={"18px"} color={"#004e27"} >{item.name}</Text>
+              <Text textTransform={"uppercase"} fontWeight={700} fontSize={"18px"} color={"#2132ff"} >{item.name}</Text>
               <Text>{item.content}</Text>
             </Flex>
           </Flex>

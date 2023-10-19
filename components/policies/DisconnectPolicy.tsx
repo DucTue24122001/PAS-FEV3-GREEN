@@ -19,7 +19,7 @@ const DisconnectPolicy = () => {
           lineHeight={2}
         >
           <Text>
-            At {tenancy?.appName}, we work hard in providing our players with the best
+            At Eurobet, we work hard in providing our players with the best
             online and mobile gaming experience; however, we cannot always
             guarantee, with absolute certainty, the smoothness of your
             experience, due to, and not limited to, factors outside our control
@@ -60,7 +60,7 @@ const DisconnectPolicy = () => {
               assistance. Cases are independently and fully investigated.
             </ListItem>
             <ListItem>
-              {tenancy?.appName} at any time and within its own discretion reserves the
+              Eurobet at any time and within its own discretion reserves the
               right to modify this policy and state the final verdict on all
               matters related to the same. Policy changes or related decisions
               will be communicated through in-app messages, electronic mails,
@@ -249,7 +249,7 @@ const DisconnectPolicy = () => {
           lineHeight={2}
         >
           <Text>
-          នៅ {tenancy?.appName} យើងខិតខំប្រឹងប្រែងផ្តល់ជូនអតិថិជនរបស់យើងដែលចូលលេង នូវបទពិសោធន៍ដ៏ល្អបំផុតក្នុងការលេងល្បែងអនឡាញ និងទូរសព្ទចល័ត។ ទោះយ៉ាងណា យើងមិនអាចធានាដាច់ខាតលើភាពរលូននៃបទពិសោធន៍របស់អ្នក ដោយសារតែកត្តាទាំងឡាយដែលហួសពីការគ្រប់គ្រងរបស់យើងនោះទេ ដូចជាការភ្ជាប់អ៊ីនធឺណិតខ្សោយ និងកាលៈទេសៈផ្សេងៗដែលអាចនាំឱ្យដាច់ការតភ្ជាប់សេវា។
+          នៅ Eurobet យើងខិតខំប្រឹងប្រែងផ្តល់ជូនអតិថិជនរបស់យើងដែលចូលលេង នូវបទពិសោធន៍ដ៏ល្អបំផុតក្នុងការលេងល្បែងអនឡាញ និងទូរសព្ទចល័ត។ ទោះយ៉ាងណា យើងមិនអាចធានាដាច់ខាតលើភាពរលូននៃបទពិសោធន៍របស់អ្នក ដោយសារតែកត្តាទាំងឡាយដែលហួសពីការគ្រប់គ្រងរបស់យើងនោះទេ ដូចជាការភ្ជាប់អ៊ីនធឺណិតខ្សោយ និងកាលៈទេសៈផ្សេងៗដែលអាចនាំឱ្យដាច់ការតភ្ជាប់សេវា។
           </Text>
           <Text>
           ក្នុងករណីមានការរំខាន ការដាច់ការតភ្ជាប់ ឬហេតុការណ៍ផ្សេងៗដែលប៉ះពាល់ដល់ការលេងល្បែង គោលការណ៍ខាងក្រោមត្រូវមានអានុភាពអនុវត្ត។ សូមអានខ្លឹមសារទាំងស្រុង មុនពេលប្រើប្រាស់សេវារបស់យើងនៅលើគេហទំព័រ។ តាមរយៈការប្រើប្រាស់សេវារបស់យើង ត្រូវចាត់ទុកថាបានអាន និងយល់ព្រមតាមគោលការណ៍ខាងលើ។
@@ -271,7 +271,7 @@ const DisconnectPolicy = () => {
               ៥. 	ប្រសិនបើបញ្ហានៅតែបន្តកើតមាន សូមទាក់ទងមកកាន់ផ្នែកគាំទ្រអតិថិជនដើម្បីសុំជំនួយ។ ករណី​នេះនឹងត្រូវមានការស៊ើបអង្កេតដោយឯករាជ្យ និងគ្រប់ជ្រុងជ្រោយ។
             </ListItem>
             <ListItem>
-            ៦​. {tenancy?.appName} រក្សាសិទ្ធិក្នុងការកែប្រែគោលការណ៍នេះបានគ្រប់ពេលផ្អែកតាមឆន្ទានុសិទ្ធិផ្ទាល់របស់ខ្លួន និងបញ្ជាក់ការវិនិច្ឆ័យចុងក្រោយលើបញ្ហាពាក់ព័ន្ធទាំងអស់។ ការកែប្រែគោលនយោបាយ ឬការសម្រេចចិត្តពាក់ព័ន្ធ នឹងធ្វើការជូនដំណឹងតាមរយៈសារក្នុងកម្មវិធី សារអេឡិចត្រូនិក WhatsApp ឬសារជាអក្សរ។
+            ៦​. Eurobet រក្សាសិទ្ធិក្នុងការកែប្រែគោលការណ៍នេះបានគ្រប់ពេលផ្អែកតាមឆន្ទានុសិទ្ធិផ្ទាល់របស់ខ្លួន និងបញ្ជាក់ការវិនិច្ឆ័យចុងក្រោយលើបញ្ហាពាក់ព័ន្ធទាំងអស់។ ការកែប្រែគោលនយោបាយ ឬការសម្រេចចិត្តពាក់ព័ន្ធ នឹងធ្វើការជូនដំណឹងតាមរយៈសារក្នុងកម្មវិធី សារអេឡិចត្រូនិក WhatsApp ឬសារជាអក្សរ។
             </ListItem>
           </OrderedList>
           <Box>

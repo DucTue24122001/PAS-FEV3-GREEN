@@ -20,16 +20,8 @@ const Language = () => {
     <Flex justifyContent={"center"} alignItems={"center"} w={"100%"} mt={10}>
       <Flex w={"1250px"} flexDir={"column"} alignItems={"center"} p={["0 20px","0 20px","0 40px","0"]}>
         <Text
-          color={"#fff"}
-          textAlign={"center"}
-          height={"35px"}
-          lineHeight={"35px"}
-          w={"100%"}
-          bg={"linear-gradient(#011b0e, #040f07, #020103)"}
-          fontSize={"14px"}
-          fontWeight={500}
-        >
-          {t('region_and_language')}
+          color={"#fff"}>
+          {t('select_language')}
         </Text>
         {
           languageList.map((language, i) => (

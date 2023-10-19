@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import httpClient from '../../http-client/httpClient'
 import { useTenancy } from '../../hook/TenancyProvider'
+import slider1 from "../../public/images/PAS_Banner01.jpg"
+import slider2 from "../../public/images/PAS_Banner02.jpg"
+import slider3 from "../../public/images/PAS_Banner03.jpg"
 
 const HomeSlider = () => {
   const [slider, setSlider] = useState<ImgSlider[]>([])
@@ -32,7 +35,7 @@ const HomeSlider = () => {
             {dots}
           </Box>
         )}>
-        {slider.map((item, i) => (
+        {defaultSlider.map((item, i) => (
           <Flex key={i} bgColor={"black"} outline={"none"}>
             <Image w={"100%"} maxH={"250px"} src={item.imageUrl} objectFit={"contain"} alt={item.title} />
           </Flex>
@@ -52,3 +55,9 @@ type ImgSlider = {
   imageUrlMobile: string,
   title: string
 }
+
+const defaultSlider = [
+  {imageUrl: slider1.src, title: "1"},
+  {imageUrl: slider2.src, title: "2"},
+  {imageUrl: slider3.src, title: "3"}
+]
