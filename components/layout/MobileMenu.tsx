@@ -1,5 +1,5 @@
 import { Center, Flex, Image, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import homeIco from "../../public/images/Home.png"
 import promoIco from "../../public/images/Promotion.png"
 import walletIco from "../../public/images/Wallet.png"
@@ -9,11 +9,37 @@ import ClientService from '../../http-client/ClientService'
 import { useRouter } from 'next/router'
 import { checkDisableLayoutPage } from '../../util/function'
 import { useTranslation } from 'react-i18next'
+import { useTenancy } from '../../hook/TenancyProvider'
+import { useDispatch } from 'react-redux'
+import { clientAction } from '../../redux/client-slice'
+import httpClient from '../../http-client/httpClient'
+import { ContentSettingType, Respond } from '../constants/type'
+import { ContentSettingEnum } from '../../util/enum'
 
 const MobileMenu = () => {
 	const isLogin = ClientService.isAuthenticated();
 	const router = useRouter()
 	const {t} = useTranslation()
+  const dispatch = useDispatch()
+  const tenancy = useTenancy()
+
+  useEffect(() => {
+    if(tenancy) {
+      (async () => {
+        try {
+          const res: Respond = await httpClient.post("/services/app/ContentSetting/GetAllContentSetting", {
+            tenancyName: tenancy?.tenancyName,
+          })
+          if(res.result) {
+            dispatch(clientAction.setContactListInfo(res.result.filter((item: ContentSettingType) => item.category === ContentSettingEnum.CONTACT)))
+            dispatch(clientAction.setSocialListInfo(res.result.filter((item: ContentSettingType) => item.category === ContentSettingEnum.SOCIAL)))
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      })()
+    }
+  }, [tenancy])
 
 	const directRouter = (url: string) => {
     if (isLogin) {

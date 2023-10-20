@@ -35,7 +35,7 @@ const HomeSlider = () => {
             {dots}
           </Box>
         )}>
-        {defaultSlider.map((item, i) => (
+        {slider.map((item, i) => (
           <Flex key={i} bgColor={"black"} outline={"none"}>
             <Image w={"100%"} maxH={"250px"} src={item.imageUrl} objectFit={"contain"} alt={item.title} />
           </Flex>

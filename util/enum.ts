@@ -25,3 +25,9 @@ export enum PoliciesEnum {
   DisconnectPolicies = "disconnect",
   PrivacyPolicies = "privacy",
 }
+
+export enum ContentSettingEnum {
+  CONTACT = 'CONTACT',
+  PAYMENT = 'PAYMENT',
+  SOCIAL = 'SOCIAL',
+}

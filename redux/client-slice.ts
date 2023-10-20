@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { LoginShowEnum, PoliciesEnum, PromotionDetailEnum } from "../components/constants/enum";
-import { AnnounceType, PromotionDetail, PromotionType, SliderType } from "../components/constants/type";
+import { AnnounceType, ContentSettingType, PromotionDetail, PromotionType, SliderType } from "../components/constants/type";
 
 
 export const clientSlice = createSlice({
@@ -28,7 +28,10 @@ export const clientSlice = createSlice({
         currentTurnover: <number>0,
         currentMinDeposit: <number>0,
         currentMaxBonus: <number>0,
-    },
+        //content-setting
+        contactListInfo: <ContentSettingType[]>[],
+        socialListInfo: <ContentSettingType[]>[],
+  },
     reducers: {
         setLanguageList(state, action) {
             state.languageList = action.payload
@@ -78,6 +81,14 @@ export const clientSlice = createSlice({
         },
         setCurrentPolicies(state, action) {
           state.currentPolicies = action.payload;
+        },
+
+        //content-setting
+        setContactListInfo(state, action) {
+          state.contactListInfo = action.payload;
+        },
+        setSocialListInfo(state, action) {
+          state.socialListInfo = action.payload;
         },
     }
 

@@ -3,8 +3,6 @@ import { useTenancy } from "../../../hook/TenancyProvider";
 import httpClient from "../../../http-client/httpClient";
 import { Box, Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { useDispatch } from "react-redux";
-import { accountAction } from "../../../redux/account-slice";
 
 const GameLive = () => {
   const tenancy = useTenancy();

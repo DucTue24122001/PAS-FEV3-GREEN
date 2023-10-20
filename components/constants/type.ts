@@ -116,3 +116,14 @@ export type SliderType = {
   title: string,
   category: string,
 }
+
+export type ContentSettingType = {
+  category: string,
+  content: string,
+  creationTime: string,
+  creatorUserId: number,
+  id: number,
+  imageUrl: string,
+  name: string,
+  link: string,
+}
