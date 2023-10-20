@@ -134,9 +134,6 @@ const CategoryGame = () => {
     }
   }
   
-  
-
-  
   return (
     <Flex w={"100%"} flexDir={"column"} justifyContent={"center"} alignItems={"center"} >
       <Flex w={"100%"} justifyContent={"center"} alignItems={"center"} bg={"linear-gradient(180deg, #000870 25%, #00075c 65%, #000000);"}>

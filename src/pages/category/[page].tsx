@@ -12,8 +12,6 @@ const Page = () => {
   const router = useRouter();
   const  pages : any = router.query.page;
 
-  
-
   const checkCategory = () => {
     switch (pages) {
       case "LIVEARENA":
