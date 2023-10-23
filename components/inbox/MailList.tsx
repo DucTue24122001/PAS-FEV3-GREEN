@@ -39,16 +39,16 @@ const MailList = () => {
   <>
     <Flex flexDir={'column'} className='text_vip'>
       {!isFetchingMail ? inboxMailPagination.map((mail, i: number) => (
-      <Box key={mail.id} borderBottom={`1px solid #c6c6c6`} bgColor={"#1f7544"}
+      <Box key={mail.id} borderBottom={`1px solid #c6c6c6`} bgColor={"#000dab"}
         py={"20px"} cursor={'pointer'} px={2} onClick={() => onMailRead(mail)} >
-          <Flex justifyContent={"space-between"} mb={"5px"}>
+        <Flex justifyContent={"space-between"} mb={"5px"}>
           <Text fontWeight={"bold"}><span>{!mail.status ? <IoMailSharp style={{fontSize: "20px"}}/> : <IoMailOpenSharp style={{fontSize: "20px"}}/>}</span>{mail.subject}</Text>
           <Text>{moment(new Date(mail.creationTime)).format("YYYY/MM/DD")}</Text>
         </Flex>
         <Text>{mail.body}</Text>
       </Box>)) : <Spinner />}
     </Flex>
-    <Flex justifyContent={'center'}>
+    <Flex justifyContent={'center'} pt={"10px"} pb={"30px"}>
       <Pagination
         currentPage={currentPage}
         pageSize={10}

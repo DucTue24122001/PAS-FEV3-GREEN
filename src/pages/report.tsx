@@ -98,7 +98,7 @@ const Report = () => {
     <Box className='layout' minH={"100vh"}>
       <Box mt={"20px"} mb={"40px"}>
         <Text pt={"16px"} pb={"12.7px"} alignItems={'center'}
-          color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
+          color={"#e6e7ff"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
           {t("transaction_report")}
         </Text>
       </Box>

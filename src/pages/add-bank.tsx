@@ -43,8 +43,8 @@ const AddBank = () => {
   return (
     <Box pb={"120px"}>
       <AddBankSection/>
-      <Text fontSize={20} fontWeight={500} mt={"10px"} color={"#caffe1"} textAlign={'center'} mb={"15px"}>HISTORY</Text>
-      <Box pb={"15px"} borderBottom={"1px dotted #caffe1"}>
+      <Text fontSize={20} fontWeight={500} mt={"10px"} color={"#e6e7ff"} textAlign={'center'} mb={"15px"}>HISTORY</Text>
+      <Box pb={"15px"} borderBottom={"1px dotted #e6e7ff"}>
         <Box mb={"15px"} fontSize={[12,12,16,16]}>
           <table className='add_bank_table'>
             <thead>

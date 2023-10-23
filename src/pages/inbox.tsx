@@ -30,7 +30,7 @@ const Inbox = () => {
       <Box px={"5px"} w={"100%"} mb={"50px"}>
         <Box maxW={"550px"} p={"10px 5px"} mx={"auto"}>
           <Box mt={"20px"} >
-            <Text fontSize={"22px"} fontWeight={500} color={"#caffe1"} textAlign={'center'} my={"10px"}
+            <Text fontSize={"22px"} fontWeight={500} color={"#e6e7ff"} textAlign={'center'} my={"10px"}
               pb={"20px"}>
               {t('inbox')}
             </Text>

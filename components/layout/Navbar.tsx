@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { accountAction } from '../../redux/account-slice'
 import { clientAction } from '../../redux/client-slice'
 import { RootState } from '../../redux/store'
+import SelectLanguageModal from './SelectLanguageModal'
 
 const Navbar = () => {
   const {language} = useSelector((state: RootState) => state.client)
@@ -29,6 +30,7 @@ const Navbar = () => {
         try {
           const data: any = await httpClient.get("/Account/GetProfile")
           dispatch(accountAction.setAccountDetail(data.result))
+          dispatch(accountAction.setAccountBalance(data.result.balance))
         } catch (err) {
           console.log(err);
         } finally {
@@ -75,9 +77,10 @@ const Navbar = () => {
         <Center cursor={'pointer'} onClick={() => router.push("/")}>
           <Image p={"5px 0"} h={"40px"} src={logo1.src} alt={"gift"} />
         </Center>
-        <Flex onClick={() => router.push("/language")} pos={"absolute"} right={"10px"} mt={"5px"} gap={"12.5px"}>
+        <Flex onClick={() => dispatch(clientAction.handleShowLanguageModal(true))} pos={"absolute"} right={"10px"} mt={"5px"} gap={"12.5px"}>
           <Image alt='language' src={currentLangImg} sx={langImg}/>
         </Flex>
+        <SelectLanguageModal/>
     </Flex>
   )
 }

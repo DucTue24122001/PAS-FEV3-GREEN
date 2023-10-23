@@ -8,7 +8,7 @@ import { convertDecimalNum } from '../util/function'
 import { useTranslation } from 'react-i18next'
 
 const UserInfoBar = () => {
-  const {accountDetail} = useSelector((state: RootState) => state.account)
+  const {accountDetail, accountBalance} = useSelector((state: RootState) => state.account)
   const router = useRouter()
   const {t} = useTranslation()
 
@@ -22,7 +22,7 @@ const UserInfoBar = () => {
         {accountDetail.name ? accountDetail.name : <Spinner/>}
       </Center>
       <Box sx={infoBar} onClick={() => router.push("/wallet")}>
-        {t('balance')} : {convertDecimalNum(accountDetail.balance)}
+        {t('balance')} : {convertDecimalNum(accountBalance)}
       </Box>
     </Flex>
   )

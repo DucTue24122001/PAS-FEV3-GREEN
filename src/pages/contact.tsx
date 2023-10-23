@@ -13,8 +13,6 @@ import { RootState } from "../../redux/store";
 
 const Contact = () => {
   const {contactListInfo, socialListInfo} = useSelector((state: RootState) => state.client)
-  console.log(contactListInfo, socialListInfo);
-  
 
   const detectIco = (name: string) => {
     switch (name.toLowerCase()) {

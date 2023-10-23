@@ -14,6 +14,7 @@ export const accountSlice = createSlice({
       userId:0,
       userName:"",
     },
+    accountBalance: 0,
     userListBanking: <Bank[]>[],
     token: "",
     //category
@@ -48,6 +49,9 @@ export const accountSlice = createSlice({
     },
     setIsFetchingCategory(state, action) {
       state.isFetchingCategory = action.payload
+    },
+    setAccountBalance(state, action) {
+      state.accountBalance = action.payload;
     },
     //record
     fetchingRecordHandler(state, action) {

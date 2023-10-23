@@ -13,7 +13,7 @@ const Personal = () => {
     <>
       <UserInfoBar/>
       <Box px={["10px","10px","30px","30px"]} w={"100%"}>
-        <Text fontSize={"20px"} fontWeight={500} color={"#caffe1"} textAlign={'center'} my={"20px"}>
+        <Text fontSize={"20px"} fontWeight={500} color={"#e6e7ff"} textAlign={'center'} my={"20px"}>
           {t("personal_info")}
         </Text>
         <Flex maxW={"500px"} mx={"auto"} className='text_vip' flexDir={'column'} gap={[5,5,8,8]} justifyContent={'center'}

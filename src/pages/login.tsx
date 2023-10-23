@@ -11,6 +11,7 @@ import { accountAction } from '../../redux/account-slice'
 import { CloseIcon } from '@chakra-ui/icons'
 import { clientAction } from '../../redux/client-slice'
 import ContactSupportModal from '../../components/layout/ContactSupportModal'
+import RegistOldAccountModal from '../../components/home/RegistOldAccountModal'
 
 export default function Login () {
   const [loginForm, setLoginForm] = useState({
@@ -141,6 +142,7 @@ export default function Login () {
         </Box>
       </Box>
       <ContactSupportModal/>
+      <RegistOldAccountModal/>
     </Box>
   )
 }

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { LoginShowEnum, PoliciesEnum, PromotionDetailEnum } from "../components/constants/enum";
-import { AnnounceType, ContentSettingType, PromotionDetail, PromotionType, SliderType } from "../components/constants/type";
+import { AnnounceType, ContentSettingType, OldAccountInfoType, PromotionDetail, PromotionType, SliderType } from "../components/constants/type";
 
 
 export const clientSlice = createSlice({
@@ -31,6 +31,15 @@ export const clientSlice = createSlice({
         //content-setting
         contactListInfo: <ContentSettingType[]>[],
         socialListInfo: <ContentSettingType[]>[],
+        //regist-old-account
+        isShowRegistOldAccountModal: false,
+        oldAccountRegistInfo: <OldAccountInfoType>{
+            name: "",
+            userName: "",
+            phoneNumber: "",
+            password: "",
+            emailAddress: "",
+          },
   },
     reducers: {
         setLanguageList(state, action) {
@@ -83,12 +92,24 @@ export const clientSlice = createSlice({
           state.currentPolicies = action.payload;
         },
 
+        handleShowLanguageModal(state, action) {
+            state.isShowLanguageModal = action.payload;
+        },
+
         //content-setting
         setContactListInfo(state, action) {
           state.contactListInfo = action.payload;
         },
         setSocialListInfo(state, action) {
           state.socialListInfo = action.payload;
+        },
+
+        //regist-old-account
+        setOldAccountRegistInfo(state, action) {
+            state.oldAccountRegistInfo = { ...state.oldAccountRegistInfo, ...action.payload };
+        },
+        handleShowRegistOldAccountModal(state, action) {
+            state.isShowRegistOldAccountModal = action.payload
         },
     }
 

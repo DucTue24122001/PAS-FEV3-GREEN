@@ -55,9 +55,3 @@ type ImgSlider = {
   imageUrlMobile: string,
   title: string
 }
-
-const defaultSlider = [
-  {imageUrl: slider1.src, title: "1"},
-  {imageUrl: slider2.src, title: "2"},
-  {imageUrl: slider3.src, title: "3"}
-]

@@ -75,7 +75,7 @@ const Record = () => {
         <Box maxW={"550px"} p={"10px 15px"} mx={"auto"}>
           <Box mt={"20px"} >
             <Text pb={"12.7px"} alignItems={'center'}
-              color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
+              color={"#e6e7ff"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
               {t("records")}
             </Text>
           </Box>

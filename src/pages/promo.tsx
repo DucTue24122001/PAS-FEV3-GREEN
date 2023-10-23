@@ -6,14 +6,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { clientAction } from "../../redux/client-slice";
 import PromotionModal from "../../components/promotion/PromotionModal";
 import { RootState } from "../../redux/store";
+import { useTranslation } from "react-i18next";
 
 const Promotion = () => {
   const {promotionCheck} = useSelector((state: RootState) => state.client)
   const [data, setData] = useState<any>(null);
   const tenancy = useTenancy();
   const dispatch = useDispatch()
-  console.log(data);
-  
+  const {t} = useTranslation()
 
   useEffect(() => {
     (async () => {
@@ -38,6 +38,10 @@ const Promotion = () => {
   return (
     <Flex justifyContent={"center"} alignItems={"center"} w={"100%"} overflow={"clip"}>
       <Flex w={"820px"} flexDir={"column"} pb={20}>
+        <Text pt={"16px"} pb={"12.7px"} alignItems={'center'}
+          color={"#e6e7ff"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
+          {t('promotion')}
+        </Text>
         {data?.map((item: any, i: any) => (
           <Flex
             key={i}

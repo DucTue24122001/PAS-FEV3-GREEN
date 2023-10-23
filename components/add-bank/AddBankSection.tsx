@@ -127,7 +127,7 @@ const AddBank = () => {
         <Box maxW={"550px"} p={"10px 15px"} pb={"30px"} mx={"auto"}>
           <Box mt={"20px"} mb={"40px"}>
             <Text pt={"16px"} pb={"12.7px"} alignItems={'center'}
-              color={"#caffe1"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
+              color={"#e6e7ff"} fontSize={"22px"} fontWeight={500} textAlign={'center'}>
               {t("add_bank")}
             </Text>
           </Box>

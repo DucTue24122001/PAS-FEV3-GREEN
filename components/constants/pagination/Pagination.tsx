@@ -45,7 +45,7 @@ const Pagination = (props: PaginationPropsType) => {
     >
        {/* Left navigation arrow */}
       <ListItem sx={arrow} cursor={currentPage === 1 ? "not-allowed" : "pointer"} 
-        color={currentPage === 1 ? "white" : "global.primary" }
+        color={currentPage === 1 ? "global.primary" : "white" }
         // className={classnames('pagination-item', {
         //   disabled: currentPage === 1
         // })}
@@ -62,7 +62,7 @@ const Pagination = (props: PaginationPropsType) => {
 		
         // Render our Page Pills
         return (
-          <ListItem sx={paginationItem} key={i} bgColor={pageNumber === currentPage ? "green.400" : "global.primary"}
+          <ListItem sx={paginationItem} key={i} bgColor={pageNumber === currentPage ? "#0e20ff" : "global.primary"}
             color={"white"}
             // className={classnames('pagination-item', {
             //   selected: pageNumber === currentPage
@@ -75,7 +75,7 @@ const Pagination = (props: PaginationPropsType) => {
       })}
       {/*  Right Navigation arrow */}
       <ListItem sx={arrow} cursor={currentPage === lastPage ? "not-allowed" : "pointer"}
-        color={currentPage === lastPage ? "white" : "global.primary"}
+        color={currentPage === lastPage ? "global.primary" : "white"}
         // className={classnames('pagination-item', {
         //   disabled: currentPage === lastPage
         // })}

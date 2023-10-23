@@ -127,3 +127,12 @@ export type ContentSettingType = {
   name: string,
   link: string,
 }
+
+export type OldAccountInfoType = {
+  name: string,
+  surname: string,
+  userName: string,
+  phoneNumber: string,
+  password: string,
+  emailAddress: string
+}

@@ -13,7 +13,7 @@ const baseTheme = extendTheme({
       variants: {
         "default": {
           borderRadius: "0.25rem",
-          bg: "white"
+          bg: "white",
         }
       },
     }
