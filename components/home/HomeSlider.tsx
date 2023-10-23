@@ -3,9 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import httpClient from '../../http-client/httpClient'
 import { useTenancy } from '../../hook/TenancyProvider'
-import slider1 from "../../public/images/PAS_Banner01.jpg"
-import slider2 from "../../public/images/PAS_Banner02.jpg"
-import slider3 from "../../public/images/PAS_Banner03.jpg"
 
 const HomeSlider = () => {
   const [slider, setSlider] = useState<ImgSlider[]>([])

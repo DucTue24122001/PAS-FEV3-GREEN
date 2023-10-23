@@ -71,6 +71,14 @@ export default function Login () {
           ClientService.login(data.result.token);
           dispatch(accountAction.setToken(data.result.token))
           router.push("/");
+        } else {
+          dispatch(clientAction.handleShowRegistOldAccountModal(true));
+          dispatch(
+            clientAction.setOldAccountRegistInfo({
+              ...data.result,
+              emailAddress: data.result.userName + "@default.com",
+            })
+          );
         }
       }
     } catch (err) {
