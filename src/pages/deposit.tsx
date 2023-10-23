@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Image, Input, Radio, RadioGroup, Spinner, Text, useToast } from '@chakra-ui/react'
+import { Box, Button, Center, Flex, Image, Input, Radio, RadioGroup, Spinner, Text, useToast } from '@chakra-ui/react'
 import React, { ChangeEvent, useEffect, useMemo, useState } from 'react'
 import httpClient from '../../http-client/httpClient'
 import { checkIsTimeoutToken, getBase64, numberWithCommas, toNormalNum } from '../../util/function'
@@ -9,6 +9,7 @@ import CurrencyInput from 'react-currency-input-field'
 import FileInput from '../../components/deposit/FileInput'
 import { DepositType } from '../../util/enum'
 import CopyButton from '../../components/constants/CopyButton'
+import {saveAs} from "file-saver";
 
 const Deposit = () => {
   const [isFetching, setIsFetching] = useState(false)
@@ -82,6 +83,10 @@ const Deposit = () => {
   const handleDepositAmount = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {value} = e.target
       setDepositAmount(value)
+  }
+
+  const downloadFile = async (url: string) => {
+    saveAs(url + '?not-from-cache-please', `qr-${currentAgentBankSelect?.bankName}`)
   }
 
   const imageInputHandler = (file: any) => {
@@ -191,7 +196,14 @@ const Deposit = () => {
             </Text>
             <CopyButton copyText={currentAgentBankSelect?.accountNumber} h='30px'/>
           </Flex>
-          {currentAgentBankSelect?.imageUrl && <Image alt='qr' src={currentAgentBankSelect?.imageUrl} boxSize={"200px"} alignSelf={'center'}/>}
+          {currentAgentBankSelect?.imageUrl && <>
+            <Image alt='qr' src={currentAgentBankSelect?.imageUrl} boxSize={"200px"} alignSelf={'center'}/>
+            <Button colorScheme='blue' w={"110px"} h={"30px"} padding={"5px"} alignSelf={'center'}
+              display={["block","block","none","none"]} mr={["30px","30px","0px","0px"]} fontWeight={400}
+              onClick={() => downloadFile(currentAgentBankSelect.imageUrl)}>
+              {t("save_qr")}
+            </Button>
+          </>}
         </Flex>}
         <Box mb={"30px"}>
           <Text className='text_vip' mb={"5px"} fontSize={14}>{t('select_bank')}</Text>

@@ -38,7 +38,7 @@ const Navbar = () => {
         }
       })()
     }
-  }, [token])
+  }, [token, router])
 
   useEffect(() => {
     if(tenancy?.lang) {
