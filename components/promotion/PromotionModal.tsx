@@ -23,13 +23,13 @@ import ClientService from "../../http-client/ClientService";
 import { clientAction } from "../../redux/client-slice";
 import { checkIsTimeoutToken, numberWithCommas, toNormalNum } from "../../util/function";
 import httpClient from "../../http-client/httpClient";
-import { PromoEnum, StatusPromotion } from "../constants/enum";
 import DefaultButton from "../constants/DefaultButton";
 import { ErrorText } from "../constants/NotificationText";
 import { RootState } from "../../redux/store";
 import { useTenancy } from "../../hook/TenancyProvider";
 import { Respond } from "../../util/type";
 import { DefaultInput } from "../constants/DefaultInput";
+import { PromoEnum, StatusPromotion } from "../../util/enum";
 
 const PromotionModal = () => {
   const { isShowPromoModal, currentPromo, currentBonus, currentTurnover, currentMinDeposit, currentMaxBonus } = useSelector((state: RootState) => state.client)

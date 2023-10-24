@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { LoginShowEnum, PoliciesEnum, PromotionDetailEnum } from "../components/constants/enum";
 import { AnnounceType, ContentSettingType, OldAccountInfoType, PromotionDetail, PromotionType, SliderType } from "../components/constants/type";
+import { PoliciesEnum, PromotionDetailEnum } from "../util/enum";
 
 
 export const clientSlice = createSlice({
@@ -8,7 +8,6 @@ export const clientSlice = createSlice({
     initialState: {
         isShowLoginModal: false,
         isShowForgotPwModal: false,
-        currentSectionShow: <LoginShowEnum>"",
         isShowLanguageModal:false,
         languageList: <string[]>[],
         language: "EN",

@@ -1,4 +1,4 @@
-import { PromoEnum } from "./enum"
+import { PromoEnum } from "../../util/enum"
 
 export type Respond = {
   error: {

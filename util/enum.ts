@@ -31,3 +31,40 @@ export enum ContentSettingEnum {
   PAYMENT = 'PAYMENT',
   SOCIAL = 'SOCIAL',
 }
+
+export enum TypeDeposit {
+  BANK = "banking",
+  CRYPTO = "crypto",
+}
+
+export enum PromotionDetailEnum {
+  BONUS = "bonus",
+  TURNOVER = "turnover",
+  MINDEPO = "mindeposit",
+  MAXBONUS = "maxbonus",
+}
+
+export enum RegistFormEnum {
+  Username = "userName",
+  Password = "password",
+  Name = "name",
+  Email = "emailAddress",
+  Phone = "phoneNumber",
+  TenancyName = "dhdemo",
+  ReferralCode = "ReferralCode",
+}
+
+export enum PromoEnum {
+  ALL = "All",
+  WELCOME = "WELCOME_BONUS",
+  DEPOSIT = "DEPOSIT",
+  REWARD = "REWARD",
+  REBATE = "REBATE",
+}
+
+export enum StatusPromotion {
+  NOTACTIVE = "",
+  COMPLETED = "COMPLETED",
+  ACCEPTED = "ACCEPTED",
+  PENDING = "PENDING",
+}

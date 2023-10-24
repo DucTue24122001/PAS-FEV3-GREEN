@@ -9,7 +9,7 @@ import { RootState } from '../../redux/store'
 import { clientAction } from '../../redux/client-slice'
 import httpClient from '../../http-client/httpClient'
 import ClientService from '../../http-client/ClientService'
-import { RegistFormEnum } from '../constants/enum'
+import { RegistFormEnum } from '../../util/enum'
 
 const RegistOldAccountModal = () => {
   const { isShowRegistOldAccountModal, oldAccountRegistInfo } = useSelector((state: RootState) => state.client)
