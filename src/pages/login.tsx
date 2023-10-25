@@ -7,7 +7,6 @@ import ClientService from '../../http-client/ClientService'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
-import { accountAction } from '../../redux/account-slice'
 import { CloseIcon } from '@chakra-ui/icons'
 import { clientAction } from '../../redux/client-slice'
 import ContactSupportModal from '../../components/layout/ContactSupportModal'
@@ -69,7 +68,6 @@ export default function Login () {
         }
         if (data.result.token) {
           ClientService.login(data.result.token);
-          dispatch(accountAction.setToken(data.result.token))
           router.push("/");
         } else {
           dispatch(clientAction.handleShowRegistOldAccountModal(true));

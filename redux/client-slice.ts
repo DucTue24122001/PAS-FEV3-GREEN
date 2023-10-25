@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AnnounceType, ContentSettingType, OldAccountInfoType, PromotionDetail, PromotionType, SliderType } from "../components/constants/type";
 import { PoliciesEnum, PromotionDetailEnum } from "../util/enum";
+import { AnnounceType, ContentSettingType, OldAccountInfoType, PromotionDetail, PromotionType, SliderType } from "../util/type";
 
 
 export const clientSlice = createSlice({

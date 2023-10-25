@@ -13,8 +13,8 @@ import { useTenancy } from '../../hook/TenancyProvider'
 import { useDispatch } from 'react-redux'
 import { clientAction } from '../../redux/client-slice'
 import httpClient from '../../http-client/httpClient'
-import { ContentSettingType, Respond } from '../constants/type'
 import { ContentSettingEnum } from '../../util/enum'
+import { ContentSettingType, Respond } from '../../util/type'
 
 const MobileMenu = () => {
 	const isLogin = ClientService.isAuthenticated();
