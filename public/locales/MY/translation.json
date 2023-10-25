@@ -202,7 +202,11 @@
     "game_currently_maintenance":"ဂိမ်းကို လောလောဆယ် ထိန်းသိမ်းထားပါတယ်။",
     "game_license": "ဂိမ်းလိုင်စင်",
     "save_qr": "SAVE QR",
-
+    "received": "Received",
+    "to": "to",
+    "rate_is": "rate is",
+    "network": "Network",
+    "wallet_address": "Wallet Address",
 
 
 

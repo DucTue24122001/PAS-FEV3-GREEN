@@ -10,6 +10,8 @@ import { useRouter } from 'next/router'
 import { DepositType } from '../../util/enum'
 import httpClient from '../../http-client/httpClient'
 import {saveAs} from "file-saver";
+import { useDispatch } from 'react-redux'
+import { accountAction } from '../../redux/account-slice'
 
 const NetBankingDeposit = () => {
   const [isFetching, setIsFetching] = useState(false)
@@ -31,6 +33,7 @@ const NetBankingDeposit = () => {
   })
   const toast = useToast()
   const {t} = useTranslation()
+  const dispatch = useDispatch()
   
   const resetForm = () => {
     setDepositAmount("")
@@ -80,6 +83,9 @@ const NetBankingDeposit = () => {
         const depositInfo = res.result
         setAgentDepositBankingList(depositInfo.agentBank)
         setUserDepositBankingList(depositInfo.playerBank)
+
+        dispatch(accountAction.setAgentCryptoBankList(depositInfo.agentCrypto))
+        dispatch(accountAction.setCurrentAgentCryptoSelect(depositInfo.agentCrypto[0]))
       } catch (err: any) {
         console.log(err);
         checkIsTimeoutToken(err, router)

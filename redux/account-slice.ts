@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AccountDetail, Bank, MailType } from "../util/type";
+import { AccountDetail, Bank, CrpytoBank, MailType } from "../util/type";
 
 export const accountSlice = createSlice({
   name: "account",
@@ -17,6 +17,10 @@ export const accountSlice = createSlice({
     accountBalance: 0,
     userListBanking: <Bank[]>[],
     token: "",
+    //crypto-bank
+    agentCryptoBankList: <CrpytoBank[]>[],
+    currentAgentCryptoSelect: <CrpytoBank>{},
+
     //category
     categoryData:[],
     isFetchingCategory: false,
@@ -53,6 +57,14 @@ export const accountSlice = createSlice({
     setAccountBalance(state, action) {
       state.accountBalance = action.payload;
     },
+    //crypto-bank
+    setAgentCryptoBankList(state, action) {
+      state.agentCryptoBankList = action.payload
+    },
+    setCurrentAgentCryptoSelect(state, action) {
+      state.currentAgentCryptoSelect = action.payload
+    },
+
     //record
     fetchingRecordHandler(state, action) {
       state.isFetchingRecord = action.payload

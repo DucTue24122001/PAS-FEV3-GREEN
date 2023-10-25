@@ -51,3 +51,16 @@ export type AnnouncementType = {
   title: string,
   type: string,
 }
+
+export type CrpytoBank = {
+  cryptoName: string,
+  cryptoNumber: string,
+  cryptoShortName: string,
+  displayName: string,
+  id: number,
+  imageUrl: string,
+  logo: string,
+  maximumDeposit: number,
+  minimumDeposit: number,
+  rate: number,
+}
