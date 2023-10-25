@@ -1,23 +1,20 @@
-import { Box, Button, Flex, Image, Spinner, Text, useToast } from '@chakra-ui/react'
+import { Box, Flex, Image, Spinner, Text, useToast } from '@chakra-ui/react'
 import React, { useEffect, useMemo, useState } from 'react'
 import CurrencyInput from 'react-currency-input-field'
 import { useTranslation } from 'react-i18next'
-import CopyButton from '../constants/CopyButton'
 import FileInput from './FileInput'
 import { checkIsTimeoutToken, getBase64, numberWithCommas } from '../../util/function'
 import { Bank } from '../../util/type'
 import { useRouter } from 'next/router'
 import { DepositType } from '../../util/enum'
 import httpClient from '../../http-client/httpClient'
-import {saveAs} from "file-saver";
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { accountAction } from '../../redux/account-slice'
+import { RootState } from '../../redux/store'
+import AgentBankItem from './AgentBankItem'
 
 const NetBankingDeposit = () => {
-  const [isFetching, setIsFetching] = useState(false)
-  const [agentDepositBankingList, setAgentDepositBankingList] = useState<Bank[]>([])
-  const [userDepositBankingList, setUserDepositBankingList] = useState<Bank[]>([])
-  const [currentAgentBankSelect, setCurrentAgentBankSelect] = useState<Bank> ()
+  const { bankTypeList, currentBankTypeSelect, depositAgentNetBankingFilter, currentAgentBankSelect, userDepositBankingList } = useSelector((state: RootState) => state.account)
   const [currentUserBankSelect, setCurrentUserBankSelect] = useState<Bank>()
   const [depositAmount, setDepositAmount] = useState("")
   const [base64Img, setBase64Img] = useState<any>("")
@@ -38,15 +35,9 @@ const NetBankingDeposit = () => {
   const resetForm = () => {
     setDepositAmount("")
     setIsErr(false)
-    selectAgentDepositBank("")
-    selectUserDepositBank("")
     setCurrentImg(null)
     setBase64Img("")
     setResponseError("")
-  }
-
-  const downloadFile = async (url: string) => {
-    saveAs(url + '?not-from-cache-please', `qr-${currentAgentBankSelect?.bankName}`)
   }
 
   const imageInputHandler = (file: any) => {
@@ -62,46 +53,16 @@ const NetBankingDeposit = () => {
     setErrorForm({
       ...errorForm,
       amount: depositAmount ? "" : 'deposit_amount_is_required',
-      bank: currentUserBankSelect && currentAgentBankSelect ? "" : "bank_is_required",
+      bank: currentUserBankSelect ? "" : "bank_is_required",
       image: currentImg ? "" : "receipt_is_required",
     })
-  },[depositAmount, currentUserBankSelect, currentAgentBankSelect, currentImg])
+  },[depositAmount, currentUserBankSelect, currentImg])
 
   const isFormValid = useMemo(() => {
     return Object.values(errorForm).every(item => item === "")
   },[errorForm])
 
-  useEffect(() => {
-    (async () => {
-      setIsFetching(true)
-      try {
-        const res: any = await httpClient.post("/services/app/bankTransaction/GetInfoBank", null, {
-          params: {
-            type: "deposit"
-          }
-        })
-        const depositInfo = res.result
-        setAgentDepositBankingList(depositInfo.agentBank)
-        setUserDepositBankingList(depositInfo.playerBank)
-
-        dispatch(accountAction.setAgentCryptoBankList(depositInfo.agentCrypto))
-        dispatch(accountAction.setCurrentAgentCryptoSelect(depositInfo.agentCrypto[0]))
-      } catch (err: any) {
-        console.log(err);
-        checkIsTimeoutToken(err, router)
-        toast({
-        status: "error",
-        title: err?.response?.data?.error?.message || t('something_went_wrong'),
-      })
-      } finally {
-        setIsFetching(false)
-      }
-    })()
-  }, [])
-
-  const selectAgentDepositBank = (bankId: string) => {
-    setCurrentAgentBankSelect(agentDepositBankingList.find(bank => bank.id === +bankId))
-  }
+  
   const selectUserDepositBank = (bankId: string) => {
     setCurrentUserBankSelect(userDepositBankingList.find(bank => bank.id === +bankId))
   }
@@ -156,59 +117,54 @@ const NetBankingDeposit = () => {
   return (
     <form onSubmit={submitHandler}>
         <Box mb={"30px"}>
-          <label htmlFor="deposit">
-            <Text className='text_vip' mb={"5px"} fontSize={14}>{t('deposit_amount')}</Text>
+          <label>
+            <Text className='text_vip' mb={"10px"} fontSize={14}>Bank List</Text>
           </label>
-          <CurrencyInput className='default_input' id='deposit' decimalsLimit={2} decimalScale={2} allowDecimals={true} onValueChange={(text: any) => setDepositAmount(text)}
-            disableAbbreviations={true} autoComplete='off'
-            intlConfig={{ locale: 'en-US'}}/>
-          {isErr && <Text className='error'>{t(`${errorForm.amount}`)}</Text>}
+          <Flex gap={2} flexWrap={"wrap"}>
+            {bankTypeList.map((bank, i) => (
+              <Flex key={i} 
+                minW={"80px"} minH={"80px"} borderRadius={'10px'} alignItems={'center'} flexDir={'column'} justifyContent={'center'}
+                gap={2} cursor={'pointer'} transition={".3s"}
+                border={"2px solid white"}
+                color={currentBankTypeSelect.id === bank.id ? "#303030" : "#fff"}
+                bgColor={currentBankTypeSelect.id === bank.id ? "#fff" : "rgba(0,0,0,.1)"}
+                onClick={() => dispatch(accountAction.setCurrentBankTypeSelect(bank))}>
+                <Image alt='netbanking' src={bank.logo} h={"30px"}/>
+                <Text fontWeight={600} textOverflow={"ellipsis"} overflow={'hidden'} whiteSpace={"nowrap"} w={"80px"}
+                  fontSize={["12px","12px","12px","16px"]}
+                  textAlign={'center'}>
+                  {bank.bankShortName}
+                </Text>
+              </Flex>
+            ))}
+          </Flex>
         </Box>
         <Box mb={"30px"}>
           <Text className='text_vip' mb={"5px"} fontSize={14}>{t("bank")}</Text>
-          <select className='default_select' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => selectAgentDepositBank(e.target.value)}>
-            <option className='default_option' value={""}>{t('select_bank')}</option>
-            {agentDepositBankingList.map((bank, i) => (
-              <option key={i} className='default_option' value={bank.id}>
-                {bank.accountName} ({bank.bankShortName})
-              </option>
-            ))}
-          </select>
-          {isErr && <Text className='error'>{t(`${errorForm.bank}`)}</Text>}
+          {depositAgentNetBankingFilter.map((bank, i) => (
+            <AgentBankItem key={i} bank={bank}/>
+          ))}
         </Box>
-        {currentAgentBankSelect && <Flex flexDir={'column'} mb={"30px"} gap={"20px"} alignItems={'flex-start'}>
-          <Flex alignItems={"center"} gap={3}>
-            <Text color={"white"} lineHeight={"20px"} fontSize={"16px"}>
-              {t('account_name')}: <span>{currentAgentBankSelect?.accountName}</span>
-            </Text>
-            <CopyButton copyText={currentAgentBankSelect?.accountName} h='30px'/>
-          </Flex>
-          <Flex alignItems={"center"} gap={3}>
-            <Text color={"white"}  lineHeight={"20px"} fontSize={"16px"}>
-              {t('account_number')}: <span>{currentAgentBankSelect?.accountNumber}</span>
-            </Text>
-            <CopyButton copyText={currentAgentBankSelect?.accountNumber} h='30px'/>
-          </Flex>
-          {currentAgentBankSelect?.imageUrl && <>
-            <Image alt='qr' src={currentAgentBankSelect?.imageUrl} boxSize={"200px"} alignSelf={'center'}/>
-            <Button colorScheme='blue' w={"110px"} h={"30px"} padding={"5px"} alignSelf={'center'}
-              display={["block","block","none","none"]} mr={["30px","30px","0px","0px"]} fontWeight={400}
-              onClick={() => downloadFile(currentAgentBankSelect.imageUrl)}>
-              {t("save_qr")}
-            </Button>
-          </>}
-        </Flex>}
         <Box mb={"30px"}>
           <Text className='text_vip' mb={"5px"} fontSize={14}>{t('select_bank')}</Text>
           <select className='default_select' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => selectUserDepositBank(e.target.value)}>
             <option className='default_option' value={""}>{t('select_bank')}</option>
             {userDepositBankingList.map((bank, i) => (
               <option key={i} className='default_option' value={bank.id}>
-                {bank.accountName} {bank.accountNumber} ({bank.bankShortName})
+                {bank.accountName} ({bank.bankShortName}) {bank.accountNumber}
               </option>
             ))}
           </select>
           {isErr && <Text className='error'>{t(`${errorForm.bank}`)}</Text>}
+        </Box>
+        <Box mb={"30px"}>
+          <label>
+            <Text className='text_vip' mb={"10px"} fontSize={14}>{t('amount')}</Text>
+          </label>
+          <CurrencyInput className='default_input' id='deposit' decimalsLimit={2} decimalScale={2} allowDecimals={true} onValueChange={(text: any) => setDepositAmount(text)}
+          disableAbbreviations={true} autoComplete='off' value={depositAmount}
+          intlConfig={{ locale: 'en-US'}}/>
+          {isErr && <Text className='error'>{t(`${errorForm.amount}`)}</Text>}
         </Box>
         <Box mb={"30px"}>
           <Text className='text_vip' mb={"5px"} fontSize={14}>{t('upload_receipt')}</Text>

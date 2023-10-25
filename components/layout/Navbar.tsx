@@ -18,7 +18,6 @@ import SelectLanguageModal from './SelectLanguageModal'
 
 const Navbar = () => {
   const {language} = useSelector((state: RootState) => state.client)
-  const {token} = useSelector((state: RootState) => state.account)
   const router = useRouter()
   const tenancy = useTenancy()
   const {i18n} = useTranslation()
@@ -38,7 +37,7 @@ const Navbar = () => {
         }
       })()
     }
-  }, [token, router])
+  }, [router])
 
   useEffect(() => {
     if(tenancy?.lang) {

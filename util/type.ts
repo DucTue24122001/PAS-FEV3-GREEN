@@ -26,6 +26,7 @@ export type Bank = {
   bankShortName: string,
   displayName: string,
   id: number,
+  logo: string,
   imageUrl: string,
   maximumDeposit: number,
   minimumDeposit: number,

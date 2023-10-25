@@ -16,7 +16,14 @@ export const accountSlice = createSlice({
     },
     accountBalance: 0,
     userListBanking: <Bank[]>[],
-    token: "",
+    //net-banking
+    depositAgentNetBankingList: <Bank[]>[],
+    depositAgentNetBankingFilter: <Bank[]>[],
+    userDepositBankingList: <Bank[]>[],
+    currentAgentBankSelect: <Bank>{},
+    bankTypeList: <Bank[]>[],
+    currentBankTypeSelect: <Bank>{},
+    
     //crypto-bank
     agentCryptoBankList: <CrpytoBank[]>[],
     currentAgentCryptoSelect: <CrpytoBank>{},
@@ -36,9 +43,6 @@ export const accountSlice = createSlice({
     currentMailRead: <MailType>{},
   },
   reducers: {
-    setToken(state, action) {
-      state.token = action.payload
-    },
     setAccountDetail(state, action) {
       state.accountDetail = action.payload
     },
@@ -57,6 +61,33 @@ export const accountSlice = createSlice({
     setAccountBalance(state, action) {
       state.accountBalance = action.payload;
     },
+    //net-banking
+    setAllBankTypeList(state, action) {
+      const allAgentBank = <Bank[]>action.payload
+      state.depositAgentNetBankingList = allAgentBank
+      state.currentAgentBankSelect = allAgentBank[0]
+      const filterTypeBank = allAgentBank.filter((value, index, self) =>
+      index === self.findIndex((t) => (
+        t.bankName === value.bankName
+      )))
+      if (filterTypeBank.length > 0) {
+        state.bankTypeList = filterTypeBank
+        state.currentBankTypeSelect = filterTypeBank[0]
+        state.depositAgentNetBankingFilter = allAgentBank.filter(bank => bank.bankName === filterTypeBank[0].bankName)
+      }
+    },
+    setUserDepositBankingList(state, action) {
+      state.userDepositBankingList = action.payload
+    },
+    setCurrentBankTypeSelect(state, action) {
+      state.currentBankTypeSelect = action.payload
+      state.depositAgentNetBankingFilter = state.depositAgentNetBankingList.filter(bank => bank.bankName === action.payload.bankName)
+      state.currentAgentBankSelect = state.depositAgentNetBankingFilter[0]
+    },
+    setCurrentAgentBankSelect(state, action) {
+      state.currentAgentBankSelect = action.payload;
+    },
+
     //crypto-bank
     setAgentCryptoBankList(state, action) {
       state.agentCryptoBankList = action.payload

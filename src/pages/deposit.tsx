@@ -1,15 +1,53 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Box, Flex, Image, Spinner, Text, useToast } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 import NetBankingDeposit from '../../components/deposit/NetBankingDeposit'
 import { useTranslation } from 'react-i18next'
 import netBankingIco from "../../public/images/netbanking.png"
 import cryptoIco from "../../public/images/CryptoPayment.png"
 import { TypeDeposit } from '../../util/enum'
 import CryptoDeposit from '../../components/deposit/CryptoDeposit'
+import httpClient from '../../http-client/httpClient'
+import { useDispatch } from 'react-redux'
+import { accountAction } from '../../redux/account-slice'
+import { checkIsTimeoutToken } from '../../util/function'
+import { useRouter } from 'next/router'
 
 const Deposit = () => {
   const {t} = useTranslation()
   const [currentDepositType, setCurrentDepositType] = useState(TypeDeposit.BANK)
+  const [isFetching, setIsFetching] = useState(false)
+  const dispatch = useDispatch()
+  const router = useRouter()
+  const toast = useToast()
+
+  useEffect(() => {
+    (async () => {
+      setIsFetching(true)
+      try {
+        const res: any = await httpClient.post("/services/app/bankTransaction/GetInfoBank", null, {
+          params: {
+            type: "deposit"
+          }
+        })
+        const depositInfo = res.result
+        dispatch(accountAction.setUserListBanking(depositInfo.playerBank))
+        dispatch(accountAction.setAllBankTypeList(depositInfo.agentBank))
+
+        dispatch(accountAction.setAgentCryptoBankList(depositInfo.agentCrypto))
+        dispatch(accountAction.setCurrentAgentCryptoSelect(depositInfo.agentCrypto[0]))
+      } catch (err: any) {
+        console.log(err);
+        checkIsTimeoutToken(err, router)
+        toast({
+        status: "error",
+        title: err?.response?.data?.error?.message || t('something_went_wrong'),
+      })
+      } finally {
+        setIsFetching(false)
+      }
+    })()
+  }, [])
+
 
   return (
     <Box className='layout' pb={"80px"}>
@@ -36,8 +74,10 @@ const Deposit = () => {
             </Flex>
           ))}
         </Flex>
-        {currentDepositType === TypeDeposit.BANK && <NetBankingDeposit/>}
-        {currentDepositType === TypeDeposit.CRYPTO && <CryptoDeposit/>}
+        {!isFetching ? <>
+          {currentDepositType === TypeDeposit.BANK && <NetBankingDeposit/>}
+          {currentDepositType === TypeDeposit.CRYPTO && <CryptoDeposit/>}
+        </> : <Spinner color='white'/>}
       </Box>
     </Box>
   )
