@@ -14,7 +14,7 @@ import { RootState } from '../../redux/store'
 import AgentBankItem from './AgentBankItem'
 
 const NetBankingDeposit = () => {
-  const { bankTypeList, currentBankTypeSelect, depositAgentNetBankingFilter, currentAgentBankSelect, userDepositBankingList } = useSelector((state: RootState) => state.account)
+  const { bankTypeList, currentBankTypeSelect, depositAgentNetBankingFilter, currentAgentBankSelect, userDepositBankingList, userListBanking } = useSelector((state: RootState) => state.account)
   const [currentUserBankSelect, setCurrentUserBankSelect] = useState<Bank>()
   const [depositAmount, setDepositAmount] = useState("")
   const [base64Img, setBase64Img] = useState<any>("")
@@ -64,7 +64,7 @@ const NetBankingDeposit = () => {
 
   
   const selectUserDepositBank = (bankId: string) => {
-    setCurrentUserBankSelect(userDepositBankingList.find(bank => bank.id === +bankId))
+    setCurrentUserBankSelect(userListBanking.find(bank => bank.id === +bankId))
   }
 
   const submitHandler = async (e: React.SyntheticEvent) => {
@@ -149,7 +149,7 @@ const NetBankingDeposit = () => {
           <Text className='text_vip' mb={"5px"} fontSize={14}>{t('select_bank')}</Text>
           <select className='default_select' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => selectUserDepositBank(e.target.value)}>
             <option className='default_option' value={""}>{t('select_bank')}</option>
-            {userDepositBankingList.map((bank, i) => (
+            {userListBanking.map((bank, i) => (
               <option key={i} className='default_option' value={bank.id}>
                 {bank.accountName} ({bank.bankShortName}) {bank.accountNumber}
               </option>
