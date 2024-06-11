@@ -15,6 +15,7 @@ import { accountAction } from '../../redux/account-slice'
 import { clientAction } from '../../redux/client-slice'
 import { RootState } from '../../redux/store'
 import SelectLanguageModal from './SelectLanguageModal'
+import { Respond } from '../../util/type'
 
 const Navbar = () => {
   const {language} = useSelector((state: RootState) => state.client)
@@ -27,11 +28,16 @@ const Navbar = () => {
     if(ClientService.isAuthenticated()) {
       (async () => {
         try {
-          const data: any = await httpClient.get("/Account/GetProfile")
+          const data: Respond = await httpClient.get("/Account/GetProfile")
           dispatch(accountAction.setAccountDetail(data.result))
           dispatch(accountAction.setAccountBalance(data.result.balance))
-        } catch (err) {
-          console.log(err);
+          if (data.success) {
+
+          }
+        } catch (error: any) {
+          if (error?.response?.status === 401 || error?.response?.status === 500 || error?.response?.status === 403 || error?.response?.data?.error?.code === 401) {
+            ClientService.logout()
+          }
         } finally {
           
         }
