@@ -18,5 +18,13 @@ export const colors = {
   },
   blue: {
     1: "#000435"
-  }
+  },
+  fb: "#3b5998",
+  insta: "#3f729b",
+  line: "#00b900",
+  telegram: "#08c",
+  mail: "#414141",
+  viber: "#7360F2",
+  messenger: "#00B2FF",
+  twitter: "#1DA1F2"
 }

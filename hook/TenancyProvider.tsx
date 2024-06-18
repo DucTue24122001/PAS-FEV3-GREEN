@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import httpClient from "../http-client/httpClient";
 import { Respond } from "../util/type";
+import Maintenance from "../components/Maintenance";
 
 type TenancyType = null | {
   mainColor: string,
@@ -19,12 +20,14 @@ const tenancyContext = React.createContext<TenancyType>(null)
 
 export const TenancyProvider = ({ children }: any) => {
   const [tenancy, setTenancy] = React.useState<TenancyType>(null)
+  const [isMaintenance, setIsMaintenance] = useState(false)
 
   React.useEffect(() => {
     (async () => {
       try {
         const res: Respond = await httpClient.post("/services/app/Tenant/GetSettingCurrent")
         if(res.success) {
+          setIsMaintenance(res.result.isMaintain);
           setTenancy(res.result)
         }
       } catch (err) {
@@ -35,7 +38,7 @@ export const TenancyProvider = ({ children }: any) => {
 
   return (
     <tenancyContext.Provider value={tenancy}>
-      {children}
+      {isMaintenance ? <Maintenance/> : children}
     </tenancyContext.Provider>
   )
 }
